@@ -6,23 +6,25 @@ function secInitial() {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="mt-164-23px mb-159px w-1111px h-350px mx-auto">
-      <div className="float-left w-546-11px h-full">
+    <section className="container mt-54-14px lg:mt-85px xl:mt-164-23px mb-30px lg:mb-80px xl:mb-159px lg:w-974px xxl:w-1111px h-auto mx-auto">
+      <div className="lg:float-left w-288px lg:w-452px xxl:w-546-11px h-172-34px lg:h-full mx-auto lg:mx-0">
         <img className="float-left" src="/imgs/balanco.svg" alt="Menos é mais" />
       </div>
-      <div className="float-right w-456px h-full">
-        <div className="h-79px">
-          <span className="font-semibold text-78 text-black-1">Menos é </span>
-          <span className="font-semibold text-78 text-cian-1">mais.</span>
+      <div className="lg:float-right xl:w-456px mt-53-53px lg:mt-0">
+        <div className="h-51px xl:h-79px w-298px lg:w-auto mx-auto lg:mx-0">
+          <span className="font-semibold text-48-97 leading-none lg:text-78 text-black-1">Menos é </span>
+          <span className="font-semibold text-48-97 leading-none lg:text-78 text-cian-1">mais.</span>
         </div>
-        <div className="w-428px h-126px ml-3px mt-38px mr-25px">
-          <p className="text-26 text-black-3 leading-tight">
+        <div className="w-296px lg:w-428px h-85px lg:h-126px mx-auto lg:ml-3px mt-38px lg:mr-25px">
+          <p className="text-18 lg:text-26 text-center lg:text-left leading-120 lg:leading-normal text-black-3 leading-tight">
             Este conceito minimalista pode facilitar muito o seu negócio. Saiba como podemos ajudá-lo a alcançar seus objetivos com menos.
           </p>
         </div>
-        <button className="h-52px w-245px mt-55px ml-3px bg-cian-1 hover:bg-cian-3 text-18 text-white font-semibold rounded">
-          INICIAR NAVEGAÇÃO
-        </button>
+        <div className="h-52px w-320px lg:w-245px mt-30px xl:mt-55px lg:ml-3px mx-auto left-0">
+          <button className="w-full h-full bg-cian-1 hover:bg-cian-3 text-18 text-white font-semibold rounded">
+            INICIAR NAVEGAÇÃO
+          </button>
+        </div>
       </div>
     </section>
   )
