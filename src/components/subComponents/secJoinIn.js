@@ -6,7 +6,7 @@ function SecJoinIn() {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="h-auto pt-30px md:pt-40px pb-30px lg:pb-60px">
+    <section id="talentos" className="h-auto pt-30px md:pt-40px pb-30px lg:pb-60px">
       <div className="container mx-auto text-center font-semibold text-34 md:text-46 xl:text-58 leading-none md:leading-normal">
         <span className="text-black-3">Junte-se </span>
         <span className="text-cian-1">a nós.</span>

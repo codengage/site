@@ -6,7 +6,7 @@ function SecContact() {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="h-auto bg-cover" style={{ backgroundImage: 'url(/imgs/background_full.svg)' }}>
+    <section id="contato" className="h-auto bg-cover" style={{ backgroundImage: 'url(/imgs/background_full.svg)' }}>
       <div className="bg-cian-1 opacity-98 h-auto pt-30px lg:pt-40px pb-30px lg:pb-60px">
         <div className="container mx-auto">
           <div className="text-center font-semibold text-34 md:text-48-97 lg:text-58 leading-none lg:leading-normal">

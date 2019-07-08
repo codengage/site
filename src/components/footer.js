@@ -32,12 +32,12 @@ function Footer({ siteTitle }) {
                 <p className="text-14 font-display">rh@codengage.com</p>
               </div>
               <div className="w-82px lg:h-full lg:ml-40px xl:ml-67-53px flex content-between flex-wrap">
-                <a className="font-display text-14 text-cian-3" href="#0">‣ Empresa</a>
-                <a className="font-display text-14 text-cian-3" href="#1">‣ Serviços</a>
-                <a className="font-display text-14 text-cian-3" href="#2">‣ Clientes</a>
-                <a className="font-display text-14 text-cian-3" href="#3">‣ Testemunho</a>
-                <a className="font-display text-14 text-cian-3" href="#4">‣ Talentos</a>
-                <a className="font-display text-14 text-cian-3" href="#5">‣ Contato</a>
+                <a className="font-display text-14 text-cian-3" href="#empresa">‣ Empresa</a>
+                <a className="font-display text-14 text-cian-3" href="#servicos">‣ Serviços</a>
+                <a className="font-display text-14 text-cian-3" href="#clientes">‣ Clientes</a>
+                <a className="font-display text-14 text-cian-3" href="#testemunho">‣ Testemunho</a>
+                <a className="font-display text-14 text-cian-3" href="#talentos">‣ Talentos</a>
+                <a className="font-display text-14 text-cian-3" href="#contato">‣ Contato</a>
               </div>
             </div>
             

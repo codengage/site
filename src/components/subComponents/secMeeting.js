@@ -6,7 +6,7 @@ function SecMeeting() {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="h-auto xl:max-w-1110 mx-auto">
+    <section id="servicos" className="h-auto xl:max-w-1110 mx-auto">
       <div className="container h-full lg:inline-flex">
         <div className="w-auto md:w-546px lg:w-734-38px h-auto mt-30px lg:mt-59px mb-30px lg:mb-60px md:mb-0 mx-auto">
           <img className="mx-20px" src="/imgs/web.svg" alt="dev" />
@@ -21,8 +21,8 @@ function SecMeeting() {
               Sua empresa segue um modelo tradicional de desenvolvimento? Podemos ajudá-lo a implementar uma cultura de startup.
             </p>
             <button className="h-52px w-full md:w-245px mt-34px bg-cian-1 hover:bg-cian-3 text-18 text-white font-semibold rounded">
-              SOLICITE UM ORÇAMENTO
-          </button>
+              AGENDAR UMA REUNIÃO
+            </button>
           </div>
         </div>
       </div>

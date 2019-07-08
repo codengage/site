@@ -6,7 +6,7 @@ function SecPartners() {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="h-auto bg-cover" style={{ backgroundImage: 'url(/imgs/background_full.svg)' }}>
+    <section id="clientes" className="h-auto bg-cover" style={{ backgroundImage: 'url(/imgs/background_full.svg)' }}>
       <div className="bg-black-1 opacity-95 h-full pt-30px lg:pt-40px">
         <div className="container h-full xl:max-w-1110 mx-auto">
           <div className="mx-20px font-semibold text-34 md:text-48-97 lg:text-58 text-center leading-none lg:leading-normal">

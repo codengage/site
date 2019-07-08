@@ -13,12 +13,12 @@ function Header({ siteTitle }) {
         </Link>
         
         <div className="md:float-right absolute hidden md:relative md:inline-flex md:visible items-center justify-between float-right md:w-456px lg:w-630px h-full pr-20px lg:pr-0 font-display text-black-1">
-            <Link to="/#0">Empresa</Link>
-            <Link to="/#1">Serviços</Link>
-            <Link to="/#2">Clientes</Link>
-            <Link to="/#3">Testemunho</Link>
-            <Link to="/#4">Talentos</Link>
-            <Link to="/#5">Contato</Link>
+            <Link to="/#empresa">Empresa</Link>
+            <Link to="/#servicos">Serviços</Link>
+            <Link to="/#clientes">Clientes</Link>
+            <Link to="/#testemunho">Testemunho</Link>
+            <Link to="/#talentos">Talentos</Link>
+            <Link to="/#contato">Contato</Link>
           </div>
 
         <button

@@ -6,7 +6,7 @@ function SecTestimony() {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="h-full bg-white pt-30px lg:pt-40px pb-30px lg:pb-60px">
+    <section id="testemunho" className="h-full bg-white pt-30px lg:pt-40px pb-30px lg:pb-60px">
       <div className="container lg:max-w-1065 mx-auto">
         <div className="mx-20px font-semibold text-34 md:text-46 lg:text-58 xl:text-58 text-center leading-none lg:leading-normal">
           <span className="text-black-3">O que nossos clientes </span>
