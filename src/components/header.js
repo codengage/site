@@ -7,7 +7,7 @@ function Header({ siteTitle }) {
 
   return (
     <nav className="lg:bg-white">
-      <div className="container pl-20px mt-20px lg:pt-0 flex flex-wrap items-center justify-between xxl:w-1110px h-39-80px lg:h-80px mx-auto">
+      <div className="container pl-20px mt-20px lg:pt-0 flex flex-wrap items-center justify-between xl:w-1110px h-39-80px lg:h-80px mx-auto">
         <Link to="/" className="float-left flex items-center w-125-63px lg:w-162-95px lg:h-51-61px">
           <img src="/imgs/logo-codengage.svg" alt="logo-codengage" />
         </Link>

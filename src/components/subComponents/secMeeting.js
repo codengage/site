@@ -6,18 +6,18 @@ function SecMeeting() {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="h-743px md:h-702px w-320px md:w-1110px mx-20px md:mx-auto">
-      <div className="md:h-full md:inline-flex">
-        <div className="w-full md:w-734-38px h-250-14px md:h-574-05px mt-30px md:mt-59px mb-30px md:mb-0">
-          <img className="" src="/imgs/web.svg" alt="dev" />
+    <section className="h-auto xl:max-w-1110 mx-auto">
+      <div className="container h-full lg:inline-flex">
+        <div className="w-auto md:w-546px lg:w-734-38px h-auto mt-30px lg:mt-59px mb-30px lg:mb-60px md:mb-0 mx-auto">
+          <img className="mx-20px" src="/imgs/web.svg" alt="dev" />
         </div>
-        <div className="md:w-269px h-full md:ml-111-63px">
-          <p className="w-full md:h-165px text-18 md:text-26 font-display leading-125 md:leading-115 mt-30px md:mt-65px text-center md:text-left">
+        <div className="max-w-380 md:max-w-424 lg:w-269px h-full mx-auto lg:mr-0 xl:ml-60px xxl:ml-111-63px text-center lg:text-left">
+          <p className="h-auto text-18 md:text-24 xl:text-26 font-display leading-125 md:leading-115 mt-30px lg:mt-65px mx-20px lg:mx-auto">
             Somos ágeis, metódicos e valorizamos a autonomia para entregar serviços com qualidade.
           </p>
-          <div className="md:w-264px mt-30px md:mt-7px">
-            <img className="w-148-26px md:w-205-29px md:h-162-15px mx-auto" src="/imgs/tela.svg" alt="" />
-            <p className="md:w-full md:h-90px text-18 md:text-14 font-display leading-130 mt-35px md:mt-48-89px text-center md:text-left">
+          <div className="mx-20px lg:w-264px mt-30px lg:mt-40px mb-30px lg:mb-60px">
+            <img className="w-148-26px md:w-245px lg:w-205-29px h-auto mx-auto" src="/imgs/tela.svg" alt="" />
+            <p className="md:w-full h-auto text-18 xl:text-14 font-display leading-130 mt-35px lg:mt-48-89px">
               Sua empresa segue um modelo tradicional de desenvolvimento? Podemos ajudá-lo a implementar uma cultura de startup.
             </p>
             <button className="h-52px w-full md:w-245px mt-34px bg-cian-1 hover:bg-cian-3 text-18 text-white font-semibold rounded">

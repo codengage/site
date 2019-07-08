@@ -7,15 +7,15 @@ function secInitial() {
 
   return (
     <section className="container mt-54-14px lg:mt-85px xl:mt-164-23px mb-30px lg:mb-80px xl:mb-159px lg:w-974px xxl:w-1111px h-auto mx-auto">
-      <div className="lg:float-left w-288px lg:w-452px xxl:w-546-11px h-172-34px lg:h-full mx-auto lg:mx-0">
+      <div className="lg:float-left w-288px md:w-350px lg:w-452px xxl:w-546-11px h-172-34px lg:h-full mx-auto lg:mx-0">
         <img className="float-left" src="/imgs/balanco.svg" alt="Menos é mais" />
       </div>
-      <div className="lg:float-right xl:w-456px mt-53-53px lg:mt-0">
-        <div className="h-51px xl:h-79px w-298px lg:w-auto mx-auto lg:mx-0">
-          <span className="font-semibold text-48-97 leading-none lg:text-78 text-black-1">Menos é </span>
-          <span className="font-semibold text-48-97 leading-none lg:text-78 text-cian-1">mais.</span>
+      <div className="lg:float-right xl:w-456px mt-50px lg:mt-0 text-center lg:text-left">
+        <div className="h-51px xl:h-79px w-298px md:w-369px lg:w-auto mx-auto lg:mx-0 font-semibold text-48-97 md:text-58 lg:text-78 leading-none">
+          <span className="text-black-1">Menos é </span>
+          <span className="text-cian-1">mais.</span>
         </div>
-        <div className="w-296px lg:w-428px h-85px lg:h-126px mx-auto lg:ml-3px mt-38px lg:mr-25px">
+        <div className="w-296px lg:w-428px h-85px lg:h-126px mx-auto lg:ml-3px mt-15px lg:mt-38px lg:mr-25px">
           <p className="text-18 lg:text-26 text-center lg:text-left leading-120 lg:leading-normal text-black-3 leading-tight">
             Este conceito minimalista pode facilitar muito o seu negócio. Saiba como podemos ajudá-lo a alcançar seus objetivos com menos.
           </p>

@@ -7,7 +7,7 @@ function SecTeam() {
 
   return (
     <section className="container h-auto lg:w-1110px mx-auto pt-29-52px lg:pt-40px">
-      <div className="font-semibold text-34 lg:text-58 text-center mx-20px lg:mx-auto leading-none md:leading-tight">
+      <div className="font-semibold text-34 md:text-48-97 lg:text-58 text-center mx-20px lg:mx-auto leading-none md:leading-tight">
         <span className="text-black-1">Um time </span>
         <span className="text-cian-1">completo de TI.</span>
       </div>
