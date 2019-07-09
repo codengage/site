@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 
@@ -15,6 +15,22 @@ import SecCodengage from "./subComponents/secCodengage";
 import SecTestimony from "./subComponents/secTestimony";
 
 function Layout({ children }) {
+  const [isScroll, toggleScroll] = useState(false);
+
+  useEffect((isScroll) => {
+    window.addEventListener('scroll', () => {
+      if(window.innerWidth >= 1024) {
+        window.pageYOffset >= 57.5 ?
+          toggleScroll(true) :
+          toggleScroll(false);
+      } else {
+        window.pageYOffset >= 8 ?
+          toggleScroll(true) :
+          toggleScroll(false);
+      }
+    })
+  },[])
+
   return (
     <StaticQuery
       query={graphql`
@@ -27,10 +43,9 @@ function Layout({ children }) {
         }
       `}
       render={data => (
-        <div className="bg-gray-1 flex flex-col font-display min-h-screen text-gray-900">
-          <Header siteTitle={data.site.siteMetadata.title} />
-
-          <SecInitial />
+        <div className="bg-gray-1 flex flex-col font-display" >
+          <Header siteTitle={data.site.siteMetadata.title} scroll={isScroll} />
+          <SecInitial scroll={isScroll} />
           <SecCodengage />
           <SecTeam />
           <SecSquad />
