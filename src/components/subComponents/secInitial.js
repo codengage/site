@@ -2,11 +2,11 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 
-function secInitial() {
+function secInitial({ scroll }) {
   // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <section className="container mt-54-14px lg:mt-85px xl:mt-164-23px mb-30px lg:mb-80px xl:mb-159px lg:w-974px xxl:w-1111px h-auto mx-auto">
+    <section className={ scroll ? "container mt-114px lg:mt-245px mb-30px lg:mb-80px xl:mb-159px lg:w-974px xxl:w-1111px h-auto mx-auto" : "container mt-54-14px lg:mt-85px xl:mt-164-23px mb-30px lg:mb-80px xl:mb-159px lg:w-974px xxl:w-1111px h-auto mx-auto" }>
       <div className="lg:float-left w-288px md:w-350px lg:w-452px xxl:w-546-11px h-172-34px lg:h-full mx-auto lg:mx-0">
         <img className="float-left" src="/imgs/balanco.svg" alt="Menos é mais" />
       </div>
