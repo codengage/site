@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
 
-function Header({ siteTitle, scroll }) {
+function Header({ scroll }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
@@ -9,13 +9,13 @@ function Header({ siteTitle, scroll }) {
       <div className="mx-auto h-auto">
         <div className="absolute invisible lg:relative lg:visible container h-57-82px xl:w-1110px mx-auto">
           <div className="inline-flex justify-between w-73px h-18px float-right mt-30px">
-            <a href="https://www.instagram.com/codengagecom/" target="_blank">
+            <a href="https://www.instagram.com/codengagecom/" rel="noopener">
               <img src="/icons/instagram-brands.svg" alt="instagram icon" />
             </a>
-            <a href="https://www.facebook.com/codengagecom/" target="_blank">
+            <a href="https://www.facebook.com/codengagecom/" rel="noopener">
               <img src="/icons/facebook-square-brands.svg" alt="facebook icon" />
             </a>
-            <a href="https://www.linkedin.com/company/codengage" target="_blank">
+            <a href="https://www.linkedin.com/company/codengage" rel="noopener">
               <img src="/icons/linkedin-brands.svg" alt="linkedin icon" />
             </a>
           </div>
@@ -58,13 +58,13 @@ function Header({ siteTitle, scroll }) {
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#contato" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Contato</Link>
 
               <div className="inline-flex justify-between w-100px h-18px mt-22px mx-auto mb-18px">
-                <a href="https://www.instagram.com/codengagecom/" target="_blank">
+                <a href="https://www.instagram.com/codengagecom/" rel="noopener">
                   <img src="/icons/instagram-brands.svg" alt="instagram icon" />
                 </a>
-                <a href="https://www.facebook.com/codengagecom/" target="_blank">
+                <a href="https://www.facebook.com/codengagecom/" rel="noopener">
                   <img src="/icons/facebook-square-brands.svg" alt="facebook icon" />
                 </a>
-                <a href="https://www.linkedin.com/company/codengage" target="_blank">
+                <a href="https://www.linkedin.com/company/codengage" rel="noopener">
                   <img src="/icons/linkedin-brands.svg" alt="linkedin icon" />
                 </a>
               </div>

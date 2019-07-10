@@ -1,9 +1,6 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 
 function SecMeeting() {
-  // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <section id="servicos" className="h-auto xl:max-w-1110 mx-auto">

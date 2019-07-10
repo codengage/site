@@ -1,9 +1,6 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 
 function secCodengage() {
-  // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <section id="empresa" className="bg-white h-auto">

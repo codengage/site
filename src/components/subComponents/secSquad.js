@@ -1,6 +1,4 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 
 function SecSquad() {
   // const [isExpanded, toggleExpansion] = useState(false);

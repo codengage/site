@@ -48,13 +48,13 @@ function Footer() {
               <p className="text-white text-10 font-display">&nbsp;Codengage 2019</p>
             </div>
             <div className="relative inline-flex justify-between w-73px h-18px float-right mt-17px mb-15px">
-              <a href="https://www.instagram.com/codengagecom/" target="_blank">
+              <a href="https://www.instagram.com/codengagecom/" rel="noopener">
                 <img src="/icons/instagram-brands-white.svg" alt="instagram icon" />
               </a>
-              <a href="https://www.facebook.com/codengagecom/" target="_blank">
+              <a href="https://www.facebook.com/codengagecom/" rel="noopener">
                 <img src="/icons/facebook-square-brands-white.svg" alt="facebook icon" />
               </a>
-              <a href="https://www.linkedin.com/company/codengage" target="_blank">
+              <a href="https://www.linkedin.com/company/codengage" rel="noopener">
                 <img src="/icons/linkedin-brands-white.svg" alt="linkedin icon" />
               </a>
             </div>
