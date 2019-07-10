@@ -18,11 +18,11 @@ function SecJoinIn() {
           </div>
           <div className="lg:float-right lg:w-541px mt-30px lg:mt-48px flex lg:content-between flex-wrap">
             <p className="font-display text-14 md:text-18 leading-140 text-center lg:text-left">
-              Venha trabalhar em uma empresa dinâmica, motivada que cresce 100% ao ano desde a sua fundação em 2015. Seja um profissional diferenciado, trabalhando com uma equipe talentosa que não mede esforços para evoluir e compartilhar conhecimentos.
+              Venha trabalhar em uma empresa dinâmica, motivada que cresce 100% ao ano desde a sua fundação em 2015. Seja um profissional diferenciado, trabalhando com uma equipe talentos a que não mede esforços para evoluir e compartilhar conhecimentos.
             </p>
-            <button className="h-52px w-full md:w-245px mx-auto lg:ml-3px mt-20px lg:mt-0 bg-black-1 hover:bg-black-5 text-18 text-white font-semibold rounded">
+            <a href="https://codengage.compleo.com.br/" target="_blank"  className="text-center py-13px h-52px w-full md:w-245px mx-auto lg:ml-3px mt-20px lg:mt-0 bg-black-1 hover:bg-black-5 text-18 text-white font-semibold rounded" >
               VAGAS ABERTAS
-        </button>
+            </a>
           </div>
         </div>
       </div>
