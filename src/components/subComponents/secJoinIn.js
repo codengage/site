@@ -14,7 +14,7 @@ function SecJoinIn() {
       <div className="max-w-380 sm:max-w-424 lg:max-w-848 mx-auto h-auto">
         <div className="mx-20px lg:inline-flex lg:w-full lg:justify-between">
           <div className="mx-auto lg:mx-0 lg:float-left w-138-32px md:w-162px mt-18px">
-            <img src="/imgs/cafe.svg" alt="coffe" />
+            <img src="/images/cafe.svg" alt="coffe" />
           </div>
           <div className="lg:float-right lg:w-541px mt-30px lg:mt-48px flex lg:content-between flex-wrap">
             <p className="font-display text-14 md:text-18 leading-140 text-center lg:text-left">

@@ -18,10 +18,10 @@ function SecTeam() {
       </div>
       <div className="w-full h-auto lg:h-405px xl:h-469-18px mb-27px md:mb-40px lg:mb-50px lg:max-w-980 xl:max-w-1110 mx-auto">
         <div className="lg:float-left w-320px md:w-546-11px lg:w-456px xl:w-546-11px h-auto mx-auto lg:mx-0">
-          <img className="flex float-left w-154-82px md:hidden" src="/imgs/mobile1.svg" alt="imgs/mobile1" />
-          <img className="flex float-right w-154-82px md:hidden" src="/imgs/mobile2.svg" alt="imgs/mobile2" />
-          <img className="hidden md:block" src="/imgs/mobile.svg" alt="imgs/mobile" />
-          {/* <img className="float-left" src="/assets/imgs/mobile1.svg" alt="imgs/mobile"/> */}
+          <img className="flex float-left w-154-82px md:hidden" src="/images/mobile1.svg" alt="images/mobile1" />
+          <img className="flex float-right w-154-82px md:hidden" src="/images/mobile2.svg" alt="images/mobile2" />
+          <img className="hidden md:block" src="/images/mobile.svg" alt="images/mobile" />
+          {/* <img className="float-left" src="/assets/images/mobile1.svg" alt="images/mobile"/> */}
         </div>
         <div className="lg:float-right w-320px md:w-456px xl:h-full mx-auto lg:mx-0 text-center lg:text-left mt-38-50px lg:mt-0">
           <div className="h-auto xl:h-247px">

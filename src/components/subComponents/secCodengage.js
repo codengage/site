@@ -18,11 +18,11 @@ function secCodengage() {
             </p>
         </div>
       </div>
-      <div className="h-auto xl:h-677px md:w-full bg-cover px-20px" style={{ backgroundImage: 'url(/imgs/background_full.svg)' }}>
+      <div className="h-auto xl:h-677px md:w-full bg-cover px-20px" style={{ backgroundImage: 'url(/images/background_full.svg)' }}>
         <div className="lg:w-581px h-full mx-auto max-w-366 md:max-w-480 lg:max-w-677 bg-cian-1 opacity-95">
           <div className="h-full ml-36-90px md:ml-67px mr-23-48px md:mr-42-63px pt-33-28px lg:pt-60-42px">
             <div className="h-161-28px lg:h-292-83px mb-32-91px lg:mb-59-75px mx-auto">
-              <img className="h-full lg:float-left" src="/imgs/lula.svg" alt="lula I love tech" />
+              <img className="h-full lg:float-left" src="/images/lula.svg" alt="lula I love tech" />
             </div>
             <div className="h-139-31px md:h-213px mb-28-22px lg:mb-50px text-left leading-120 md:leading-130 lg:leading-normal text-16 md:text-24 lg:text-26 mx-auto">
               <span className="text-white">Acreditamos muito nas pessoas</span>

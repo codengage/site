@@ -19,7 +19,7 @@ function Footer() {
               </form>
             </div>
             <div className="absolute lg:relative w-full left-0 -bottom-32 lg:bottom-0 lg:w-179-55px lg:h-228-23px lg:pt-4-89px lg:-mb-85-12px xl:mr-0 xl:ml-84-65px">
-              <img className="mx-auto" src="/imgs/mimi.svg" alt="mimi codengage" />
+              <img className="mx-auto" src="/images/mimi.svg" alt="mimi codengage" />
             </div>
             <div className="w-full lg:w-auto justify-between inline-flex h-148px mt-29px lg:mt-0 lg:mb-0">
               <div className="lg:w-161px lg:h-119px lg:mb-26px pt-3px xl:ml-88-4px text-14 font-display">

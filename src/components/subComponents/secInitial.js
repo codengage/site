@@ -8,7 +8,7 @@ function secInitial({ scroll }) {
   return (
     <section className={ scroll ? "container mt-114px lg:mt-245px mb-30px lg:mb-80px xl:mb-159px lg:w-974px xxl:w-1111px h-auto mx-auto" : "container mt-54-14px lg:mt-85px xl:mt-164-23px mb-30px lg:mb-80px xl:mb-159px lg:w-974px xxl:w-1111px h-auto mx-auto" }>
       <div className="lg:float-left w-288px md:w-350px lg:w-452px xxl:w-546-11px h-172-34px lg:h-full mx-auto lg:mx-0">
-        <img className="float-left" src="/imgs/balanco.svg" alt="Menos é mais" />
+        <img className="float-left" src="/images/balanco.svg" alt="Menos é mais" />
       </div>
       <div className="lg:float-right xl:w-456px mt-50px lg:mt-0 text-center lg:text-left">
         <div className="h-51px xl:h-79px w-298px md:w-369px lg:w-auto mx-auto lg:mx-0 font-semibold text-48-97 md:text-58 lg:text-78 leading-none">
