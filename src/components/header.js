@@ -20,7 +20,7 @@ function Header({ siteTitle, scroll }) {
             </a>
           </div>
         </div>
-        <div className={ scroll ? "bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px lg:mt-0 h-39-80px lg:h-80px w-full"}>
+        <div className={ scroll ? "transition-slower transition-timing-ease-out transition-property-bg transition-delay-longer bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px lg:mt-0 h-39-80px lg:h-80px w-full"}>
           <div className="container pl-20px lg:pl-0 flex flex-wrap items-center justify-between xl:w-1110px h-full mx-auto">
             <Link to="/" className="float-left flex items-center w-125-63px lg:w-162-95px lg:h-65-78px">
               <img src="/images/logo-codengage.svg" alt="logo-codengage" />
