@@ -14,7 +14,7 @@ function SecContact() {
         method: 'POST',
         headers: {
           "Content-type": "application/json",
-          "Authorization": "Basic 0a426dfc7c2733e3ea1656ab67ce8181-us8"
+          "Authorization": "Basic ####################################"
         },
         body: JSON.stringify({
           email_address: email,
@@ -29,7 +29,7 @@ function SecContact() {
 
       console.log('data',data)
   
-      fetch("https://us3.api.mailchimp.com/3.0/lists/e6b15f892e/members/", data);
+      fetch("https://###.api.mailchimp.com/3.0/lists/##########/members/", data);
     }
   }
 
