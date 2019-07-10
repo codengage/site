@@ -331,5 +331,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: []
+  plugins: [
+    require('glhd-tailwindcss-transitions')(),
+  ],
 }
