@@ -53,7 +53,7 @@ function Header({ siteTitle, scroll }) {
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#empresa" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Empresa</Link>
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#servicos" onClick={() => toggleExpansion(!isExpanded)}><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Serviços</Link>
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#clientes" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Clientes</Link>
-              <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/testemunho" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Testemunho</Link>
+              <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#testemunho" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Testemunho</Link>
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#talentos" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Talentos</Link>
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#contato" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Contato</Link>
 

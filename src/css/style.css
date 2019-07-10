@@ -14,3 +14,9 @@
 @tailwind components;
 
 @tailwind utilities;
+
+macro-carousel-pagination-indicator {
+    --macro-carousel-pagination-color: #ffffff33;
+    --macro-carousel-pagination-color-selected: #04BFCB;
+    --macro-carousel-pagination-size-dot: 12.18px;
+  }
