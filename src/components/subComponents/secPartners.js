@@ -53,9 +53,11 @@ function SecPartners() {
               {
                 logos.map((logo, index) => {
                   return (
-                    <article key={index} class="inline-flex justify-between mb-30px">
-                      <img className="ml-20px w-150px" src={`/images/${logo[1]}.svg`} alt={`icon ${logo[1]}`} />
-                      <img className="mr-20px w-150px" src={`/images/${logo[2]}.svg`} alt={`icon ${logo[2]}`} />
+                    <article key={index} class="w-full mb-30px mr-0">
+                      <div className="w-full px-auto inline-flex justify-around">
+                        <img className="w-150px" src={`/images/${logo[1]}.svg`} alt={`icon ${logo[1]}`} />
+                        <img className="w-150px" src={`/images/${logo[2]}.svg`} alt={`icon ${logo[2]}`} />
+                      </div>
                     </article>)
                 })
               }
