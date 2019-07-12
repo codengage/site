@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// import { postMessage } from '../../services/index';
+
 function SecContact() {
   const [email, changeEmail] = useState("");
   const [fullName, changeFullName] = useState("");
@@ -10,12 +12,6 @@ function SecContact() {
     event.preventDefault();
     if (email && fullName && message && telefone) {
       const data = {
-        mode: 'no-cors',
-        method: 'POST',
-        headers: {
-          "Content-type": "application/json",
-          "Authorization": "Basic ####################################"
-        },
         body: JSON.stringify({
           email_address: email,
           status: "subscribed",
@@ -27,9 +23,8 @@ function SecContact() {
         }),
       }
 
-      console.log('data',data)
+      // postMessage(data)
   
-      fetch("https://###.api.mailchimp.com/3.0/lists/##########/members/", data);
     }
   }
 
