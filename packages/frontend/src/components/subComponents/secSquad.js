@@ -1,4 +1,5 @@
 import React from "react";
+// import { graphql, StaticQuery } from "gatsby";
 
 function SecSquad() {
   // const [isExpanded, toggleExpansion] = useState(false);
