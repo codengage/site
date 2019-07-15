@@ -20,10 +20,10 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     {
-      resolve: "gatsby-plugin-purgecss",
+      resolve: 'gatsby-plugin-purgecss',
       options: {
         tailwind: true,
-        purgeOnly: ["src/css/style.css"]
+        purgeOnly: ['src/css/style.css']
       }
     },
     {
@@ -31,7 +31,7 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`
-      },
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -39,8 +39,8 @@ module.exports = {
         commonmark: true,
         footnotes: true,
         pedantic: true,
-        gfm: true,
+        gfm: true
       }
     }
   ]
-};
+}

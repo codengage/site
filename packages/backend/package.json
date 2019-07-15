@@ -1,15 +1,15 @@
 {
-  "name": "codengage",
+  "name": "@codengage/site-backend",
   "description": "Landing Page Codengage",
   "version": "1.0.0",
   "private": true,
   "license": "All copyrights reserved - Codengage",
   "author": "Team Codengage <codengage@gmail.com>",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "dev:backend": "yarn workspace @codengage/site-backend run dev",
-    "dev:frontend": "yarn workspace @codengage/site-frotend run dev"
+    "dev": "micro"
+  },
+  "dependencies": {
+    "mailchimp-api-v3": "^1.13.0",
+    "micro": "^9.3.4"
   }
 }

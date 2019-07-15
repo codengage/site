@@ -4,7 +4,7 @@ module.exports = {
       display: ['Myriad Pro', 'sans-serif'],
       body: ['Myriad Pro', 'sans-serif'],
       bold: ['Myriad Pro', 'sans-serif'],
-      semibold: ['Myriad Pro', 'sans-serif'],
+      semibold: ['Myriad Pro', 'sans-serif']
     },
     fontSize: {
       '10': '10px',
@@ -20,11 +20,11 @@ module.exports = {
       '46': '46px',
       '48-97': '48.97px',
       '58': '58px',
-      '78': '74.93px',
+      '78': '74.93px'
     },
     extend: {
       screens: {
-        'xxl':  '1440px'
+        xxl: '1440px'
       },
       colors: {
         black: {
@@ -35,23 +35,23 @@ module.exports = {
           5: '#121312',
           6: '#0C0C0D',
           7: '#0C0D0D',
-          8: '#00000029',//16%
-          9: '#0000001A',//10%
+          8: '#00000029', //16%
+          9: '#0000001A' //10%
         },
         cian: {
           1: '#04BFCB',
           2: '#21BFCA',
           3: '#08C0CC',
-          4: '#79DBE2',
+          4: '#79DBE2'
         },
         white: '#FFFFFF',
         gray: {
           1: '#F5F5F5',
           2: '#E0E0E0',
           3: '#290000',
-          4: '#7F7F7F',
+          4: '#7F7F7F'
         },
-        red: '#EB2226',
+        red: '#EB2226'
       },
       spacing: {
         '3px': '3px',
@@ -178,7 +178,7 @@ module.exports = {
         '154px': '154px',
         '154-82px': '154.82px',
         '159px': '159px',
-        
+
         '161px': '161px',
         '161-28px': '161.28px',
         '162px': '162px',
@@ -275,28 +275,28 @@ module.exports = {
         '1111px': '1111px',
         '1221px': '1221px',
         '1455px': '1455px',
-        '1674px': '1674px',
+        '1674px': '1674px'
       },
       opacity: {
         '95': '0.95',
-        '98': '0.98',
+        '98': '0.98'
       },
       lineHeight: {
         105: 1.05,
-        110: 1.10,
+        110: 1.1,
         115: 1.15,
-        120: 1.20,
+        120: 1.2,
         125: 1.25,
         128: 1.28,
-        130: 1.30,
-        140: 1.40,
+        130: 1.3,
+        140: 1.4,
         145: 1.45
       },
       maxHeight: {
-        '180': '180px',
+        '180': '180px'
       },
       minWidth: {
-        '20': '20px',
+        '20': '20px'
       },
       maxWidth: {
         '150': '150px',
@@ -316,7 +316,7 @@ module.exports = {
         '980': '980px',
         '1025': '1025px',
         '1065': '1065px',
-        '1110': '1110px',
+        '1110': '1110px'
       },
       inset: {
         '52': '52px',
@@ -328,10 +328,8 @@ module.exports = {
       boxShadow: {
         bottom: '0 4px 5px -3px rgba(0, 0, 0, .1)'
       }
-    },
+    }
   },
   variants: {},
-  plugins: [
-    require('glhd-tailwindcss-transitions')(),
-  ],
+  plugins: [require('glhd-tailwindcss-transitions')()]
 }
