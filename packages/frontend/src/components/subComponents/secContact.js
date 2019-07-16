@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { graphql, StaticQuery } from "gatsby";
 
-// import { postMessage } from '../../services/index';
+import postMessage from '../../../../backend/index';
 
 function SecContact() {
   const [email, changeEmail] = useState("");
@@ -24,7 +24,7 @@ function SecContact() {
         }),
       }
 
-      // postMessage(data)
+      postMessage(data)
     }
   }
 
