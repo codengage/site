@@ -38,9 +38,9 @@ function SecMeeting() {
                     </p>
                   )
                 }
-                <button className="h-52px w-full md:w-245px mt-34px bg-cian-1 hover:bg-cian-3 text-18 text-white font-semibold rounded">
-                  AGENDAR UMA REUNIÃO
-            </button>
+                <a href="https://calendar.google.com/calendar/b/3?cid=Y29tZXJjaWFsQGNvZGVuZ2FnZS5jb20" rel="noopener" target="_blank" className="block text-center py-13px h-52px w-full md:w-245px mx-auto lg:ml-3px mt-34px bg-cian-1 hover:bg-cian-3 text-18 text-white font-semibold rounded" >
+                AGENDAR UMA REUNIÃO
+                </a>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ function SecJoinIn() {
                 }
                 <a href="https://codengage.compleo.com.br/" rel="noopener" className="text-center py-13px h-52px w-full md:w-245px mx-auto lg:ml-3px mt-20px lg:mt-0 bg-black-1 hover:bg-black-5 text-18 text-white font-semibold rounded" >
                   VAGAS ABERTAS
-            </a>
+                </a>
               </div>
             </div>
           </div>
