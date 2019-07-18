@@ -9,7 +9,9 @@
     "dev": "micro"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "mailchimp-api-v3": "^1.13.0",
-    "micro": "^9.3.4"
+    "micro": "^9.3.4",
+    "micro-cors": "^0.1.1"
   }
 }

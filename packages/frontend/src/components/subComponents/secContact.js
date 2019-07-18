@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import { graphql, StaticQuery } from "gatsby";
 
-import postMessage from '../../../../backend/index';
-
 function SecContact() {
   const [email, changeEmail] = useState("");
   const [fullName, changeFullName] = useState("");
   const [message, changeMessage] = useState("");
   const [telefone, changeTelefone] = useState("");
+  const [error, changeError] = useState(false);
 
   function handleSubmit(event) {
+    console.log('handleSubmit')
     event.preventDefault();
+
     if (email && fullName && message && telefone) {
       const data = {
+        method: 'POST',
+        headers: {
+          // "Content-type": "application/json",
+          "Accept": "application/json"
+        },
+        mode: 'cors',
         body: JSON.stringify({
           email_address: email,
           status: "subscribed",
@@ -22,9 +29,17 @@ function SecContact() {
             MESSAGE: message
           }
         }),
-      }
+      }     
 
-      postMessage(data)
+      fetch('http://localhost:3000', data)
+        .then(res => res.json())
+        .then(res => {
+          res.erro ? changeError(true) : changeError(false);
+          
+        })
+        .catch (e => {
+          console.log('e', e)
+        })
     }
   }
 
