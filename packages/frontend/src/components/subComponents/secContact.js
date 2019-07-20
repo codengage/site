@@ -16,7 +16,6 @@ function SecContact() {
       const data = {
         method: 'POST',
         headers: {
-          // "Content-type": "application/json",
           "Accept": "application/json"
         },
         mode: 'cors',
@@ -27,7 +26,10 @@ function SecContact() {
             FULLNAME: fullName,
             PHONE: telefone,
             MESSAGE: message
-          }
+          },
+          tags: [
+            { "name": "Contact", "status": "active" }
+          ],
         }),
       }     
 
