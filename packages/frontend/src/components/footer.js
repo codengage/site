@@ -1,7 +1,42 @@
 import { Link } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 
 function Footer() {
+  const [email, changeEmail] = useState("");
+  const [error, changeError] = useState(false);
+
+  function handleSubmit(event) {
+    console.log('handleSubmit')
+    event.preventDefault();
+
+    if (email) {
+      const data = {
+        method: 'POST',
+        headers: {
+          "Accept": "application/json"
+        },
+        mode: 'cors',
+        body: JSON.stringify({
+          email_address: email,
+          status: "subscribed",
+          tags: [
+            { "name": "Newsletter", "status": "active" }
+          ],
+        }),
+      }     
+
+      console.log('dt', data)
+      fetch('http://localhost:3000', data)
+        .then(res => res.json())
+        .then(res => {
+          res.erro ? changeError(true) : changeError(false);
+          
+        })
+        .catch (e => {
+          console.log('e', e)
+        })
+    }
+  }
 
   return (
     <div className="h-auto">
@@ -12,8 +47,8 @@ function Footer() {
               <h5 className="font-bold w-full lg:w-auto mb-20px lg:mb-0">Assine nossa Newsletter mensal</h5>
               <p className="font-display lg:w-350px leading-145 mb-20px lg:mb-0">Acompanhe-nos recebendo mensalmente novidades sobre o mercado de tecnologia no seu email.</p>
               <form className="mx-auto lg:mx-0 inline-flex w-320px">
-                <input className="bg-white float-left w-214-8px h-40-91px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14" id="email_news" type="email" placeholder="Email"></input>
-                <button className="float-right w-85px lg:w-122-74px h-40-91px ml-10px bg-cian-1 hover:bg-cian-3 text-12 text-white font-semibold rounded" type="submit">
+                <input className="bg-white float-left w-214-8px h-40-91px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14" type="email" placeholder="Email" required value={email} onChange={e => changeEmail(e.target.value)}></input>
+                <button className="float-right w-85px lg:w-122-74px h-40-91px ml-10px bg-cian-1 hover:bg-cian-3 text-12 text-white font-semibold rounded" type="submit" onClick={e => handleSubmit(e)}>
                   ASSINAR
                 </button>
               </form>
