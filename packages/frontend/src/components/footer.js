@@ -47,13 +47,13 @@ function Footer() {
               <h5 className="font-bold w-full lg:w-auto mb-20px lg:mb-0">Assine nossa Newsletter mensal</h5>
               <p className="font-display lg:w-350px leading-145 mb-20px lg:mb-0">Acompanhe-nos recebendo mensalmente novidades sobre o mercado de tecnologia no seu email.</p>
               <form className="mx-auto lg:mx-0 inline-flex w-320px">
-                <input className="bg-white float-left w-214-8px h-40-91px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14" type="email" placeholder="Email" required value={email} onChange={e => changeEmail(e.target.value)}></input>
+                <input className="bg-white float-left xs:w-214-8px h-40-91px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14" type="email" placeholder="Email" required value={email} onChange={e => changeEmail(e.target.value)}></input>
                 <button className="float-right w-85px lg:w-122-74px h-40-91px ml-10px bg-cian-1 hover:bg-cian-3 text-12 text-white font-semibold rounded" type="submit" onClick={e => handleSubmit(e)}>
                   ASSINAR
                 </button>
               </form>
             </div>
-            <div className="absolute lg:relative w-full left-0 -bottom-32 lg:bottom-0 lg:w-179-55px lg:h-228-23px lg:pt-4-89px lg:-mb-85-12px xl:mr-0 xl:ml-84-65px">
+            <div className="absolute lg:relative w-full left-0 -bottom-28 xs:-bottom-32 lg:bottom-0 lg:w-179-55px lg:h-228-23px lg:pt-4-89px lg:-mb-85-12px xl:mr-0 xl:ml-84-65px">
               <img className="mx-auto" src="/images/mimi.svg" alt="mimi codengage" />
             </div>
             <div className="w-full lg:w-auto justify-between inline-flex h-148px mt-29px lg:mt-0 lg:mb-0">

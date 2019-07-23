@@ -24,6 +24,7 @@ module.exports = {
     },
     extend: {
       screens: {
+        xs: '360px',
         xxl: '1440px'
       },
       colors: {
@@ -320,7 +321,9 @@ module.exports = {
       },
       inset: {
         '52': '52px',
-        '-32': '-32px'
+        '0': '0 !important',
+        '-32': '-32px',
+        '-28': '-28px',
       },
       zIndex: {
         '1': '1'
