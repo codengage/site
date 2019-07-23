@@ -48,7 +48,7 @@ function Header({ scroll }) {
           </div>
         </div>
         <div 
-          className={ isExpanded ? ( scroll ? "fixed top-52 z-1 bg-white w-auto pt-22px shadow-bottom visible md:invisible": "z-1 bg-white w-auto pt-22px shadow-bottom absolute visible md:invisible" ) : "w-auto mt-22px shadow-bottom absolute invisible" }>
+          className={ isExpanded ? ( scroll ? "fixed top-52 z-1 bg-white w-full pt-22px shadow-bottom visible md:invisible": "z-1 bg-white w-full pt-22px shadow-bottom absolute visible md:invisible" ) : "absolute invisible" }>
           <div className="w-auto h-auto mx-20px flex content-between flex-wrap font-display text-14 text-black-1">
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#empresa" onClick={() => toggleExpansion(!isExpanded)} ><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Empresa</Link>
               <Link className="w-full pt-6px pb-6px border-b border-black-9 inline-flex" to="/#servicos" onClick={() => toggleExpansion(!isExpanded)}><img src="icons/icon-play.svg" alt="icon list"/>&nbsp;Serviços</Link>
