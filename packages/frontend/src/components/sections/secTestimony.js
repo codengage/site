@@ -70,36 +70,6 @@ function SecTestimony() {
                   </div>
                 )
               }
-              {/* <div className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
-                <img className="md:float-left w-full md:w-auto" src="/images/foto1.png" alt="foto Felix Rode" />
-                <div className="px-5px md:float-right md:px-20px lg:px-0">
-                  <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
-                    <p className="text-cian-1 text-16">Felix Rode</p>
-                    <p className="text-14 text-black-3">CTO Editora Sanar</p>
-                  </div>
-                </div>
-              </div>
-              <div className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
-                <img className="md:float-left w-full md:w-auto" src="/images/foto2.png" alt="foto Samantha Firman" />
-                <div className="px-5px md:float-right md:px-20px lg:px-0">
-                  <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
-                    <p className="text-cian-1 text-16">Samantha Firman</p>
-                    <p className="text-14 text-black-3">CEO Company</p>
-                  </div>
-                </div>
-              </div>
-              <div className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
-                <img className="md:float-left w-full md:w-auto" src="/images/foto3.png" alt="foto Samantha Firman" />
-                <div className="px-5px md:float-right md:px-20px lg:px-0">
-                  <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
-                    <p className="text-cian-1 text-16">Samantha Firman</p>
-                    <p className="text-14 text-black-3">CEO Company</p>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>
