@@ -7,13 +7,32 @@ function SecTestimony() {
   return (
     <StaticQuery
       query={graphql`
-        {
-          allMarkdownRemark(filter: { frontmatter: { title: { eq: "Testimony" } }}) {
+        query {
+          testimony: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Testimony" } }}) {
             edges {
               node {
                 excerpt(pruneLength: 200)
                 frontmatter {
                   title
+                }   
+              }
+            }
+          }
+          testimonys: allMarkdownRemark(
+            sort: {
+              fields: [frontmatter___order]
+              order: ASC }
+            filter: { frontmatter: { id: { eq: "testimony" } }}
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 300)
+                frontmatter {
+                  title
+                  company
+                  id
+                  img
+                  order
                 }   
               }
             }
@@ -29,7 +48,7 @@ function SecTestimony() {
             </div>
             <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-30px lg:mt-25px lg:mb-53-23px">
               {
-                data.allMarkdownRemark.edges.map(({ node }) =>
+                data.testimony.edges.map(({ node }) =>
                   <p key={node.frontmatter.title} className="text-14 md:text-18 font-display text-black-3 leading-tight mx-20px">
                     {node.excerpt}
                   </p>
@@ -37,7 +56,21 @@ function SecTestimony() {
               }
             </div>
             <div className="max-w-380 sm:max-w-full lg:inline-flex lg:justify-between w-full h-auto mx-auto">
-              <div className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
+              {
+                data.testimonys.edges.map(({ node }) =>
+                  <div key={node.frontmatter.order} className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
+                    <img className="md:float-left w-full md:w-auto" src={`/images/${node.frontmatter.img}.png`} alt={`foto ${node.frontmatter.title}`} />
+                    <div className="px-5px md:float-right md:px-20px lg:px-0">
+                      <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">{node.excerpt}</p>
+                      <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
+                        <p className="text-cian-1 text-16">{node.frontmatter.title}</p>
+                        <p className="text-14 text-black-3">{node.frontmatter.company}</p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+              {/* <div className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
                 <img className="md:float-left w-full md:w-auto" src="/images/foto1.png" alt="foto Felix Rode" />
                 <div className="px-5px md:float-right md:px-20px lg:px-0">
                   <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -66,7 +99,7 @@ function SecTestimony() {
                     <p className="text-14 text-black-3">CEO Company</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
