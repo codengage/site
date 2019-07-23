@@ -6,7 +6,7 @@ function Header({ scroll }) {
 
   return (
     <nav className={ isExpanded ? "bg-white" : "" }>
-      <div className={ scroll ? "mx-auto h-auto" : "mx-auto h-auto px-20px xl:px-0"}>
+      <div className={ scroll ? "mx-auto h-auto" : "mx-auto h-auto lg:px-20px xl:px-0"}>
         <div className="absolute invisible lg:relative lg:visible container h-57-82px xl:w-1110px mx-auto">
           <div className="inline-flex justify-between w-73px h-18px float-right mt-30px">
             <a href="https://www.instagram.com/codengagecom/" rel="noopener">
@@ -20,8 +20,8 @@ function Header({ scroll }) {
             </a>
           </div>
         </div>
-        <div className={ scroll ? "px-20px xl:px-0 transition-slower transition-timing-ease-out transition-property-bg transition-delay-longer bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px lg:mt-0 h-39-80px lg:h-80px w-full"}>
-          <div className={ scroll ? "container  xl:px-0 flex flex-wrap items-center justify-between xl:w-1110px h-full mx-auto" : "container pl-20px lg:pl-0 flex flex-wrap items-center justify-between xl:w-1110px h-full mx-auto"}>
+        <div className={ scroll ? "lg:px-20px xl:px-0 transition-slower transition-timing-ease-out transition-property-bg transition-delay-longer bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px lg:mt-0 h-39-80px lg:h-80px w-full"}>
+          <div className={ scroll ? "container pl-20px lg:pl-0 xl:px-0 flex flex-wrap items-center justify-between xl:w-1110px h-full mx-auto" : "container pl-20px lg:pl-0 flex flex-wrap items-center justify-between xl:w-1110px h-full mx-auto"}>
             <Link to="/" className="float-left flex items-center w-125-63px lg:w-162-95px lg:h-65-78px">
               <img src="/images/logo-codengage.svg" alt="logo-codengage" />
             </Link>
