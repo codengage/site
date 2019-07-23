@@ -1,14 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import { graphql, StaticQuery } from "gatsby";
+
+import Alert from '../alert';
 
 function SecContact() {
   const [email, changeEmail] = useState("");
   const [fullName, changeFullName] = useState("");
   const [message, changeMessage] = useState("");
   const [telefone, changeTelefone] = useState("");
-  const [error, changeError] = useState(false);
+  const [showAlert, changeShowAlert] = useState(false);
+
+  const initialState = { alert: '', title: '', content: '' }
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  function handleCloseAlert() {
+    changeShowAlert(false)
+  }
+
+  function reducer(state, action) {
+    console.log('reducer',state.alert)
+    switch (action.type) {
+      case 'incomplete':
+        return { 
+          alert: "error", 
+          title: "Campos vazios!",
+          content: "Por favor, preencha todos os campos." 
+        };
+      case 'error':
+        return { 
+          alert: action.type, 
+          title: "Falha ao enviar e-mail!",
+          content: "Por favor, tente novamente mais tarde." 
+        };
+      case 'success':
+        return { 
+          alert: action.type, 
+          title: "Sucesso!", 
+          content: "E-mail enviado corretamente, aguarde nosso retorno." };
+      default:
+        return { initialState }
+    }
+  }
 
   function handleSubmit(event) {
+    changeShowAlert(true)
+
     console.log('handleSubmit')
     event.preventDefault();
 
@@ -31,24 +68,29 @@ function SecContact() {
             { "name": "Contact", "status": "active" }
           ],
         }),
-      }     
+      }
 
       fetch('http://localhost:3000', data)
         .then(res => res.json())
         .then(res => {
-          res.erro ? changeError(true) : changeError(false);
-          
+          res.erro ?
+            dispatch({ type: 'error' }) :
+            dispatch({ type: 'success' });
+
         })
-        .catch (e => {
+        .catch(e => {
+          dispatch({ type: 'error' })
           console.log('e', e)
         })
+    } else {
+      dispatch({ type: 'incomplete' })
     }
   }
 
   return (
     <StaticQuery
       query={graphql`
-        {
+        query {
           allMarkdownRemark(filter: { frontmatter: { title: { eq: "Contact" } }}) {
             edges {
               node {
@@ -79,6 +121,9 @@ function SecContact() {
                 }
               </div>
               <div className="max-w-380 sm:max-w-424 md:max-w-677 lg:max-w-734 h-auto mx-auto mt-25px md:mt-23px">
+                
+                <Alert type={state.alert} title={state.title} content={state.content} show={showAlert} onClose={handleCloseAlert.bind(this)} />
+               
                 <form
                   className="mx-20px lg:mx-0">
                   <div className="mb-20px">
