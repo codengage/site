@@ -4,15 +4,15 @@ import { StaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
 import Footer from "./footer";
-import SecTeam from "./subComponents/secTeam";
-import SecSquad from "./subComponents/secSquad";
-import SecJoinIn from "./subComponents/secJoinIn";
-import SecInitial from "./subComponents/secInitial";
-import SecContact from "./subComponents/secContact";
-import SecMeeting from "./subComponents/secMeeting";
-import SecPartners from "./subComponents/secPartners";
-import SecCodengage from "./subComponents/secCodengage";
-import SecTestimony from "./subComponents/secTestimony";
+import SecTeam from "./sections/secTeam";
+import SecSquad from "./sections/secSquad";
+import SecJoinIn from "./sections/secJoinIn";
+import SecInitial from "./sections/secInitial";
+import SecContact from "./sections/secContact";
+import SecMeeting from "./sections/secMeeting";
+import SecPartners from "./sections/secPartners";
+import SecCodengage from "./sections/secCodengage";
+import SecTestimony from "./sections/secTestimony";
 
 function Layout({ children }) {
   const [isScroll, toggleScroll] = useState(false);
