@@ -20,7 +20,11 @@ function Layout({ children }) {
   useEffect((isScroll) => {
     window.addEventListener('scroll', () => {
       if(window.innerWidth >= 1024) {
-        window.pageYOffset >= 57.5 ?
+        window.pageYOffset >= 55 ?
+          toggleScroll(true) :
+          toggleScroll(false);
+      } else if(window.innerWidth >= 768) {
+        window.pageYOffset >= 45 ?
           toggleScroll(true) :
           toggleScroll(false);
       } else {
