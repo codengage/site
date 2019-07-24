@@ -1,15 +1,15 @@
 import React from "react";
 
 function Alert({ type, title, content, show, onClose }) {
-  let classes = "absolute invisible";  
+  let classes = "ab-inv";  
 
   if(show) {
     switch (type) {
       case 'succes':
-        classes = "transition-slow transition-timing-ease-out transition-property-all transition-delay-long mx-20px lg:mx-0 text-display mb-20px bg-green-2 border border-green-1 text-green-1 px-4 py-3 rounded relative opacity-100";
+        classes = "alert text-display bg-green-2 border-green-1 text-green-1";
         break;
       case 'error':
-        classes = "transition-slow transition-timing-ease-out transition-property-all transition-delay-long mx-20px lg:mx-0 text-display mb-20px bg-red-2 border border-red-1 text-red-1 px-4 py-3 rounded relative opacity-100";
+        classes = "alert text-display bg-red-2 border-red-1 text-red-1";
         break;
       default:
         break;
