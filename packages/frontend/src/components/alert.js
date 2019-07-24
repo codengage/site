@@ -1,13 +1,7 @@
 import React from "react";
 
 function Alert({ type, title, content, show, onClose }) {
-  console.log('Alert')
-  let classes = "absolute invisible";
-
-  console.log('type', type)
-
-  console.log('show', show)
-  
+  let classes = "absolute invisible";  
 
   if(show) {
     switch (type) {
@@ -37,6 +31,5 @@ function Alert({ type, title, content, show, onClose }) {
 
   return null;
 }
-
 
 export default Alert;
