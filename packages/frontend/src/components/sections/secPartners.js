@@ -34,8 +34,8 @@ function SecPartners() {
       render={data => (
         <section id="clientes" className="h-auto bg-cover" style={{ backgroundImage: 'url(/images/background_full.svg)' }}>
           <div className="bg-black-1 opacity-95 h-full pt-30px lg:pt-40px">
-            <div className="container h-full xl:max-w-1110 mx-auto">
-              <div className="mx-20px font-semibold text-34 md:text-48-97 lg:text-58 text-center leading-none lg:leading-normal">
+            <div className="container mx-auto h-full xl:max-w-1110">
+              <div className="sec-intro font-semibold mx-20px lg:leading-normal">
                 <span className="text-white">Empresas que </span>
                 <span className="text-cian-1">estão conosco.</span>
               </div>
@@ -48,20 +48,20 @@ function SecPartners() {
                   )
                 }
               </div>
-              <div className="xl:max-w-1065 md:h-245px xl:h-341-79px invisible absolute md:visible md:relative flex content-between flex-wrap pb-30px lg:pb-50px px-20px lg:px-40px xl:px-0">
-                <div className="flex justify-between flex-wrap md:w-full">
+              <div className="c-grid xl:max-w-1065 md:h-245px xl:h-341-79px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-40px xl:px-0">
+                <div className="j-grid md:w-full">
                   <img className="md:w-135px" src="/images/dm.svg" alt="icon dm" />
                   <img className="md:w-135px" src="/images/sanar.svg" alt="icon sanar" />
                   <img className="md:w-135px" src="/images/matera.svg" alt="icon matera" />
                   <img className="md:w-135px" src="/images/leigado.svg" alt="icon leigado" />
                 </div>
-                <div className="flex justify-between flex-wrap md:w-full">
+                <div className="j-grid md:w-full">
                   <img className="md:w-135px" src="/images/consisanet.svg" alt="icon consisanet" />
                   <img className="md:w-135px" src="/images/wedotax.svg" alt="icon wedotax" />
                   <img className="md:w-135px" src="/images/maxmilhas.svg" alt="icon maxmilhas" />
                   <img className="md:w-135px" src="/images/otl.svg" alt="icon otl" />
                 </div>
-                <div className="flex justify-between flex-wrap md:w-full">
+                <div className="j-grid md:w-full">
                   <img className="md:w-135px" src="/images/hci.svg" alt="icon hci" />
                   <img className="md:w-135px" src="/images/db1.svg" alt="icon db1" />
                   <img className="md:w-135px" src="/images/kiper.svg" alt="icon kiper" />

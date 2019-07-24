@@ -41,8 +41,8 @@ function SecTestimony() {
       `}
       render={data => (
         <section id="testemunho" className="h-full bg-white pt-30px lg:pt-40px pb-30px lg:pb-60px">
-          <div className="container lg:max-w-1065 mx-auto">
-            <div className="mx-20px font-semibold text-34 md:text-46 lg:text-58 xl:text-58 text-center leading-none lg:leading-normal">
+          <div className="container mx-auto lg:max-w-1065">
+            <div className="mx-20px font-semibold text-34 md:text-46 lg:text-58 text-center leading-none lg:leading-normal">
               <span className="text-black-3">O que nossos clientes </span>
               <span className="text-cian-1">pensam de nós?</span>
             </div>
@@ -55,7 +55,7 @@ function SecTestimony() {
                 )
               }
             </div>
-            <div className="max-w-380 sm:max-w-full lg:inline-flex lg:justify-between w-full h-auto mx-auto">
+            <div className="max-w-380 sm:max-w-full lg:inline-flex lg:justify-between w-full mxa-ha">
               {
                 data.testimonys.edges.map(({ node }) =>
                   <div key={node.frontmatter.order} className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">

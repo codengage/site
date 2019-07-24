@@ -21,8 +21,8 @@ function SecTeam() {
         }
       `}
       render={data => (
-        <section className="container h-auto lg:w-1110px mx-auto pt-29-52px lg:pt-40px">
-          <div className="font-semibold text-34 md:text-48-97 lg:text-58 text-center mx-20px lg:mx-auto leading-none md:leading-tight">
+        <section className="container mxa-ha lg:w-1110px pt-29-52px lg:pt-40px">
+          <div className="sec-intro font-semibold md:leading-tight lg:mx-auto mx-20px">
             <span className="text-black-1">Um time </span>
             <span className="text-cian-1">completo de TI.</span>
           </div>
@@ -35,14 +35,13 @@ function SecTeam() {
               )
             }
           </div>
-          <div className="w-full h-auto lg:h-405px xl:h-469-18px mb-27px md:mb-40px lg:mb-50px lg:max-w-980 xl:max-w-1110 mx-auto">
-            <div className="lg:float-left w-320px md:w-546-11px lg:w-456px xl:w-546-11px h-auto mx-auto lg:mx-0">
-              <img className="flex float-left w-154-82px md:hidden" src="/images/mobile1.svg" alt="images/mobile1" />
-              <img className="flex float-right w-154-82px md:hidden" src="/images/mobile2.svg" alt="images/mobile2" />
-              <img className="hidden md:block" src="/images/mobile.svg" alt="images/mobile" />
-              {/* <img className="float-left" src="/assets/images/mobile1.svg" alt="images/mobile"/> */}
+          <div className="w-full mxa-ha lg:h-405px xl:h-469-18px mb-27px md:mb-40px lg:mb-50px lg:max-w-980 xl:max-w-1110">
+            <div className="h-auto lg:float-left w-320px md:w-546-11px lg:w-456px xl:w-546-11px mxa-ha lg:mx-0">
+              <img className="mb-38-50px lg:mb-0 flex float-left w-154-82px md:hidden" src="/images/mobile1.svg" alt="images/mobile1" />
+              <img className="mb-38-50px lg:mb-0 flex float-right w-154-82px md:hidden" src="/images/mobile2.svg" alt="images/mobile2" />
+              <img className="mb-38-50px lg:mb-0 hidden md:block" src="/images/mobile.svg" alt="images/mobile" />
             </div>
-            <div className="lg:float-right w-320px md:w-456px xl:h-full mx-auto lg:mx-0 text-center lg:text-left mt-38-50px lg:mt-0">
+            <div className="lg:float-right w-320px md:w-456px xl:h-full mx-auto lg:mx-0 txtc-lgtxtl">
               <div className="h-auto xl:h-247px">
                 <p className="font-semibold text-28 lg:text-34 xl:text-46 leading-105">Buscamos a excelência do produto através da cultura criativa, design e engenharia de software.</p>
               </div>

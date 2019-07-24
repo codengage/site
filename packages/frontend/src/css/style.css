@@ -19,4 +19,99 @@ macro-carousel-pagination-indicator {
     --macro-carousel-pagination-color: #ffffff33;
     --macro-carousel-pagination-color-selected: #04BFCB;
     --macro-carousel-pagination-size-dot: 12.18px;
-  }
+    outline: none !important;
+}
+
+.ab-inv {
+    @apply absolute invisible;
+}
+.alert {
+    @apply transition-slow transition-timing-ease-out transition-property-all transition-delay-long mx-20px mb-20px px-4 py-3 rounded relative opacity-100 border;
+}
+.btn {
+    @apply border-2 border-transparent w-full text-18 text-white rounded;
+}
+.btn:focus {
+    @apply border-solid border-cian-4;
+}
+.c-grid {
+    @apply flex content-between flex-wrap;
+}
+.header-link {
+    @apply w-full pt-6px pb-6px border-b border-black-9 inline-flex;
+}
+.initial {
+    @apply mb-30px;
+}
+.j-grid {
+    @apply flex justify-between flex-wrap;
+}
+.input-contact {
+    @apply w-full px-16px bg-white opacity-100 font-display text-black-1 border border-black-8 rounded leading-tight;
+}
+.mw424-mxa {
+    @apply max-w-424 mx-auto;
+}
+.mxa-ha {
+    @apply mx-auto h-auto;
+}
+.on-focus:focus {
+    @apply border-2 border-transparent border-solid border-cian-4;
+}
+.no-outline {
+    outline: none !important;
+}
+.sec-intro {
+    @apply text-34 text-center leading-none;
+}
+.txtc-lgtxtl {
+    @apply text-center;
+}
+
+@screen md {
+    .initial-xs {
+        width: 369px !important;
+        font-size: 58px !important;
+    }
+    .md-vis-rel {
+        @apply visible relative;
+    }
+    .sec-intro {
+        @apply text-48-97;
+    }
+}
+@screen lg {
+    .alert {
+        @apply mx-0;
+    }
+    .initial {
+        margin-bottom: 80px !important;
+        width: 974px;
+    }
+    .initial-xs {
+        width: auto !important;
+        font-size: 74px !important;
+    }
+    .lg-w-428 {
+        width: 428px !important;
+    }
+    .sec-intro {
+        @apply text-58;
+    }
+    .txtc-lgtxtl {
+        text-align: left !important;
+    }
+}
+@screen xl {
+    .initial {
+        @apply mb-159px;
+    }
+    .initial-xs {
+        font-size: 78px !important;
+    }
+}
+@screen xxl {
+    .initial {
+        @apply w-1111px;
+    }
+}
