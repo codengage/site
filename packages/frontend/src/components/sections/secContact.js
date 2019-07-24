@@ -10,43 +10,41 @@ function SecContact() {
   const [telefone, changeTelefone] = useState("");
   const [showAlert, changeShowAlert] = useState(false);
 
-  const initialState = { alert: '', title: '', content: '' }
-
+  const initialState = { alert: '', title: '', content: '' };
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function handleCloseAlert() {
-    changeShowAlert(false)
+    changeShowAlert(false);
   }
 
   function reducer(state, action) {
-    console.log('reducer',state.alert)
     switch (action.type) {
       case 'incomplete':
+        changeShowAlert(true);
         return { 
           alert: "error", 
           title: "Campos vazios!",
           content: "Por favor, preencha todos os campos." 
         };
       case 'error':
+        changeShowAlert(true);
         return { 
           alert: action.type, 
           title: "Falha ao enviar e-mail!",
           content: "Por favor, tente novamente mais tarde." 
         };
       case 'success':
+        changeShowAlert(true);
         return { 
           alert: action.type, 
           title: "Sucesso!", 
           content: "E-mail enviado corretamente, aguarde nosso retorno." };
       default:
-        return { initialState }
+        return { initialState };
     }
   }
 
   function handleSubmit(event) {
-    changeShowAlert(true)
-
-    console.log('handleSubmit')
     event.preventDefault();
 
     if (email && fullName && message && telefone) {
@@ -76,14 +74,13 @@ function SecContact() {
           res.erro ?
             dispatch({ type: 'error' }) :
             dispatch({ type: 'success' });
-
         })
         .catch(e => {
-          dispatch({ type: 'error' })
+          dispatch({ type: 'error' });
           console.log('e', e)
         })
     } else {
-      dispatch({ type: 'incomplete' })
+      dispatch({ type: 'incomplete' });
     }
   }
 
