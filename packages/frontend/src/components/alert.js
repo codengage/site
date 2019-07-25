@@ -5,7 +5,7 @@ function Alert({ type, title, content, show, onClose }) {
 
   if(show) {
     switch (type) {
-      case 'succes':
+      case 'success':
         classes = "alert text-display bg-green-2 border-green-1 text-green-1";
         break;
       case 'error':
