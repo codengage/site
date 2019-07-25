@@ -48,12 +48,11 @@ const mailchimp = async (req, res) => {
 
   const manageTags = async (request) => {
     try {
-      const mTags = await mc.request(request);
-      console.log(mTags)
+      await mc.request(request);
   
     } catch(e) {
-      console.log(e)
-      console.log(e.message)
+      console.log(e);
+      console.log(e.message);
     }
   }
   
@@ -61,20 +60,21 @@ const mailchimp = async (req, res) => {
     try {
       body.tags = [];
       const response = await mc.request(request);
-      console.log(response)
-      manageTags(manage_tags)
+      console.log('*******************');
+      console.log('response:', response.statusCode);
+      console.log('*******************');
+      manageTags(manage_tags);
 
-      send(res, 200, {teste:123})
+      send(res, 200, { success: response.statusCode });
     } catch(e) {
-      console.log(e.message)
+      console.log(e.message);
   
-      send(res, 400, { erro: e.message })
+      send(res, 400, { erro: e.message });
     }
   }
 
   try {
     const exist = await mc.request(get_user);
-
     if (exist.tags) {
       exist.tags.map(({ name }) => {
         if (name !== body.tags[0]) {
@@ -84,7 +84,7 @@ const mailchimp = async (req, res) => {
           try {
             manageTags(manage_tags);
           } catch (e) {
-            console.log(e.message)
+            console.log(e.message);
           }
         }
       })

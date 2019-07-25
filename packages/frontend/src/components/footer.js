@@ -42,7 +42,6 @@ function Footer() {
   }
 
   function handleSubmit(event) {
-    console.log('handleSubmit')
     event.preventDefault();
 
     if (email) {
