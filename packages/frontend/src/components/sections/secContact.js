@@ -111,7 +111,7 @@ function SecContact() {
               <div className="mw424-mxa md:max-w-677 lg:max-w-817 pt-15px">
                 {
                   data.allMarkdownRemark.edges.map(({ node }) =>
-                    <p key={node.frontmatter.title} className="font-display text-14 md:text-18 text-black-3 text-center leading-snug mx-20px">
+                    <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 text-center leading-snug mx-20px">
                       {node.excerpt}
                     </p>
                   )

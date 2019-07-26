@@ -29,7 +29,7 @@ function secCodengage() {
             <div className="md:w-662px lg:w-889px h-auto mx-20px md:mx-auto text-center mt-30px md:mt-25px mb-38px">
               {
                 data.allMarkdownRemark.edges.map(({ node }) =>
-                  <p key={node.frontmatter.title} className="text-14 md:text-18 font-display text-black-3 leading-tight">
+                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 leading-tight">
                     {node.excerpt}
                   </p>
                 )

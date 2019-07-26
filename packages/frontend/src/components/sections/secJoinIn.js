@@ -33,7 +33,7 @@ function SecJoinIn() {
               <div className="lg:float-right lg:w-541px mt-30px lg:mt-48px flex lg:content-between flex-wrap">
                 {
                   data.allMarkdownRemark.edges.map(({ node }) =>
-                    <p key={node.frontmatter.title} className="font-display text-14 md:text-18 leading-140 txtc-lgtxtl">
+                    <p key={node.frontmatter.title} className="txtc-14-18 leading-140 txtc-lgtxtl">
                       {node.excerpt}
                     </p>
                   )

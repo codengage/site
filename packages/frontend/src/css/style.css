@@ -67,8 +67,14 @@ macro-carousel-pagination-indicator {
 .txtc-lgtxtl {
     @apply text-center;
 }
+.txtc-14-18 {
+    @apply text-14 font-display;
+}
 
 @screen md {
+    .md-ab-inv {
+        @apply absolute invisible;
+    }
     .initial-xs {
         width: 369px !important;
         font-size: 58px !important;
@@ -78,6 +84,9 @@ macro-carousel-pagination-indicator {
     }
     .sec-intro {
         @apply text-48-97;
+    }
+    .txtc-14-18 {
+        @apply text-18;
     }
 }
 @screen lg {

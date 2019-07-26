@@ -49,7 +49,7 @@ function SecTestimony() {
             <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-30px lg:mt-25px lg:mb-53-23px">
               {
                 data.testimony.edges.map(({ node }) =>
-                  <p key={node.frontmatter.title} className="text-14 md:text-18 font-display text-black-3 leading-tight mx-20px">
+                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 leading-tight mx-20px">
                     {node.excerpt}
                   </p>
                 )
