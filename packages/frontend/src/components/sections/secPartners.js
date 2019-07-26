@@ -18,8 +18,8 @@ function SecPartners() {
   return (
     <StaticQuery
       query={graphql`
-        {
-          allMarkdownRemark(filter: { frontmatter: { title: { eq: "Partners" } }}) {
+        query {
+          partners: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Partners" } }}) {
             edges {
               node {
                 excerpt(pruneLength: 250)
@@ -29,6 +29,40 @@ function SecPartners() {
               }
             }
           }
+          partnerssm: allMarkdownRemark(
+            sort: {
+                fields: [frontmatter___order]
+                order: ASC }
+              filter: { frontmatter: { id: { eq: "partners-sm" } }}
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    order
+                    first
+                    second
+                  }   
+                }
+              }
+            }
+            partnersmd: allMarkdownRemark(
+            sort: {
+                fields: [frontmatter___order]
+                order: ASC }
+              filter: { frontmatter: { id: { eq: "partners-md" } }}
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    order
+                    first
+                    second
+                    third
+                    fourth
+                  }   
+                }
+              }
+            }
         }
       `}
       render={data => (
@@ -41,45 +75,36 @@ function SecPartners() {
               </div>
               <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-25px mb-20px md:mb-40px lg:mb-53-23px">
                 {
-                  data.allMarkdownRemark.edges.map(({ node }) =>
-                    <p key={node.frontmatter.title} className="text-14 md:text-18 font-display text-white leading-tight mx-20px">
+                  data.partners.edges.map(({ node }) =>
+                    <p key={node.frontmatter.title} className="txtc-14-18 text-white leading-tight mx-20px">
                       {node.excerpt}
                     </p>
                   )
                 }
               </div>
               <div className="c-grid xl:max-w-1065 md:h-245px xl:h-341-79px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-40px xl:px-0">
-                <div className="j-grid md:w-full">
-                  <img className="md:w-135px" src="/images/dm.svg" alt="icon dm" />
-                  <img className="md:w-135px" src="/images/sanar.svg" alt="icon sanar" />
-                  <img className="md:w-135px" src="/images/matera.svg" alt="icon matera" />
-                  <img className="md:w-135px" src="/images/leigado.svg" alt="icon leigado" />
-                </div>
-                <div className="j-grid md:w-full">
-                  <img className="md:w-135px" src="/images/consisanet.svg" alt="icon consisanet" />
-                  <img className="md:w-135px" src="/images/wedotax.svg" alt="icon wedotax" />
-                  <img className="md:w-135px" src="/images/maxmilhas.svg" alt="icon maxmilhas" />
-                  <img className="md:w-135px" src="/images/otl.svg" alt="icon otl" />
-                </div>
-                <div className="j-grid md:w-full">
-                  <img className="md:w-135px" src="/images/hci.svg" alt="icon hci" />
-                  <img className="md:w-135px" src="/images/db1.svg" alt="icon db1" />
-                  <img className="md:w-135px" src="/images/kiper.svg" alt="icon kiper" />
-                  <img className="md:w-135px" src="/images/sponte.svg" alt="icon sponte" />
-                </div>
+                {
+                  data.partnersmd.edges.map(({ node }) =>
+                    <div key={node.frontmatter.order} className="j-grid md:w-full">
+                      <img className="md:w-135px" src={`/images/${node.frontmatter.first}.svg`} alt={`icon ${node.frontmatter.first}`} />
+                      <img className="md:w-135px" src={`/images/${node.frontmatter.second}.svg`} alt={`icon ${node.frontmatter.second}`} />
+                      <img className="md:w-135px" src={`/images/${node.frontmatter.third}.svg`} alt={`icon ${node.frontmatter.third}`} />
+                      <img className="md:w-135px" src={`/images/${node.frontmatter.fourth}.svg`} alt={`icon ${node.frontmatter.fourth}`} />
+                    </div>
+                  )
+                }
               </div>
-              <div className="h-148px w-full md:absolute md:invisible flex mt-50px mb-32px">
+              <div className="h-148px w-full md-ab-inv flex mt-50px mb-32px">
                 <macro-carousel loop pagination class="w-full">
                   {
-                    logos.map((logo, index) => {
-                      return (
-                        <article key={index} className="w-full mb-30px mr-0">
-                          <div className="w-full px-auto inline-flex justify-around">
-                            <img className="w-150px" src={`/images/${logo[1]}.svg`} alt={`icon ${logo[1]}`} />
-                            <img className="w-150px" src={`/images/${logo[2]}.svg`} alt={`icon ${logo[2]}`} />
-                          </div>
-                        </article>)
-                    })
+                    data.partnerssm.edges.map(({ node }) =>
+                      <article key={node.frontmatter.order} className="w-full mb-30px mr-0">
+                        <div className="w-full px-auto inline-flex justify-around">
+                          <img className="w-150px" src={`/images/${node.frontmatter.first}.svg`} alt={`icon ${node.frontmatter.first}`} />
+                          <img className="w-150px" src={`/images/${node.frontmatter.second}.svg`} alt={`icon ${node.frontmatter.second}`} />
+                        </div>
+                      </article>
+                    )
                   }
                 </macro-carousel>
               </div>
