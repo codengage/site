@@ -6,15 +6,6 @@ import 'macro-carousel';
 
 function SecPartners() {
 
-  const logos = [
-    { 1: 'dm', 2: 'sanar' },
-    { 1: 'matera', 2: 'leigado' },
-    { 1: 'consisanet', 2: 'wedotax' },
-    { 1: 'maxmilhas', 2: 'otl' },
-    { 1: 'hci', 2: 'db1' },
-    { 1: 'kiper', 2: 'sponte' }
-  ]
-
   return (
     <StaticQuery
       query={graphql`

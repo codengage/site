@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 function SecTeam() {
-  // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <StaticQuery
@@ -37,8 +36,8 @@ function SecTeam() {
           </div>
           <div className="w-full mxa-ha lg:h-405px xl:h-469-18px mb-27px md:mb-40px lg:mb-50px lg:max-w-980 xl:max-w-1110">
             <div className="h-auto lg:float-left w-320px md:w-546-11px lg:w-456px xl:w-546-11px mxa-ha lg:mx-0">
-              <img className="mb-38-50px lg:mb-0 flex float-left w-154-82px md:hidden" src="/images/mobile1.svg" alt="images/mobile1" />
-              <img className="mb-38-50px lg:mb-0 flex float-right w-154-82px md:hidden" src="/images/mobile2.svg" alt="images/mobile2" />
+              <img className="float-left img-mobile" src="/images/mobile1.svg" alt="images/mobile1" />
+              <img className="float-right img-mobile" src="/images/mobile2.svg" alt="images/mobile2" />
               <img className="mb-38-50px lg:mb-0 hidden md:block" src="/images/mobile.svg" alt="images/mobile" />
             </div>
             <div className="lg:float-right w-320px md:w-456px xl:h-full mx-auto lg:mx-0 txtc-lgtxtl">

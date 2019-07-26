@@ -1,8 +1,7 @@
 import { StaticQuery, graphql } from "gatsby";
-import React, { useState } from "react";
+import React from "react";
 
 function SecTestimony() {
-  // const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <StaticQuery
@@ -63,7 +62,7 @@ function SecTestimony() {
                     <div className="px-5px md:float-right md:px-20px lg:px-0">
                       <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">{node.excerpt}</p>
                       <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
-                        <p className="text-cian-1 text-16">{node.frontmatter.title}</p>
+                        <p className="text-16 text-cian-1">{node.frontmatter.title}</p>
                         <p className="text-14 text-black-3">{node.frontmatter.company}</p>
                       </div>
                     </div>

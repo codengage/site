@@ -37,8 +37,14 @@ macro-carousel-pagination-indicator {
 .c-grid {
     @apply flex content-between flex-wrap;
 }
+.f-ic-rdd {
+    @apply flex items-center rounded;
+}
 .header-link {
     @apply w-full pt-6px pb-6px border-b border-black-9 inline-flex;
+}
+.img-mobile {
+    @apply mb-38-50px flex w-154-82px;
 }
 .initial {
     @apply mb-30px;
@@ -75,6 +81,9 @@ macro-carousel-pagination-indicator {
     .md-ab-inv {
         @apply absolute invisible;
     }
+    .img-mobile {
+        @apply hidden;
+    }
     .initial-xs {
         width: 369px !important;
         font-size: 58px !important;
@@ -96,6 +105,9 @@ macro-carousel-pagination-indicator {
     .initial {
         margin-bottom: 80px !important;
         width: 974px;
+    }
+    .img-mobile {
+        @apply mb-0;
     }
     .initial-xs {
         width: auto !important;

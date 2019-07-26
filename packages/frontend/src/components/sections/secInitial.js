@@ -33,7 +33,7 @@ function secInitial({ scroll }) {
               <div className="w-280px xs:w-296px lg-w-428 h-85px lg:h-107px xl:h-126px mx-auto lg:ml-3px mt-15px lg:mt-20px xl:mt-38px lg:mr-25px">
                 {
                   data.allMarkdownRemark.edges.map(({ node }) =>
-                    <p key={node.frontmatter.title} className="text-18 lg:text-26 txtc-lgtxtl leading-120 text-black-3 lg:leading-110">
+                    <p key={node.frontmatter.title} className="text-18 lg:text-26 text-black-3 txtc-lgtxtl leading-120 lg:leading-110">
                       {node.excerpt}
                     </p>
                   )

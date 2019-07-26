@@ -36,12 +36,12 @@ function Header({ scroll }) {
               </div>
 
             <button 
-              className={ isExpanded ? "no-outline on-focus ab-inv flex items-center rounded mr-26-38px" : "no-outline on-focus relative visible md-ab-inv flex items-center rounded mr-26-38px" } 
+              className={ isExpanded ? "no-outline on-focus ab-inv f-ic-rdd mr-26-38px" : "no-outline on-focus md-ab-inv f-ic-rdd relative visible mr-26-38px" } 
               onClick={() => toggleExpansion(!isExpanded)}>
               <img src="/icons/icon-menu.svg" alt="show menu"/>
             </button>
             <button
-              className={ isExpanded ? "no-outline on-focus relative visible md-ab-inv flex items-center rounded mr-26-38px text-24" : "no-outline on-focus ab-inv md-ab-inv flex rounded mr-26-38px text-24" }
+              className={ isExpanded ? "no-outline on-focus md-ab-inv f-ic-rdd relative visible mr-26-38px text-24" : "no-outline on-focus ab-inv md-ab-inv flex rounded mr-26-38px text-24" }
               onClick={() => toggleExpansion(!isExpanded)}>
               &times;
             </button>
