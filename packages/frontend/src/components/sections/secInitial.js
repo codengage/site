@@ -39,11 +39,7 @@ function secInitial({ scroll }) {
                   )
                 }
               </div>
-              <div className="h-52px max-w-320 lg:w-245px mt-30px xl:mt-40px lg:ml-3px mx-auto left-0">
-                <button className="btn no-outline h-full bg-cian-1 hover:bg-cian-3 font-semibold">
-                  INICIAR NAVEGAÇÃO
-            </button>
-              </div>
+              <a href="/#empresa" className="no-outline btn text-center block py-13px h-52px max-w-320 lg:w-245px mt-30px xl:mt-40px lg:ml-3px mx-auto bg-cian-1 hover:bg-cian-3 font-semibold" >INICIAR NAVEGAÇÃO</a>
             </div>
           </div>
         </section>
