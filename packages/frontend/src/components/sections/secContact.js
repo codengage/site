@@ -79,7 +79,6 @@ function SecContact() {
         })
         .catch(e => {
           dispatch({ type: 'error' });
-          console.log('e', e)
         })
     } else {
       dispatch({ type: 'incomplete' });
