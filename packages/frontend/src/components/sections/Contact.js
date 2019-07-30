@@ -73,9 +73,9 @@ function SecContact() {
       fetch('http://localhost:3000', data)
         .then(res => res.json())
         .then(res => {
-          res.erro ?
-            dispatch({ type: 'error' }) :
-            dispatch({ type: 'success' });
+          res.success ?
+          dispatch({ type: 'success' }) :
+            dispatch({ type: 'error' });
         })
         .catch(e => {
           dispatch({ type: 'error' });
