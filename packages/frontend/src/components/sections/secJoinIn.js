@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
+import Anchor from '../anchor';
+
 function SecJoinIn() {
 
   return (
@@ -20,7 +22,8 @@ function SecJoinIn() {
         }
       `}
       render={data => (
-        <section id="talentos" className="h-auto pt-30px md:pt-40px pb-30px lg:pb-60px">
+        <section className="h-auto pt-30px md:pt-40px pb-30px lg:pb-60px">
+          <Anchor id="talentos" />
           <div className="container mx-auto text-center font-semibold text-34 md:text-46 xl:text-58 leading-none md:leading-normal">
             <span className="text-black-3">Junte-se </span>
             <span className="text-cian-1">a nós.</span>

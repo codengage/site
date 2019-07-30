@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 
 import 'macro-carousel';
+import Anchor from '../anchor';
+
 
 function SecPartners() {
 
@@ -57,8 +59,9 @@ function SecPartners() {
         }
       `}
       render={data => (
-        <section id="clientes" className="h-auto bg-cover" style={{ backgroundImage: 'url(/images/background_full.svg)' }}>
+        <section className="h-auto bg-cover" style={{ backgroundImage: 'url(/images/background_full.svg)' }}>
           <div className="bg-black-1 opacity-95 h-full pt-30px lg:pt-40px">
+            <Anchor id="clientes" />
             <div className="container mx-auto h-full xl:max-w-1110">
               <div className="sec-intro font-semibold mx-20px lg:leading-normal">
                 <span className="text-white">Empresas que </span>

@@ -1,6 +1,8 @@
 import React, { useState, useReducer } from "react";
 import { graphql, StaticQuery } from "gatsby";
 
+import Anchor from '../anchor';
+
 import Alert from '../alert';
 
 function SecContact() {
@@ -101,8 +103,9 @@ function SecContact() {
         }
       `}
       render={data => (
-        <section id="contato" className="h-auto bg-cover" style={{ backgroundImage: 'url(/images/background_full.svg)' }}>
+        <section className="h-auto bg-cover" style={{ backgroundImage: 'url(/images/background_full.svg)' }}>
           <div className="bg-cian-1 opacity-98 h-auto pt-30px lg:pt-40px pb-30px lg:pb-60px">
+            <Anchor id="contato" />
             <div className="container mx-auto">
               <div className="sec-intro font-semibold lg:leading-normal">
                 <span className="text-black-3">Entre em contato </span>

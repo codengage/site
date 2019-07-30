@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
+import Anchor from '../anchor';
+
 function secCodengage() {
 
   return (
@@ -20,8 +22,9 @@ function secCodengage() {
         }
       `}
       render={data => (
-        <section id="empresa" className="bg-white h-auto">
+        <section className="bg-white h-auto">
           <div className="container mxa-ha pt-30px md:pt-40px">
+            <Anchor id="empresa" />
             <div className="md:w-662px mx-20px md:mx-auto leading-none md:leading-105 lg:leading-120 xl:leading-normal text-center font-semibold text-34 md:text-48-97 lg:text-58">
               <span className="text-black-1">Uma empresa formada </span>
               <span className="text-cian-1">por pessoas.</span>

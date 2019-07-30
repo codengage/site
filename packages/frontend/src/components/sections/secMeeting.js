@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
+import Anchor from '../anchor';
+
 function SecMeeting() {
 
   return (
@@ -20,8 +22,9 @@ function SecMeeting() {
         }
       `}
       render={data => (
-        <section id="servicos" className="mxa-ha xl:max-w-1110">
+        <section className="mxa-ha xl:max-w-1110">
           <div className="container h-full lg:inline-flex">
+            <Anchor id="servicos" />
             <div className="w-auto md:w-546px lg:w-734-38px mxa-ha mt-30px lg:mt-59px mb-30px lg:mb-60px md:mb-0">
               <img className="mx-20px" src="/images/web.svg" alt="dev" />
             </div>
