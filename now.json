@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "codengage",
+  "alias": "codengage.now.sh",
+  "public": true,
+  "env": {
+    "MAILCHIMP_API": "@mailchimp_api",
+    "MAILCHIMP_LIST": "@mailchimp_list"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_API_CONTACT": "/api/contact"
+    }
+  }
+}
