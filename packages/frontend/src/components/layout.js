@@ -4,15 +4,15 @@ import { StaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
 import Footer from "./footer";
-import SecTeam from "./sections/secTeam";
-import SecSquad from "./sections/secSquad";
-import SecJoinIn from "./sections/secJoinIn";
-import SecInitial from "./sections/secInitial";
-import SecContact from "./sections/secContact";
-import SecMeeting from "./sections/secMeeting";
-import SecPartners from "./sections/secPartners";
-import SecCodengage from "./sections/secCodengage";
-import SecTestimony from "./sections/secTestimony";
+import Team from "./sections/Team";
+import Squad from "./sections/Squad";
+import JoinIn from "./sections/JoinIn";
+import Initial from "./sections/Initial";
+import Contact from "./sections/Contact";
+import Meeting from "./sections/Meeting";
+import Partners from "./sections/Partners";
+import Codengage from "./sections/Codengage";
+import Testimony from "./sections/Testimony";
 
 function Layout({ children }) {
   const [isScroll, toggleScroll] = useState(false);
@@ -49,15 +49,15 @@ function Layout({ children }) {
       render={data => (
         <div className="bg-gray-1 flex flex-col font-display" >
           <Header siteTitle={data.site.siteMetadata.title} scroll={isScroll} />
-          <SecInitial scroll={isScroll} />
-          <SecCodengage />
-          <SecTeam />
-          <SecSquad />
-          <SecMeeting />
-          <SecPartners />
-          <SecTestimony />
-          <SecJoinIn />
-          <SecContact />
+          <Initial scroll={isScroll} />
+          <Codengage />
+          <Team />
+          <Squad />
+          <Meeting />
+          <Partners />
+          <Testimony />
+          <JoinIn />
+          <Contact />
 
           <Footer />
         </div>
