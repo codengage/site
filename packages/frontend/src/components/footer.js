@@ -104,12 +104,12 @@ function Footer() {
                 <p>rh@codengage.com</p>
               </div>
               <div className="c-grid w-82px lg:h-full lg:ml-40px xl:ml-67-53px font-display text-14 text-cian-3">
-                <Link className="inline-flex no-outline on-focus" to="/#empresa"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Empresa</Link>
-                <Link className="inline-flex no-outline on-focus" to="/#servicos"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Serviços</Link>
-                <Link className="inline-flex no-outline on-focus" to="/#clientes"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Clientes</Link>
-                <Link className="inline-flex no-outline on-focus" to="/#testemunho"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Testemunho</Link>
-                <Link className="inline-flex no-outline on-focus" to="/#talentos"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Talentos</Link>
-                <Link className="inline-flex no-outline on-focus" to="/#contato"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Contato</Link>
+                <Link className="inline-flex no-outline" to="/#empresa"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Empresa</Link>
+                <Link className="inline-flex no-outline" to="/#servicos"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Serviços</Link>
+                <Link className="inline-flex no-outline" to="/#clientes"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Clientes</Link>
+                <Link className="inline-flex no-outline" to="/#testemunho"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Testemunho</Link>
+                <Link className="inline-flex no-outline" to="/#talentos"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Talentos</Link>
+                <Link className="inline-flex no-outline" to="/#contato"><img src="icons/icon-play-cian.svg" alt="icon list"/>&nbsp;Contato</Link>
               </div>
             </div>
             
@@ -122,13 +122,13 @@ function Footer() {
               <p className="text-white text-10 font-display">&nbsp;Codengage 2019</p>
             </div>
             <div className="relative inline-flex justify-between w-73px h-18px float-right mt-17px mb-15px">
-              <a href="https://www.instagram.com/codengagecom/" rel="noopener" className="no-outline on-focus">
+              <a href="https://www.instagram.com/codengagecom/" rel="noopener" className="no-outline">
                 <img src="/icons/instagram-brands-white.svg" alt="instagram icon" />
               </a>
-              <a href="https://www.facebook.com/codengagecom/" rel="noopener" className="no-outline on-focus">
+              <a href="https://www.facebook.com/codengagecom/" rel="noopener" className="no-outline">
                 <img src="/icons/facebook-square-brands-white.svg" alt="facebook icon" />
               </a>
-              <a href="https://www.linkedin.com/company/codengage" rel="noopener" className="no-outline on-focus">
+              <a href="https://www.linkedin.com/company/codengage" rel="noopener" className="no-outline">
                 <img src="/icons/linkedin-brands-white.svg" alt="linkedin icon" />
               </a>
             </div>

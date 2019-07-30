@@ -64,7 +64,7 @@ html {
     @apply mx-auto h-auto;
 }
 .on-focus:focus {
-    @apply border-2 border-transparent border-solid border-cian-4;
+    @apply border-2 border-solid border-cian-4;
 }
 .no-outline {
     outline: none !important;
