@@ -21,7 +21,9 @@ macro-carousel-pagination-indicator {
     --macro-carousel-pagination-size-dot: 12.18px;
     outline: none !important;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .ab-inv {
     @apply absolute invisible;
 }
