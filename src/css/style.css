@@ -1,0 +1,140 @@
+@tailwind base;
+
+@font-face {
+    font-family: Myriad Pro;
+    font-weight: 5400;
+    src: url(../fonts/MyriadPro/MYRIADPRO-REGULAR.woff) format("woff");
+};
+@font-face {
+    font-family: Myriad Pro;
+    font-weight: 600;
+    src: url(../fonts/MyriadPro/MYRIADPRO-SEMIBOLD.woff) format("woff");
+};
+
+@tailwind components;
+
+@tailwind utilities;
+
+macro-carousel-pagination-indicator {
+    --macro-carousel-pagination-color: #ffffff33;
+    --macro-carousel-pagination-color-selected: #04BFCB;
+    --macro-carousel-pagination-size-dot: 12.18px;
+    outline: none !important;
+}
+html {
+    scroll-behavior: smooth;
+}
+.ab-inv {
+    @apply absolute invisible;
+}
+.alert {
+    @apply transition-slow transition-timing-ease-out transition-property-all transition-delay-long mx-20px mb-20px px-4 py-3 rounded relative opacity-100 border;
+}
+.btn {
+    @apply border-2 border-transparent w-full text-18 text-white rounded;
+}
+.btn:focus {
+    @apply border-solid border-cian-4;
+}
+.c-grid {
+    @apply flex content-between flex-wrap;
+}
+.f-ic-rdd {
+    @apply flex items-center rounded;
+}
+.header-link {
+    @apply w-full pt-6px pb-6px border-b border-black-9 inline-flex;
+}
+.img-mobile {
+    @apply mb-38-50px flex w-154-82px;
+}
+.initial {
+    @apply mb-30px;
+}
+.j-grid {
+    @apply flex justify-between flex-wrap;
+}
+.input-contact {
+    @apply w-full px-16px bg-white opacity-100 font-display text-black-1 border border-black-8 rounded leading-tight;
+}
+.mw424-mxa {
+    @apply max-w-424 mx-auto;
+}
+.mxa-ha {
+    @apply mx-auto h-auto;
+}
+.on-focus:focus {
+    @apply border-2 border-solid border-cian-4;
+}
+.no-outline {
+    outline: none !important;
+}
+.sec-intro {
+    @apply text-34 text-center leading-none;
+}
+.txtc-lgtxtl {
+    @apply text-center;
+}
+.txtc-14-18 {
+    @apply text-14 font-display;
+}
+
+@screen md {
+    .md-ab-inv {
+        @apply absolute invisible;
+    }
+    .img-mobile {
+        @apply hidden;
+    }
+    .initial-xs {
+        width: 369px !important;
+        font-size: 58px !important;
+    }
+    .md-vis-rel {
+        @apply visible relative;
+    }
+    .sec-intro {
+        @apply text-48-97;
+    }
+    .txtc-14-18 {
+        @apply text-18;
+    }
+}
+@screen lg {
+    .alert {
+        @apply mx-0;
+    }
+    .initial {
+        margin-bottom: 80px !important;
+        width: 974px;
+    }
+    .img-mobile {
+        @apply mb-0;
+    }
+    .initial-xs {
+        width: auto !important;
+        font-size: 74px !important;
+    }
+    .lg-w-428 {
+        width: 428px !important;
+    }
+    .sec-intro {
+        @apply text-58;
+    }
+    .txtc-lgtxtl {
+        text-align: left !important;
+    }
+}
+@screen xl {
+    .initial {
+        @apply mb-159px;
+    }
+    .initial-xs {
+        font-size: 78px !important;
+    }
+}
+@screen xxl {
+    .initial {
+        @apply w-1111px;
+    }
+}

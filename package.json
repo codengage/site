@@ -1,15 +1,51 @@
 {
-  "name": "codengage",
+  "name": "@codengage/site",
   "description": "Landing Page Codengage",
   "version": "1.0.0",
   "private": true,
   "license": "All copyrights reserved - Codengage",
   "author": "Team Codengage <codengage@gmail.com>",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "dev:backend": "yarn workspace @codengage/site-backend run dev",
-    "dev:frontend": "yarn workspace @codengage/site-frotend run dev"
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "analyze": "yarn analyze:lint && yarn analyze:prettier",
+    "analyze:lint": "eslint --ext .jsx --ext .js .",
+    "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
+    "fix": "yarn fix:lint && yarn fix:prettier",
+    "fix:lint": "eslint --ext .jsx --ext .js . --fix",
+    "fix:prettier": "prettier --write '**/*.{js,css,md,json}'"
+  },
+  "dependencies": {
+    "gatsby": "2.12.0",
+    "gatsby-plugin-manifest": "2.2.0",
+    "gatsby-plugin-postcss": "2.1.0",
+    "gatsby-plugin-purgecss": "4.0.0",
+    "gatsby-plugin-react-helmet": "3.1.0",
+    "gatsby-source-filesystem": "^2.1.1",
+    "gatsby-transformer-remark": "^2.5.0",
+    "glhd-tailwindcss-transitions": "^0.3.0",
+    "graphql": "14.4.1",
+    "macro-carousel": "^1.0.0",
+    "mailchimp-api-v3": "^1.13.1",
+    "md5": "^2.2.1",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-helmet": "5.2.1"
+  },
+  "devDependencies": {
+    "@now/node": "^0.12.1",
+    "babel-eslint": "10.0.2",
+    "eslint": "5.16.0",
+    "eslint-config-react-app": "4.0.1",
+    "eslint-plugin-flowtype": "3.11.1",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.14.2",
+    "eslint-plugin-react-hooks": "1.6.1",
+    "micro": "^9.3.4",
+    "prettier": "1.18.2",
+    "tailwindcss": "1.0.4"
   }
 }
