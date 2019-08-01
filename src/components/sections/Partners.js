@@ -22,7 +22,7 @@ function Partners() {
                 }
               }
             }
-          }
+          },
           partnerssm: allMarkdownRemark(
             sort: { fields: [frontmatter___order], order: ASC }
             filter: { frontmatter: { id: { eq: "partners-sm" } } }
@@ -36,7 +36,7 @@ function Partners() {
                 }
               }
             }
-          }
+          },
           partnersmd: allMarkdownRemark(
             sort: { fields: [frontmatter___order], order: ASC }
             filter: { frontmatter: { id: { eq: "partners-md" } } }
@@ -52,15 +52,25 @@ function Partners() {
                 }
               }
             }
-          }
+          },
+          background_full: file(name: {eq:"background_full"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
+          icons: allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "partners"}}) {
+            nodes {
+              name
+              publicURL
+            }
+          },
         }
       `}
       render={data => (
         <section
           className="h-auto bg-cover"
-          style={{ backgroundImage: 'url(/images/background_full.svg)' }}
+          style={{ backgroundImage: `url(${data.background_full.publicURL})` }}
         >
-          <div className="bg-black-1 opacity-95 h-full pt-30px lg:pt-40px">
+          <div className="bg-black-2 h-full pt-30px lg:pt-40px">
             <Anchor id="clientes" />
             <div className="container mx-auto h-full xl:max-w-1110">
               <div className="sec-intro font-semibold mx-20px lg:leading-normal">
@@ -77,44 +87,44 @@ function Partners() {
               <div className="c-grid xl:max-w-1065 md:h-245px xl:h-341-79px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-40px xl:px-0">
                 {data.partnersmd.edges.map(({ node }) => (
                   <div key={node.frontmatter.order} className="j-grid md:w-full">
-                    <img
-                      className="md:w-135px"
-                      src={`/images/${node.frontmatter.first}.svg`}
-                      alt={`icon ${node.frontmatter.first}`}
-                    />
-                    <img
-                      className="md:w-135px"
-                      src={`/images/${node.frontmatter.second}.svg`}
-                      alt={`icon ${node.frontmatter.second}`}
-                    />
-                    <img
-                      className="md:w-135px"
-                      src={`/images/${node.frontmatter.third}.svg`}
-                      alt={`icon ${node.frontmatter.third}`}
-                    />
-                    <img
-                      className="md:w-135px"
-                      src={`/images/${node.frontmatter.fourth}.svg`}
-                      alt={`icon ${node.frontmatter.fourth}`}
-                    />
+                    {
+                      data.icons.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.first && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                      )
+                    }
+                    {
+                      data.icons.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.second && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                      )
+                    }
+                    {
+                      data.icons.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.third && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                      )
+                    }
+                    {
+                      data.icons.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.fourth && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                      )
+                    }
                   </div>
                 ))}
               </div>
-              <div className="h-148px w-full md-ab-inv flex mt-50px mb-32px">
+              <div className="h-148px w-full md-ab-inv md:hidden flex mt-50px mb-32px">
                 <macro-carousel loop pagination class="w-full">
                   {data.partnerssm.edges.map(({ node }) => (
                     <article key={node.frontmatter.order} className="w-full mb-30px mr-0">
                       <div className="w-full px-auto inline-flex justify-around">
-                        <img
-                          className="w-150px"
-                          src={`/images/${node.frontmatter.first}.svg`}
-                          alt={`icon ${node.frontmatter.first}`}
-                        />
-                        <img
-                          className="w-150px"
-                          src={`/images/${node.frontmatter.second}.svg`}
-                          alt={`icon ${node.frontmatter.second}`}
-                        />
+                    {
+                      data.icons.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.first && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
+                      )
+                    }
+                    {
+                      data.icons.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.second && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
+                      )
+                    }
                       </div>
                     </article>
                   ))}

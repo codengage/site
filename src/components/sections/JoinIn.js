@@ -9,7 +9,7 @@ function JoinIn() {
     <StaticQuery
       query={graphql`
         {
-          allMarkdownRemark(filter: { frontmatter: { title: { eq: "JoinIn" } }}) {
+          content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "JoinIn" } }}) {
             edges {
               node {
                 excerpt(pruneLength: 250)
@@ -18,7 +18,11 @@ function JoinIn() {
                 }   
               }
             }
-          }
+          },
+          coffee: file(name: {eq:"cafe"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
         }
       `}
       render={data => (
@@ -31,11 +35,11 @@ function JoinIn() {
           <div className="max-w-380 sm:max-w-424 lg:max-w-848 mxa-ha">
             <div className="mx-20px lg:inline-flex lg:w-full lg:justify-between">
               <div className="mx-auto lg:mx-0 lg:float-left w-138-32px md:w-162px mt-18px">
-                <img src="/images/cafe.svg" alt="coffe" />
+                <img src={data.coffee.publicURL} alt="coffee" />
               </div>
               <div className="lg:float-right lg:w-541px mt-30px lg:mt-48px flex lg:content-between flex-wrap">
                 {
-                  data.allMarkdownRemark.edges.map(({ node }) =>
+                  data.content.edges.map(({ node }) =>
                     <p key={node.frontmatter.title} className="txtc-14-18 leading-140 txtc-lgtxtl">
                       {node.excerpt}
                     </p>

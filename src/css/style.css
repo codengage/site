@@ -39,17 +39,14 @@ html {
 .c-grid {
     @apply flex content-between flex-wrap;
 }
-.f-ic-rdd {
-    @apply flex items-center rounded;
+.f-ic {
+    @apply flex items-center;
 }
 .header-link {
     @apply w-full pt-6px pb-6px border-b border-black-9 inline-flex;
 }
 .img-mobile {
     @apply mb-38-50px flex w-154-82px;
-}
-.initial {
-    @apply mb-30px;
 }
 .j-grid {
     @apply flex justify-between flex-wrap;

@@ -18,7 +18,7 @@ function SecTestimony() {
                 }   
               }
             }
-          }
+          },
           testimonys: allMarkdownRemark(
             sort: {
               fields: [frontmatter___order]
@@ -37,7 +37,13 @@ function SecTestimony() {
                 }   
               }
             }
-          }
+          },
+          photos: allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "testmony"}}) {
+            nodes {
+              name
+              publicURL
+            }
+          },
         }
       `}
       render={data => (
@@ -61,7 +67,12 @@ function SecTestimony() {
               {
                 data.testimonys.edges.map(({ node }) =>
                   <div key={node.frontmatter.order} className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
-                    <img className="md:float-left w-full md:w-auto" src={`/images/${node.frontmatter.img}.png`} alt={`foto ${node.frontmatter.title}`} />
+                    
+                    {
+                      data.photos.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.img && <img className="md:float-left w-full md:w-auto" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
+                      )
+                    }
                     <div className="px-5px md:float-right md:px-20px lg:px-0">
                       <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">{node.excerpt}</p>
                       <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">

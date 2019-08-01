@@ -7,7 +7,7 @@ function SecTeam() {
     <StaticQuery
       query={graphql`
         {
-          allMarkdownRemark(filter: { frontmatter: { title: { eq: "Team" } }}) {
+          content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Team" } }}) {
             edges {
               node {
                 excerpt(pruneLength: 340)
@@ -16,7 +16,19 @@ function SecTeam() {
                 }   
               }
             }
-          }
+          },
+          mobile: file(name: {eq:"mobile"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
+          mobile1: file(name: {eq:"mobile1"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
+          mobile2: file(name: {eq:"mobile2"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
         }
       `}
       render={data => (
@@ -27,7 +39,7 @@ function SecTeam() {
           </div>
           <div className="w-auto md:w-662px lg:w-889px h-auto lg:h-91px mx-20px md:mx-auto text-center mt-22-50px md:mt-25px mb-39-50px md:mb-38px">
             {
-              data.allMarkdownRemark.edges.map(({ node }) =>
+              data.content.edges.map(({ node }) =>
                 <p key={node.frontmatter.title} className="text-14 md:text-17 text-black-3 leading-tight">
                   {node.excerpt}
                 </p>
@@ -36,9 +48,9 @@ function SecTeam() {
           </div>
           <div className="w-full mxa-ha lg:h-405px xl:h-469-18px mb-27px md:mb-40px lg:mb-50px lg:max-w-980 xl:max-w-1110">
             <div className="h-auto lg:float-left w-320px md:w-546-11px lg:w-456px xl:w-546-11px mxa-ha lg:mx-0">
-              <img className="float-left img-mobile" src="/images/mobile1.svg" alt="images/mobile1" />
-              <img className="float-right img-mobile" src="/images/mobile2.svg" alt="images/mobile2" />
-              <img className="mb-38-50px lg:mb-0 hidden md:block" src="/images/mobile.svg" alt="images/mobile" />
+              <img className="float-left img-mobile" src={data.mobile1.publicURL} alt={data.mobile1.name} />
+              <img className="float-right img-mobile" src={data.mobile2.publicURL} alt={data.mobile2.name} />
+              <img className="mb-38-50px lg:mb-0 hidden md:block" src={data.mobile.publicURL} alt={data.mobile.name} />
             </div>
             <div className="lg:float-right w-320px md:w-456px xl:h-full mx-auto lg:mx-0 txtc-lgtxtl">
               <div className="h-auto xl:h-247px">

@@ -96,15 +96,19 @@ function Contact() {
                 }
               }
             }
-          }
+          },
+          background_full: file(name: {eq:"background_full"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
         }
       `}
       render={data => (
         <section
           className="h-auto bg-cover"
-          style={{ backgroundImage: 'url(/images/background_full.svg)' }}
+          style={{ backgroundImage: `url(${data.background_full.publicURL})` }}
         >
-          <div className="bg-cian-1 opacity-98 h-auto pt-30px lg:pt-40px pb-30px lg:pb-60px">
+          <div className="bg-cian-5 h-auto pt-30px lg:pt-40px pb-30px lg:pb-60px">
           <Anchor id="contato" />
             <div className="container mx-auto">
               <div className="sec-intro font-semibold lg:leading-normal">
