@@ -7,16 +7,6 @@ function SecTeam() {
     <StaticQuery
       query={graphql`
         {
-          content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Team" } }}) {
-            edges {
-              node {
-                excerpt(pruneLength: 340)
-                frontmatter {
-                  title
-                }   
-              }
-            }
-          },
           mobile: file(name: {eq:"mobile"}, sourceInstanceName: {eq: "images"}) {
             name
             publicURL
@@ -29,13 +19,25 @@ function SecTeam() {
             name
             publicURL
           },
+          content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Team" } }}) {
+            edges {
+              node {
+                excerpt(pruneLength: 340)
+                frontmatter {
+                  title
+                }   
+              }
+            }
+          },
         }
       `}
       render={data => (
         <section className="container mxa-ha lg:w-1110px pt-30px lg:pt-40px">
           <div className="sec-intro font-semibold md:leading-tight lg:mx-auto mx-20px">
-            <span className="text-black-1">Um time </span>
-            <span className="text-cian-1">completo de TI.</span>
+            <h2>
+              <span className="text-black-1">Um time </span>
+              <span className="text-cian-1">completo de TI.</span>
+            </h2>
           </div>
           <div className="w-auto md:w-662px lg:w-889px h-auto lg:h-91px mx-20px md:mx-auto text-center mt-23px md:mt-25px mb-40px md:mb-38px">
             {

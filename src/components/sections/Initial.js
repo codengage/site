@@ -7,6 +7,10 @@ function Initial({ scroll }) {
     <StaticQuery
       query={graphql`
         {
+          balanco: file(name: {eq:"balanco"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
           content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Initial" } }}) {
             edges {
               node {
@@ -16,10 +20,6 @@ function Initial({ scroll }) {
                 }   
               }
             }
-          },
-          balanco: file(name: {eq:"balanco"}, sourceInstanceName: {eq: "images"}) {
-            name
-            publicURL
           },
         }
       `}
@@ -31,8 +31,10 @@ function Initial({ scroll }) {
             </div>
             <div className="lg:float-right mt-50px lg:mt-0 txtc-lgtxtl">
               <div className="h-51px lg:h-60px xl:h-79px w-280px xs:w-298px initial-xs mx-auto lg:mx-0 font-semibold text-46 xs:text-48-97 leading-none">
-                <span className="text-black-1">Menos é </span>
-                <span className="text-cian-1">mais.</span>
+                <h1>
+                  <span className="text-black-1">Menos é </span>
+                  <span className="text-cian-1">mais.</span>
+                </h1>
               </div>
               <div className="w-280px xs:w-296px lg-w-428 h-85px lg:h-107px xl:h-126px mx-auto lg:ml-3px mt-15px lg:mt-20px xl:mt-38px lg:mr-25px">
                 {

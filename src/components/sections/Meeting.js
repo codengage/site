@@ -9,6 +9,14 @@ function Meeting() {
     <StaticQuery
       query={graphql`
         {
+          web: file(name: {eq:"web"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
+          tela: file(name: {eq:"tela"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
           content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Meeting" } }}) {
             edges {
               node {
@@ -19,14 +27,6 @@ function Meeting() {
               }
             }
           },
-          tela: file(name: {eq:"tela"}, sourceInstanceName: {eq: "images"}) {
-            name
-            publicURL
-          },
-          web: file(name: {eq:"web"}, sourceInstanceName: {eq: "images"}) {
-            name
-            publicURL
-          }
         }
       `}
       render={data => (
@@ -39,7 +39,7 @@ function Meeting() {
             <div className="max-w-380 md:max-w-424 mx-auto lg:w-269px h-full lg:mr-0 xl:ml-60px xxl:ml-112px txtc-lgtxtl">
               <p className="h-auto text-18 md:text-24 xl:text-26 font-display leading-125 md:leading-115 mt-30px lg:mt-65px mx-20px lg:mx-auto">
                 Somos ágeis, metódicos e valorizamos a autonomia para entregar serviços com qualidade.
-          </p>
+              </p>
               <div className="mx-20px xl:w-264px mt-30px lg:mt-40px mb-30px lg:mb-60px">
                 <img className="w-148px md:w-245px lg:w-205px mxa-ha" src={data.tela.publicURL} alt={data.tela.name} />
                 {

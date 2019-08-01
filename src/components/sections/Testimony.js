@@ -9,6 +9,12 @@ function SecTestimony() {
     <StaticQuery
       query={graphql`
         query {
+          photos: allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "testmony"}}) {
+            nodes {
+              name
+              publicURL
+            }
+          },
           testimony: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Testimony" } }}) {
             edges {
               node {
@@ -38,21 +44,17 @@ function SecTestimony() {
               }
             }
           },
-          photos: allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "testmony"}}) {
-            nodes {
-              name
-              publicURL
-            }
-          },
         }
       `}
       render={data => (
         <section className="h-full bg-white pt-30px lg:pt-40px pb-30px lg:pb-60px">
-        <Anchor id="testemunho" />
+          <Anchor id="testemunho" />
           <div className="container mx-auto lg:max-w-1065">
             <div className="mx-20px font-semibold text-34 md:text-46 lg:text-58 text-center leading-none lg:leading-normal">
-              <span className="text-black-3">O que nossos clientes </span>
-              <span className="text-cian-1">pensam de nós?</span>
+              <h2>
+                <span className="text-black-3">O que nossos clientes </span>
+                <span className="text-cian-1">pensam de nós?</span>
+              </h2>
             </div>
             <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-30px lg:mt-25px lg:mb-53px">
               {
@@ -67,7 +69,7 @@ function SecTestimony() {
               {
                 data.testimonys.edges.map(({ node }) =>
                   <div key={node.frontmatter.order} className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
-                    
+
                     {
                       data.photos.nodes.map(({ name, publicURL }) =>
                         name === node.frontmatter.img && <img className="md:float-left w-full md:w-auto" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />

@@ -24,6 +24,16 @@ function Partners() {
     <StaticQuery
       query={graphql`
         query {
+          background_full: file(name: {eq:"background_full"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
+          icons: allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "partners"}}) {
+            nodes {
+              name
+              publicURL
+            }
+          },
           partners: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Partners" } } }) {
             edges {
               node {
@@ -64,16 +74,6 @@ function Partners() {
               }
             }
           },
-          background_full: file(name: {eq:"background_full"}, sourceInstanceName: {eq: "images"}) {
-            name
-            publicURL
-          },
-          icons: allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "partners"}}) {
-            nodes {
-              name
-              publicURL
-            }
-          },
         }
       `}
       render={data => (
@@ -85,8 +85,10 @@ function Partners() {
             <Anchor id="clientes" />
             <div className="container mx-auto h-full xl:max-w-1110">
               <div className="sec-intro font-semibold mx-20px lg:leading-normal">
-                <span className="text-white">Empresas que </span>
-                <span className="text-cian-1">estão conosco.</span>
+                <h2>
+                  <span className="text-white">Empresas que </span>
+                  <span className="text-cian-1">estão conosco.</span>
+                </h2>
               </div>
               <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-25px mb-20px md:mb-40px lg:mb-53px">
                 {data.partners.edges.map(({ node }) => (

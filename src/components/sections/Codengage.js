@@ -9,6 +9,14 @@ function Codengage() {
     <StaticQuery
       query={graphql`
         {
+          background_full: file(name: {eq:"background_full"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
+          lula: file(name: {eq:"lula"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
           content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Codengage" } }}) {
             edges {
               node {
@@ -19,14 +27,6 @@ function Codengage() {
               }
             }
           },
-          background_full: file(name: {eq:"background_full"}, sourceInstanceName: {eq: "images"}) {
-            name
-            publicURL
-          },
-          lula: file(name: {eq:"lula"}, sourceInstanceName: {eq: "images"}) {
-            name
-            publicURL
-          },
         }
       `}
       render={data => (
@@ -34,8 +34,10 @@ function Codengage() {
           <div className="container mxa-ha pt-30px md:pt-40px">
             <Anchor id="empresa" />
             <div className="mx-20px md:mx-auto leading-none md:leading-105 lg:leading-120 xl:leading-normal text-center font-semibold text-34 md:text-48-97 lg:text-58">
-              <span className="text-black-1">Uma empresa formada </span>
-              <span className="text-cian-1">por pessoas.</span>
+              <h2>
+                <span className="text-black-1">Uma empresa formada </span>
+                <span className="text-cian-1">por pessoas.</span>
+              </h2>
             </div>
             <div className="md:w-662px lg:w-889px h-auto mx-20px md:mx-auto text-center mt-30px md:mt-25px mb-38px">
               {
