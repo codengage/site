@@ -1,14 +1,25 @@
 import React from 'react'
 
+import Slider from "react-slick";
+
 import { StaticQuery, graphql } from 'gatsby'
 
 import Anchor from '../anchor';
 
-if (typeof window !== `undefined`) {
-  require('macro-carousel')
-}
-
 function Partners() {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    nextArrow: <></>,
+    prevArrow: <></>
+  };
+
   return (
     <StaticQuery
       query={graphql`
@@ -110,26 +121,24 @@ function Partners() {
                   </div>
                 ))}
               </div>
-              <div className="h-148px w-full md-ab-inv md:hidden flex mt-50px mb-32px">
-                <macro-carousel loop pagination class="w-full">
-                  {data.partnerssm.edges.map(({ node }) => (
-                    <article key={node.frontmatter.order} className="w-full mb-30px mr-0">
-                      <div className="w-full px-auto inline-flex justify-around">
-                    {
-                      data.icons.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.first && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
-                      )
-                    }
-                    {
-                      data.icons.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.second && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
-                      )
-                    }
-                      </div>
-                    </article>
-                  ))}
-                </macro-carousel>
-              </div>
+              <Slider {...sliderSettings} className="h-73px md-ab-inv md:hidden flex mt-50px mb-73px">
+                {
+                  data.partnerssm.edges.map(({ node }) => (
+                    <div key={node.frontmatter.order} className="no-outline w-full px-auto flex-row inline-flex justify-around">
+                      {
+                        data.icons.nodes.map(({ name, publicURL }) =>
+                          name === node.frontmatter.first && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
+                        )
+                      }
+                      {
+                        data.icons.nodes.map(({ name, publicURL }) =>
+                          name === node.frontmatter.second && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
+                        )
+                      }
+                    </div>
+                  ))
+                }
+              </Slider>
             </div>
           </div>
         </section>

@@ -26,13 +26,14 @@
     "gatsby-transformer-remark": "^2.5.0",
     "glhd-tailwindcss-transitions": "^0.3.0",
     "graphql": "14.4.1",
-    "macro-carousel": "^1.0.0",
     "mailchimp-api-v3": "^1.13.1",
     "md5": "^2.2.1",
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-helmet": "5.2.1"
+    "react-helmet": "5.2.1",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@now/node": "^0.12.1",

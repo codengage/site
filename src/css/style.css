@@ -15,12 +15,30 @@
 
 @tailwind utilities;
 
-macro-carousel-pagination-indicator {
-    --macro-carousel-pagination-color: #ffffff33;
-    --macro-carousel-pagination-color-selected: #04BFCB;
-    --macro-carousel-pagination-size-dot: 12.18px;
-    outline: none !important;
+/* personalização do caroussel */
+.slick-dots {
+    position: relative !important;
 }
+.slick-dots li button {
+    border-color: #ffffff99 !important;
+    border-width: 1px !important;
+    border-radius: 10px !important;
+    border-style: solid !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+.slick-dots li.slick-active button {
+    border-color: #04BFCB !important;
+    background-color: #04BFCB !important;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: transparent !important
+}
+.slick-slide div div {
+    display: inline-flex !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
