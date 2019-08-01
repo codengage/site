@@ -77,14 +77,14 @@ function Partners() {
                 <span className="text-white">Empresas que </span>
                 <span className="text-cian-1">estão conosco.</span>
               </div>
-              <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-25px mb-20px md:mb-40px lg:mb-53-23px">
+              <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-25px mb-20px md:mb-40px lg:mb-53px">
                 {data.partners.edges.map(({ node }) => (
                   <p key={node.frontmatter.title} className="txtc-14-18 text-white leading-tight mx-20px">
                     {node.excerpt}
                   </p>
                 ))}
               </div>
-              <div className="c-grid xl:max-w-1065 md:h-245px xl:h-341-79px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-40px xl:px-0">
+              <div className="c-grid xl:max-w-1065 md:h-245px xl:h-342px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-40px xl:px-0">
                 {data.partnersmd.edges.map(({ node }) => (
                   <div key={node.frontmatter.order} className="j-grid md:w-full">
                     {

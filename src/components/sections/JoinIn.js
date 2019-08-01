@@ -34,7 +34,7 @@ function JoinIn() {
           </div>
           <div className="max-w-380 sm:max-w-424 lg:max-w-848 mxa-ha">
             <div className="mx-20px lg:inline-flex lg:w-full lg:justify-between">
-              <div className="mx-auto lg:mx-0 lg:float-left w-138-32px md:w-162px mt-18px">
+              <div className="mx-auto lg:mx-0 lg:float-left w-138px md:w-162px mt-18px">
                 <img src={data.coffee.publicURL} alt="coffee" />
               </div>
               <div className="lg:float-right lg:w-541px mt-30px lg:mt-48px flex lg:content-between flex-wrap">

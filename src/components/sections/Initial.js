@@ -26,7 +26,7 @@ function Initial({ scroll }) {
       render={data => (
         <section className={scroll ? "container mxa-ha initial mt-114px md:mt-154px lg:mt-225px xl:mt-298px mb-55px lg:mb-85px xl:mb-165px" : "container mxa-ha initial mt-55px lg:mt-85px xl:mt-165px mb-55px lg:mb-85px xl:mb-165px"}>
           <div className="mx-20px">
-            <div className="lg:float-left max-w-288 md:max-w-350 lg:max-w-452 xxl:max-w-546 h-172-34px md:h-209-42px lg:h-full mx-auto lg:mx-0">
+            <div className="lg:float-left max-w-288 md:max-w-350 lg:max-w-452 xxl:max-w-546 h-172px md:h-209px lg:h-full mx-auto lg:mx-0">
               <img className="float-left" src={data.balanco.publicURL} alt={data.balanco.name} />
             </div>
             <div className="lg:float-right mt-50px lg:mt-0 txtc-lgtxtl">

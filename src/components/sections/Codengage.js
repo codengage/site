@@ -49,11 +49,11 @@ function Codengage() {
           </div>
           <div className="h-auto xl:h-677px md:w-full bg-cover px-20px" style={{ backgroundImage: `url(${data.background_full.publicURL})` }}>
             <div className="lg:w-581px h-full mx-auto max-w-366 md:max-w-480 lg:max-w-677 bg-cian-2">
-              <div className="h-full ml-36-90px md:ml-67px mr-23-48px md:mr-42-63px pt-33-28px lg:pt-60-42px">
-                <div className="h-161-28px lg:h-292-83px mb-32-91px lg:mb-59-75px mx-auto">
+              <div className="h-full ml-37px md:ml-67px mr-24px md:mr-43px pt-33px lg:pt-61px">
+                <div className="h-161px lg:h-293px mb-33px lg:mb-60px mx-auto">
                   <img className="h-full lg:float-left" src={data.lula.publicURL} alt="lula I love tech" />
                 </div>
-                <div className="h-139-31px md:h-213px mb-28-22px lg:mb-50px text-left leading-120 md:leading-130 lg:leading-normal text-16 md:text-24 lg:text-26 mx-auto">
+                <div className="h-139px md:h-213px mb-28px lg:mb-50px text-left leading-120 md:leading-130 lg:leading-normal text-16 md:text-24 lg:text-26 mx-auto">
                   <span className="text-white">Acreditamos muito nas pessoas</span>
                   <span>, somente elas possuem o poder da transformação. Uma pessoa motivada pode acessar o inacessível,</span>
                   <span className="text-white"> rompendo barreiras</span>

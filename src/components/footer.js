@@ -121,14 +121,14 @@ function Footer() {
                 onClose={handleCloseAlert.bind(this)}
               />
               <div className="w-auto mx-20px pb-203px lg:pb-54px lg:inline-flex lg:justify-between">
-                <div className="lg:w-357-74px lg:h-135px lg:pt-7px lg:pb-6-09px flex lg:content-between flex-wrap text-14 txtc-lgtxtl">
+                <div className="lg:w-358px lg:h-135px lg:pt-7px lg:pb-6px flex lg:content-between flex-wrap text-14 txtc-lgtxtl">
                   <h5 className="font-bold w-full lg:w-auto mb-20px lg:mb-0">Assine nossa Newsletter mensal</h5>
                   <p className="font-display lg:w-350px leading-145 mb-20px lg:mb-0">
                     Acompanhe-nos recebendo mensalmente novidades sobre o mercado de tecnologia no seu email.
               </p>
                   <form className="mx-auto lg:mx-0 inline-flex w-320px">
                     <input
-                      className="no-outline on-focus bg-white float-left xs:w-214-8px h-40-91px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14"
+                      className="no-outline on-focus bg-white float-left xs:w-215px h-41px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14"
                       type="email"
                       placeholder="Email"
                       required
@@ -136,7 +136,7 @@ function Footer() {
                       onChange={e => changeEmail(e.target.value)}
                     ></input>
                     <button
-                      className="no-outline on-focus float-right w-85px lg:w-122-74px h-40-91px ml-10px bg-cian-1 hover:bg-cian-3 text-12 text-white font-semibold rounded"
+                      className="no-outline on-focus float-right w-85px lg:w-123px h-41px ml-10px bg-cian-1 hover:bg-cian-3 text-12 text-white font-semibold rounded"
                       type="submit"
                       onClick={e => handleSubmit(e)}
                     >
@@ -144,18 +144,18 @@ function Footer() {
                 </button>
                   </form>
                 </div>
-                <div className="absolute lg:relative w-full left-0 -bottom-28 xs:-bottom-32 lg:bottom-0 lg:w-179-55px lg:h-228-23px lg:pt-4-89px lg:-mb-85-12px xl:mr-0 xl:ml-84-65px">
+                <div className="absolute lg:relative w-full left-0 -bottom-28 xs:-bottom-32 lg:bottom-0 lg:w-180px lg:h-228px lg:pt-5px lg:-mb-85px xl:mr-0 xl:ml-85px">
                   <img className="mx-auto" src={data.mimi.publicURL} alt="mimi codengage" />
                 </div>
                 <div className="w-full lg:w-auto justify-between inline-flex h-148px mt-29px lg:mt-0 lg:mb-0">
-                  <div className="lg:w-161px lg:h-119px lg:mb-26px pt-3px xl:ml-88-4px text-14 font-display">
+                  <div className="lg:w-161px lg:h-119px lg:mb-26px pt-3px xl:ml-88px text-14 font-display">
                     <p>+55 46 2605-0031</p>
                     <p>+55 46 99985-8593</p>
                     <p>contato@codengage.com</p>
                     <p>comercial@codengage.com</p>
                     <p>rh@codengage.com</p>
                   </div>
-                  <div className="c-grid w-82px lg:h-full lg:ml-40px xl:ml-67-53px font-display text-14 text-cian-3">
+                  <div className="c-grid w-82px lg:h-full lg:ml-40px xl:ml-68px font-display text-14 text-cian-3">
                     <Link className="inline-flex no-outline" to="/#empresa"><img src={data.icon_play_cian.publicURL} alt="icon list" />&nbsp;Empresa</Link>
                     <Link className="inline-flex no-outline" to="/#servicos"><img src={data.icon_play_cian.publicURL} alt="icon list" />&nbsp;Serviços</Link>
                     <Link className="inline-flex no-outline" to="/#clientes"><img src={data.icon_play_cian.publicURL} alt="icon list" />&nbsp;Clientes</Link>

@@ -161,7 +161,7 @@ function Contact() {
                   </div>
                   <div className="w-full mb-15px">
                     <textarea
-                      className="no-outline on-focus input-contact h-153-81px max-h-180 py-16px"
+                      className="no-outline on-focus input-contact h-154px max-h-180 py-16px"
                       type="text"
                       placeholder="Mensagem"
                       required

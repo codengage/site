@@ -44,9 +44,9 @@ function Header({ scroll }) {
                 <SocialIcons data={data} />
               </div>
             </div>
-            <div className={scroll ? "lg:px-20px xl:px-0 transition-fast transition-timing-ease-out transition-property-bg transition-delay-long bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px md:mt-0 h-39-80px lg:h-80px w-full"}>
+            <div className={scroll ? "lg:px-20px xl:px-0 transition-fast transition-timing-ease-out transition-property-bg transition-delay-long bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px md:mt-0 h-40px lg:h-80px w-full"}>
               <div className={scroll ? "container mx-auto pl-20px md:pl-40px md:pr-20px lg:pr-0 lg:pl-0 xl:px-0 j-grid items-center xl:w-1110px h-full" : "container mx-auto pl-20px lg:pl-0 j-grid items-center xl:w-1110px h-full"}>
-                <Link to="/" className="no-outline float-left flex items-center w-125-63px lg:w-162-95px lg:h-65-78px">
+                <Link to="/" className="no-outline float-left flex items-center w-126px lg:w-163px lg:h-66px">
                   <img src={data.logo.publicURL} alt={data.logo.name} />
                 </Link>
                 <div className="md:float-right absolute hidden md-vis-rel md:inline-flex items-center justify-between float-right md:w-456px lg:w-630px h-full pr-20px lg:pr-0 font-display text-black-1">
@@ -59,12 +59,12 @@ function Header({ scroll }) {
                 </div>
 
                 <button
-                  className={isExpanded ? "no-outline ab-inv f-ic mr-26-38px" : "no-outline md-ab-inv f-ic relative visible mr-26-38px"}
+                  className={isExpanded ? "no-outline ab-inv f-ic mr-26px" : "no-outline md-ab-inv f-ic relative visible mr-26px"}
                   onClick={() => toggleExpansion(!isExpanded)}>
                   <img src={data.icon_menu.publicURL} alt={data.icon_menu.name} />
                 </button>
                 <button
-                  className={isExpanded ? "no-outline md-ab-inv f-ic relative visible mr-26-38px text-24" : "no-outline ab-inv md-ab-inv flex mr-26-38px text-24"}
+                  className={isExpanded ? "no-outline md-ab-inv f-ic relative visible mr-26px text-24" : "no-outline ab-inv md-ab-inv flex mr-26px text-24"}
                   onClick={() => toggleExpansion(!isExpanded)}>
                   &times;
             </button>

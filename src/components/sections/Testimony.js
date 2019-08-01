@@ -54,7 +54,7 @@ function SecTestimony() {
               <span className="text-black-3">O que nossos clientes </span>
               <span className="text-cian-1">pensam de nós?</span>
             </div>
-            <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-30px lg:mt-25px lg:mb-53-23px">
+            <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-30px lg:mt-25px lg:mb-53px">
               {
                 data.testimony.edges.map(({ node }) =>
                   <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 leading-tight mx-20px">
