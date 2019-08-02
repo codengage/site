@@ -56,11 +56,11 @@ function SecTeam() {
             </div>
             <div className="lg:float-right w-320px md:w-456px xl:h-full mx-auto lg:mx-0 txtc-lgtxtl">
               <div className="h-auto xl:h-247px">
-                <p className="font-semibold text-28 lg:text-34 xl:text-46">Buscamos a excelência do produto através da cultura criativa, design e engenharia de software.</p>
+                <p className="font-semibold text-28 lg:text-34 xl:text-46">Buscamos a excelência do produto por meio da cultura criativa, design e engenharia de software.</p>
               </div>
               <div className="h-auto lg:h-165px mt-30px lg:mt-43px">
                 <p className="text-18 lg:text-26 text-black-3 font-display">
-                  Oferecemos a assessoria completa para empresas quem desejam desenvolver novos produtos digitais, ou reforçar seu corpo técnico atual.
+                  Oferecemos a assessoria completa para empresas quem desejam desenvolver novos produtos, ou reforçar sua equipe técnica atual.
               </p>
               </div>
             </div>
