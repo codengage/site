@@ -46,7 +46,7 @@ function Layout() {
         `}
         render={data => (
           <div className="bg-gray-1 flex flex-col font-display">
-            <Header siteTitle={data.site.siteMetadata.title} scroll={isScroll} />
+            <Header scroll={isScroll} />
             <Initial scroll={isScroll} />
             <Codengage />
             <Team />

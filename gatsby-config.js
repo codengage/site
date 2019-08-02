@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Codengage`,
-    description: `Landing Page Codengage`,
-    author: `@CodengageTech`
+    titleTemplate: ` - Fazemos sistemas, não biscoitos`,
+    description: `Empresa de desenvolvimento de soluções de tecnologia da informação que alia os desafios com a capacidade de transformar idéias em grandes oportunidades de negócios. Offshore Outsourcing. Consultoria e projetos de software sob medida. Pesquisa, Inovação e Prototipação`,
+    keywords: "tecnologia,informação,desenvolvimento,desenvolvedor,desenvolvedores,software,sistemas,mobile,aplicativos, soluções,eletrônica,hardware,ux,ui,design,dados,análise,uml,scrum,metodologias,java,php,dotnet,javascript,html,css,backend,frontend,projetos",
+    url: "http://www.codengage.com/",
+    author: `@CodengageTech`,
+    image: `src/images/favicon-32x32.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
