@@ -68,14 +68,14 @@ function SecTestimony() {
             <div className="max-w-380 sm:max-w-full lg:inline-flex lg:justify-between w-full mxa-ha">
               {
                 data.testimonys.edges.map(({ node }) =>
-                  <div key={node.frontmatter.order} className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px lg:mx-0">
+                  <div key={node.frontmatter.order} className="flex-wrap sm:flex-no-wrap sm:inline-flex h-auto lg:w-307px mt-30px lg:mt-0 sm:content-between lg:flex-wrap mx-20px lg:mx-0">
 
                     {
                       data.photos.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.img && <img width="50%" height="50%" className="md:max-w-300 w-full mx-auto md:float-left" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
+                        name === node.frontmatter.img && <img width="50%" height="50%" className="md:max-w-300 w-full mx-auto sm:float-left order-1" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
                       )
                     }
-                    <div className="px-5px md:float-right md:pl-40px md:pr-0 lg:px-0">
+                    <div className="px-5px sm:float-right md:pl-40px md:pr-0 lg:px-0 order-2">
                       <p className="text-14 font-display text-center md:text-left mt-30px">{node.excerpt}</p>
                       <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
                         <p className="text-16 text-cian-1">{node.frontmatter.title}</p>

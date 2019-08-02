@@ -40,16 +40,16 @@ function Meeting() {
               <p className="h-auto text-18 md:text-24 xl:text-26 font-display mx-20px lg:mx-auto">
                 Somos ágeis, metódicos e valorizamos a autonomia para entregar serviços com qualidade.
               </p>
-              <div className="mx-20px xl:w-264px mt-30px lg:mt-40px">
-                <img className="w-148px md:w-245px lg:w-205px mxa-ha" src={data.tela.publicURL} alt={data.tela.name} />
+              <div className="mx-20px xl:w-264px mt-30px lg:mt-40px flex-wrap">
+                <img className="w-148px md:w-245px lg:w-205px mxa-ha order-1" src={data.tela.publicURL} alt={data.tela.name} />
                 {
                   data.content.edges.map(({ node }) =>
-                    <p key={node.frontmatter.title} className="md:w-full h-auto text-18 xl:text-14 font-display mt-35px xl:mt-49px">
+                    <p key={node.frontmatter.title} className="md:w-full h-auto text-18 xl:text-14 font-display mt-35px xl:mt-49px order-2">
                       {node.excerpt}
                     </p>
                   )
                 }
-                <a href="https://calendar.google.com/calendar/b/3?cid=Y29tZXJjaWFsQGNvZGVuZ2FnZS5jb20" rel="noopener" target="_blank" className="no-outline btn text-center block py-13px h-52px md:max-w-245 mx-auto xl:ml-3px mt-30px xl:mt-34px bg-cian-1 hover:bg-cian-3 font-semibold" >
+                <a href="https://calendar.google.com/calendar/b/3?cid=Y29tZXJjaWFsQGNvZGVuZ2FnZS5jb20" rel="noopener" target="_blank" className="no-outline btn text-center block py-13px h-52px md:max-w-245 mx-auto xl:ml-3px mt-30px xl:mt-34px bg-cian-1 hover:bg-cian-3 font-semibold order-3" >
                 AGENDAR UMA REUNIÃO
                 </a>
               </div>
