@@ -33,7 +33,7 @@ function SecTeam() {
       `}
       render={data => (
         <section className="container mxa-ha lg:w-1110px pt-30px lg:pt-40px">
-          <div className="sec-intro font-semibold md:leading-tight lg:mx-auto mx-20px">
+          <div className="sec-intro font-semibold lg:mx-auto mx-20px">
             <h2>
               <span className="text-black-1">Um time </span>
               <span className="text-cian-1">completo de TI.</span>
@@ -42,7 +42,7 @@ function SecTeam() {
           <div className="w-auto md:w-662px lg:w-889px h-auto lg:h-91px mx-20px md:mx-auto text-center mt-23px md:mt-25px mb-40px md:mb-38px">
             {
               data.content.edges.map(({ node }) =>
-                <p key={node.frontmatter.title} className="text-14 md:text-17 text-black-3 leading-tight">
+                <p key={node.frontmatter.title} className="text-14 md:text-17 text-black-3">
                   {node.excerpt}
                 </p>
               )
@@ -56,10 +56,10 @@ function SecTeam() {
             </div>
             <div className="lg:float-right w-320px md:w-456px xl:h-full mx-auto lg:mx-0 txtc-lgtxtl">
               <div className="h-auto xl:h-247px">
-                <p className="font-semibold text-28 lg:text-34 xl:text-46 leading-105">Buscamos a excelência do produto através da cultura criativa, design e engenharia de software.</p>
+                <p className="font-semibold text-28 lg:text-34 xl:text-46">Buscamos a excelência do produto através da cultura criativa, design e engenharia de software.</p>
               </div>
               <div className="h-auto lg:h-165px mt-30px lg:mt-43px">
-                <p className="text-18 lg:text-26 text-black-3 leading-tight font-display">
+                <p className="text-18 lg:text-26 text-black-3 font-display">
                   Oferecemos a assessoria completa para empresas quem desejam desenvolver novos produtos digitais, ou reforçar seu corpo técnico atual.
               </p>
               </div>

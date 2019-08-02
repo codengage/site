@@ -111,7 +111,7 @@ function Contact() {
           <div className="bg-cian-5 h-auto pt-30px lg:pt-40px pb-30px lg:pb-60px">
             <Anchor id="contato" />
             <div className="container mx-auto">
-              <div className="sec-intro font-semibold lg:leading-normal">
+              <div className="sec-intro font-semibold">
                 <h2>
                   <span className="text-black-3">Entre em contato </span>
                   <span className="text-white">conosco.</span>
@@ -119,7 +119,7 @@ function Contact() {
               </div>
               <div className="mw424-mxa md:max-w-677 lg:max-w-817 pt-15px">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 text-center leading-snug mx-20px">
+                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 text-center mx-20px">
                     {node.excerpt}
                   </p>
                 ))}

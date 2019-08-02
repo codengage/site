@@ -123,7 +123,7 @@ function Footer() {
               <div className="w-auto mx-20px pb-203px lg:pb-54px lg:inline-flex lg:justify-between">
                 <div className="lg:w-358px lg:h-135px lg:pt-7px lg:pb-6px flex lg:content-between flex-wrap text-14 txtc-lgtxtl">
                   <h3 className="font-bold w-full lg:w-auto mb-20px lg:mb-0">Assine nossa Newsletter mensal</h3>
-                  <p className="font-display lg:w-350px leading-145 mb-20px lg:mb-0">
+                  <p className="font-display lg:w-350px mb-20px lg:mb-0">
                     Acompanhe-nos recebendo mensalmente novidades sobre o mercado de tecnologia no seu email.
                   </p>
                   <form className="mx-auto lg:mx-0 inline-flex w-320px">

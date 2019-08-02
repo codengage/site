@@ -28,13 +28,13 @@ function JoinIn() {
       render={data => (
         <section className="h-auto pt-30px md:pt-40px pb-30px lg:pb-60px">
           <Anchor id="talentos" />
-          <div className="container mx-auto text-center font-semibold text-34 md:text-46 xl:text-58 leading-none md:leading-normal">
+          <div className="container mx-auto text-center font-semibold text-34 md:text-46 xl:text-58">
             <h2>
               <span className="text-black-3">Junte-se </span>
               <span className="text-cian-1">a nós.</span>
             </h2>
           </div>
-          <div className="max-w-380 sm:max-w-424 lg:max-w-848 mxa-ha">
+          <div className="max-w-360 sm:max-w-424 lg:max-w-848 mxa-ha">
             <div className="mx-20px lg:inline-flex lg:w-full lg:justify-between">
               <div className="mx-auto lg:mx-0 lg:float-left w-138px md:w-162px mt-18px">
                 <img src={data.coffee.publicURL} alt="coffee" />
@@ -42,7 +42,7 @@ function JoinIn() {
               <div className="lg:float-right lg:w-541px mt-30px lg:mt-48px flex lg:content-between flex-wrap">
                 {
                   data.content.edges.map(({ node }) =>
-                    <p key={node.frontmatter.title} className="txtc-14-18 leading-140 txtc-lgtxtl">
+                    <p key={node.frontmatter.title} className="txtc-14-18 txtc-lgtxtl">
                       {node.excerpt}
                     </p>
                   )

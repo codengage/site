@@ -84,7 +84,7 @@ function Partners() {
           <div className="bg-black-2 h-full pt-30px lg:pt-40px">
             <Anchor id="clientes" />
             <div className="container mx-auto h-full xl:max-w-1110">
-              <div className="sec-intro font-semibold mx-20px lg:leading-normal">
+              <div className="sec-intro font-semibold mx-20px">
                 <h2>
                   <span className="text-white">Empresas que </span>
                   <span className="text-cian-1">estão conosco.</span>
@@ -92,32 +92,32 @@ function Partners() {
               </div>
               <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-25px mb-20px md:mb-40px lg:mb-53px">
                 {data.partners.edges.map(({ node }) => (
-                  <p key={node.frontmatter.title} className="txtc-14-18 text-white leading-tight mx-20px">
+                  <p key={node.frontmatter.title} className="txtc-14-18 text-white mx-20px">
                     {node.excerpt}
                   </p>
                 ))}
               </div>
-              <div className="c-grid xl:max-w-1065 md:h-245px xl:h-342px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-40px xl:px-0">
+              <div className="c-grid lg:max-w-980 xl:max-w-1110 md:h-245px xl:h-342px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-0 lg:mx-auto">
                 {data.partnersmd.edges.map(({ node }) => (
                   <div key={node.frontmatter.order} className="j-grid md:w-full">
                     {
                       data.icons.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.first && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                        name === node.frontmatter.first && <img className="md:w-135px lg:w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
                       )
                     }
                     {
                       data.icons.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.second && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                        name === node.frontmatter.second && <img className="md:w-135px lg:w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
                       )
                     }
                     {
                       data.icons.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.third && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                        name === node.frontmatter.third && <img className="md:w-135px lg:w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
                       )
                     }
                     {
                       data.icons.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.fourth && <img className="md:w-135px" key={name} src={publicURL} alt={`icon ${name}`} />
+                        name === node.frontmatter.fourth && <img className="md:w-135px lg:w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
                       )
                     }
                   </div>

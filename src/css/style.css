@@ -42,6 +42,9 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    line-height: 1.25 !important;
+}
 .ab-inv {
     @apply absolute invisible;
 }
@@ -70,7 +73,7 @@ html {
     @apply flex justify-between flex-wrap;
 }
 .input-contact {
-    @apply w-full px-16px bg-white opacity-100 font-display text-black-1 border border-black-8 rounded leading-tight;
+    @apply w-full px-16px bg-white opacity-100 font-display text-black-1 border border-black-8 rounded;
 }
 .mw424-mxa {
     @apply max-w-424 mx-auto;
@@ -85,7 +88,7 @@ html {
     outline: none !important;
 }
 .sec-intro {
-    @apply text-34 text-center leading-none;
+    @apply text-34 text-center;
 }
 .txtc-lgtxtl {
     @apply text-center;
@@ -95,6 +98,9 @@ html {
 }
 
 @screen md {
+    .slick-slider {
+        display: none !important;
+    }
     .md-ab-inv {
         @apply absolute invisible;
     }
@@ -120,7 +126,6 @@ html {
         @apply mx-0;
     }
     .initial {
-        margin-bottom: 80px !important;
         width: 974px;
     }
     .img-mobile {
@@ -142,14 +147,10 @@ html {
 }
 @screen xl {
     .initial {
-        @apply mb-159px;
+        @apply w-1111px;
     }
     .initial-xs {
         font-size: 78px !important;
     }
 }
-@screen xxl {
-    .initial {
-        @apply w-1111px;
-    }
-}
+

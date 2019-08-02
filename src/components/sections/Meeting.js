@@ -30,21 +30,21 @@ function Meeting() {
         }
       `}
       render={data => (
-        <section className="mxa-ha xl:max-w-1110">
-          <div className="container h-full lg:inline-flex">
+        <section className="mxa-ha xl:max-w-1110 lg:max-h-677 pt-30px pb-30px lg:pt-60px lg:pb-60px">
+          <div className="container h-full lg:inline-flex lg:justify-between xl:w-1111px">
             <Anchor id="servicos" />
-            <div className="w-auto md:w-546px lg:w-734px mxa-ha mt-30px lg:mt-59px mb-30px lg:mb-60px md:mb-0">
-              <img className="mx-20px" src={data.web.publicURL} alt={data.web.name} />
+            <div className="w-auto md:w-546px lg:w-700px mxa-ha lg:mx-0">
+              <img className="mx-20px md:mx-0 h-full" src={data.web.publicURL} alt={data.web.name} />
             </div>
-            <div className="max-w-380 md:max-w-424 mx-auto lg:w-269px h-full lg:mr-0 xl:ml-60px xxl:ml-112px txtc-lgtxtl">
-              <p className="h-auto text-18 md:text-24 xl:text-26 font-display leading-125 md:leading-115 mt-30px lg:mt-65px mx-20px lg:mx-auto">
+            <div className="max-w-380 md:max-w-424 mx-auto lg:w-269px h-full lg:mr-0 xl:ml-60px xxl:ml-112px txtc-lgtxtl mt-30px lg:mt-0 lg:mb-0">
+              <p className="h-auto text-18 md:text-24 xl:text-26 font-display mx-20px lg:mx-auto">
                 Somos ágeis, metódicos e valorizamos a autonomia para entregar serviços com qualidade.
               </p>
-              <div className="mx-20px xl:w-264px mt-30px lg:mt-40px mb-30px lg:mb-60px">
+              <div className="mx-20px xl:w-264px mt-30px lg:mt-40px">
                 <img className="w-148px md:w-245px lg:w-205px mxa-ha" src={data.tela.publicURL} alt={data.tela.name} />
                 {
                   data.content.edges.map(({ node }) =>
-                    <p key={node.frontmatter.title} className="md:w-full h-auto text-18 xl:text-14 font-display lg:leading-120 xl:leading-130 mt-35px xl:mt-49px">
+                    <p key={node.frontmatter.title} className="md:w-full h-auto text-18 xl:text-14 font-display mt-35px xl:mt-49px">
                       {node.excerpt}
                     </p>
                   )
