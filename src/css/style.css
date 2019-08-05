@@ -16,6 +16,7 @@
 @tailwind utilities;
 
 /* personalização do caroussel */
+/* purgecss start ignore */
 .slick-dots {
     position: relative !important;
 }
@@ -37,6 +38,7 @@
 .carousel {
     display: inline-flex !important;
 }
+/* purgecss end ignore */
 
 html {
     scroll-behavior: smooth;

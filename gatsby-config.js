@@ -27,8 +27,6 @@ module.exports = {
       resolve: 'gatsby-plugin-purgecss',
       options: {
         tailwind: true,
-        whitelist: ['slick-dots'],
-        whitelistPatternsChildren: ['/slick-dots$/'],
         purgeOnly: ['src/css/style.css']
       }
     },
