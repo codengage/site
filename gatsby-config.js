@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Codengage`,
-    titleTemplate: ` - Fazemos sistemas, não biscoitos`,
+    titleTemplate: ` - Outsourcing Tecnologia da Informação`,
     description: `Empresa de desenvolvimento de soluções de tecnologia da informação que alia os desafios com a capacidade de transformar idéias em grandes oportunidades de negócios. Offshore Outsourcing. Consultoria e projetos de software sob medida. Pesquisa, Inovação e Prototipação`,
     keywords: "tecnologia,informação,desenvolvimento,desenvolvedor,desenvolvedores,software,sistemas,mobile,aplicativos, soluções,eletrônica,hardware,ux,ui,design,dados,análise,uml,scrum,metodologias,java,php,dotnet,javascript,html,css,backend,frontend,projetos",
     url: "http://www.codengage.com/",
@@ -27,6 +27,8 @@ module.exports = {
       resolve: 'gatsby-plugin-purgecss',
       options: {
         tailwind: true,
+        whitelist: ['slick-dots'],
+        whitelistPatternsChildren: ['/slick-dots$/'],
         purgeOnly: ['src/css/style.css']
       }
     },

@@ -27,15 +27,14 @@
     width: 10px !important;
     height: 10px !important;
 }
-.slick-dots li.slick-active button {
+.slick-dots .slick-active button {
     border-color: #04BFCB !important;
     background-color: #04BFCB !important;
 }
-.slick-dots li button:before,
-.slick-dots li.slick-active button:before {
+.slick-dots li button:before {
     color: transparent !important
 }
-.slick-slide div div {
+.carousel {
     display: inline-flex !important;
 }
 
