@@ -6,7 +6,6 @@ module.exports = {
     keywords: "tecnologia,informação,desenvolvimento,desenvolvedor,desenvolvedores,software,sistemas,mobile,aplicativos, soluções,eletrônica,hardware,ux,ui,design,dados,análise,uml,scrum,metodologias,java,php,dotnet,javascript,html,css,backend,frontend,projetos",
     url: "http://www.codengage.com/",
     author: `@CodengageTech`,
-    image: `src/images/favicon-32x32.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
