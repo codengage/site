@@ -1,12 +1,20 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 
+import Anchor from '../anchor';
+
 function SecTestimony() {
 
   return (
     <StaticQuery
       query={graphql`
         query {
+          photos: allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "testmony"}}) {
+            nodes {
+              name
+              publicURL
+            }
+          },
           testimony: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Testimony" } }}) {
             edges {
               node {
@@ -16,7 +24,7 @@ function SecTestimony() {
                 }   
               }
             }
-          }
+          },
           testimonys: allMarkdownRemark(
             sort: {
               fields: [frontmatter___order]
@@ -35,20 +43,23 @@ function SecTestimony() {
                 }   
               }
             }
-          }
+          },
         }
       `}
       render={data => (
-        <section id="testemunho" className="h-full bg-white pt-30px lg:pt-40px pb-30px lg:pb-60px">
-          <div className="container mx-auto lg:max-w-1065">
-            <div className="mx-20px font-semibold text-34 md:text-46 lg:text-58 text-center leading-none lg:leading-normal">
-              <span className="text-black-3">O que nossos clientes </span>
-              <span className="text-cian-1">pensam de nós?</span>
+        <section className="h-full bg-white pt-30px lg:pt-40px pb-30px lg:pb-60px">
+          <Anchor id="testemunho" />
+          <div className="container mx-auto lg:max-w-980 xl:max-w-1110">
+            <div className="mx-20px font-semibold text-34 md:text-46 lg:text-58 text-center">
+              <h2>
+                <span className="text-black-3">O que nossos clientes </span>
+                <span className="text-cian-1">pensam de nós?</span>
+              </h2>
             </div>
-            <div className="lg:max-w-980 xl:w-817px mx-auto text-center mt-30px lg:mt-25px lg:mb-53-23px">
+            <div className="xl:w-817px mx-auto text-center mt-30px lg:mt-25px lg:mb-53px">
               {
                 data.testimony.edges.map(({ node }) =>
-                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 leading-tight mx-20px">
+                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 mx-20px">
                     {node.excerpt}
                   </p>
                 )
@@ -57,10 +68,15 @@ function SecTestimony() {
             <div className="max-w-380 sm:max-w-full lg:inline-flex lg:justify-between w-full mxa-ha">
               {
                 data.testimonys.edges.map(({ node }) =>
-                  <div key={node.frontmatter.order} className="sm:inline-flex lg:flex h-auto lg:w-307px mt-30px lg:mt-0 md:content-between lg:flex-wrap mx-20px">
-                    <img className="md:float-left w-full md:w-auto" src={`/images/${node.frontmatter.img}.png`} alt={`foto ${node.frontmatter.title}`} />
-                    <div className="px-5px md:float-right md:px-20px lg:px-0">
-                      <p className="text-14 font-display text-center md:text-left leading-130 md:leading-105 mt-30px">{node.excerpt}</p>
+                  <div key={node.frontmatter.order} className="flex-wrap sm:flex-no-wrap sm:inline-flex h-auto lg:w-307px mt-30px lg:mt-0 sm:content-between lg:flex-wrap mx-20px lg:mx-0">
+
+                    {
+                      data.photos.nodes.map(({ name, publicURL }) =>
+                        name === node.frontmatter.img && <img width="50%" height="50%" className="md:max-w-300 w-full mx-auto sm:float-left order-1" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
+                      )
+                    }
+                    <div className="px-5px sm:float-right md:pl-40px md:pr-0 lg:px-0 order-2">
+                      <p className="text-14 font-display text-center md:text-left mt-30px">{node.excerpt}</p>
                       <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
                         <p className="text-16 text-cian-1">{node.frontmatter.title}</p>
                         <p className="text-14 text-black-3">{node.frontmatter.company}</p>

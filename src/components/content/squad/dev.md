@@ -4,4 +4,4 @@ title: "DEVELOPER:"
 img: "dev"
 order: "2"
 ---
-Não são penas empilhadores de códigos, este profissional é sem dúvida a mente criativa que transcende a realidade da imaginação.
+Não são penas empilhadores de códigos, este profissional é a mente criativa responsável por converter imaginação em realidade.

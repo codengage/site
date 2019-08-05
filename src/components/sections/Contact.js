@@ -1,9 +1,10 @@
 import React, { useState, useReducer } from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
+import Anchor from '../anchor';
 import Alert from '../alert'
 
-function SecContact() {
+function Contact() {
   const [email, changeEmail] = useState('')
   const [fullName, changeFullName] = useState('')
   const [message, changeMessage] = useState('')
@@ -71,11 +72,11 @@ function SecContact() {
       fetch(`${process.env.GATSBY_API_CONTACT}`, data)
         .then(res => res.json())
         .then(res => {
-          res.erro ? dispatch({ type: 'error' }) : dispatch({ type: 'success' })
+          res.success ?
+            dispatch({ type: 'success' }) : dispatch({ type: 'error' });
         })
         .catch(e => {
           dispatch({ type: 'error' })
-          console.log('e', e)
         })
     } else {
       dispatch({ type: 'incomplete' })
@@ -95,24 +96,30 @@ function SecContact() {
                 }
               }
             }
-          }
+          },
+          background_full: file(name: {eq:"background_full"}, sourceInstanceName: {eq: "images"}) {
+            name
+            publicURL
+          },
         }
       `}
       render={data => (
         <section
-          id="contato"
           className="h-auto bg-cover"
-          style={{ backgroundImage: 'url(/images/background_full.svg)' }}
+          style={{ backgroundImage: `url(${data.background_full.publicURL})` }}
         >
-          <div className="bg-cian-1 opacity-98 h-auto pt-30px lg:pt-40px pb-30px lg:pb-60px">
+          <div className="bg-cian-5 h-auto pt-30px lg:pt-40px pb-30px lg:pb-60px">
+            <Anchor id="contato" />
             <div className="container mx-auto">
-              <div className="sec-intro font-semibold lg:leading-normal">
-                <span className="text-black-3">Entre em contato </span>
-                <span className="text-white">conosco.</span>
+              <div className="sec-intro font-semibold">
+                <h2>
+                  <span className="text-black-3">Entre em contato </span>
+                  <span className="text-white">conosco.</span>
+                </h2>
               </div>
               <div className="mw424-mxa md:max-w-677 lg:max-w-817 pt-15px">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 text-center leading-snug mx-20px">
+                  <p key={node.frontmatter.title} className="txtc-14-18 text-black-3 text-center mx-20px">
                     {node.excerpt}
                   </p>
                 ))}
@@ -156,7 +163,7 @@ function SecContact() {
                   </div>
                   <div className="w-full mb-15px">
                     <textarea
-                      className="no-outline on-focus input-contact h-153-81px max-h-180 py-16px"
+                      className="no-outline on-focus input-contact h-154px max-h-180 py-16px"
                       type="text"
                       placeholder="Mensagem"
                       required
@@ -181,4 +188,4 @@ function SecContact() {
   )
 }
 
-export default SecContact
+export default Contact

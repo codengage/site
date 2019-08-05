@@ -15,9 +15,21 @@ function SEO({ description, lang, meta, keywords, title }) {
             htmlAttributes={{
               lang
             }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            title={`${data.site.siteMetadata.title}${data.site.siteMetadata.titleTemplate}` }
+            // titleTemplate={data.site.siteMetadata.titleTemplate}
             meta={[
+              {
+                name: `author`,
+                content: data.site.siteMetadata.author
+              },
+              {
+                name: `image`,
+                content: data.logo.publicURL
+              },
+              {
+                name: `keywords`,
+                content: data.site.siteMetadata.keywords
+              },
               {
                 name: `description`,
                 content: metaDescription
@@ -70,14 +82,16 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: []
+  keywords: ``
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
+  titleTemplate: PropTypes.string,
+  image: PropTypes.string,
   meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  keywords: PropTypes.string,
   title: PropTypes.string.isRequired
 }
 
@@ -87,10 +101,16 @@ const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
       siteMetadata {
-        title
+        titleTemplate
         description
+        keywords
         author
+        title
       }
     }
+    logo: file(name: {eq:"logo-codengage"}, sourceInstanceName: {eq: "images"}) {
+      name
+      publicURL
+    },
   }
 `
