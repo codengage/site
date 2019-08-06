@@ -101,7 +101,7 @@ export default async (req, res) => {
 
   try {
     //envia email de contato pelo mailgun
-    if (tag === "contact") {
+    if (tag === "Contact") {
       await sendContact(body)
     }
 
