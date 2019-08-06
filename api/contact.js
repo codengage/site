@@ -1,13 +1,18 @@
 const md5 = require('md5')
 const dotenv = require('dotenv')
 const Mailchimp = require('mailchimp-api-v3')
+const Mailgun = require('mailgun-js')
 
 dotenv.config()
 
-const apiKey = process.env.MAILCHIMP_API
+const apiKeyMailchimp = process.env.MAILCHIMP_API
 const listId = process.env.MAILCHIMP_LIST
 
-const mailChimp = new Mailchimp(apiKey)
+const apiKeyMailgun = process.env.MAILGUN_API
+const domain = process.env.MAILGUN_DOMAIN
+
+const mailChimp = new Mailchimp(apiKeyMailchimp)
+const mailgun = new Mailgun({ apiKey: apiKeyMailgun, domain: domain });
 
 const getByEmail = path =>
   mailChimp.request({
@@ -46,6 +51,22 @@ const updateTags = (path, tags = []) =>
     }
   })
 
+const sendContact = (body = {}) =>
+  new Promise((resolve, reject) => {
+    mailgun.messages().send({
+      from: `${body.email_address}`,
+      to: 'contato@codengage.com',
+      subject: `Contato de ${body.merge_fields.FULLNAME}`,
+      html: `<p>Nome: ${body.merge_fields.FULLNAME};</p><p>Mensagem: ${body.merge_fields.MESSAGE};</p><p>Email: ${body.email_address};</p><p>Telefone: ${body.merge_fields.PHONE}.</p>`,
+      text: `Nome: ${body.merge_fields.FULLNAME}; Mensagem: ${body.merge_fields.MESSAGE}; Email: ${body.email_address}; Telefone: ${body.merge_fields.PHONE}.`
+    }, (error, body) => {
+      if (error) {
+        reject(error)
+      }
+      resolve(200)
+    });
+  })
+
 export default async (req, res) => {
   // extrai tag do body
   const { tag, ...body } = req.body
@@ -76,9 +97,14 @@ export default async (req, res) => {
         }
       })
     }
-  } catch (e) {}
+  } catch (e) { }
 
   try {
+    //envia email de contato pelo mailgun
+    if (tag === "contact") {
+      await sendContact(req.body)
+    }
+
     // registra ou atualiza o contato
     await createOrUpdate(path, body)
 

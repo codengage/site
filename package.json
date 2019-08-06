@@ -27,6 +27,7 @@
     "glhd-tailwindcss-transitions": "^0.3.0",
     "graphql": "14.4.1",
     "mailchimp-api-v3": "^1.13.1",
+    "mailgun-js": "^0.22.0",
     "md5": "^2.2.1",
     "prop-types": "15.7.2",
     "react": "16.8.6",
