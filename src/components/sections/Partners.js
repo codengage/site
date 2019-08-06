@@ -123,7 +123,7 @@ function Partners() {
                   </div>
                 ))}
               </div>
-              <Slider {...sliderSettings} className="h-73px md-ab-inv md:hidden flex mt-50px mb-73px">
+              <Slider {...sliderSettings} className="h-73px md-ab-inv flex mt-50px mb-73px">
                 {
                   data.partnerssm.edges.map(({ node }) => (
                     <div key={node.frontmatter.order} className="carousel no-outline w-full px-auto flex-row inline-flex justify-around">

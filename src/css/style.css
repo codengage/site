@@ -17,6 +17,11 @@
 
 /* personalização do caroussel */
 /* purgecss start ignore */
+@screen md {
+    .slick-slider {
+        display: none !important;
+    }
+}
 .slick-dots {
     position: relative !important;
 }
