@@ -126,7 +126,7 @@ function Partners() {
               <Slider {...sliderSettings} className="h-73px md-ab-inv md:hidden flex mt-50px mb-73px">
                 {
                   data.partnerssm.edges.map(({ node }) => (
-                    <div key={node.frontmatter.order} className="no-outline w-full px-auto flex-row inline-flex justify-around">
+                    <div key={node.frontmatter.order} className="carousel no-outline w-full px-auto flex-row inline-flex justify-around">
                       {
                         data.icons.nodes.map(({ name, publicURL }) =>
                           name === node.frontmatter.first && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />

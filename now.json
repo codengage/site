@@ -5,7 +5,9 @@
   "public": true,
   "env": {
     "MAILCHIMP_API": "@mailchimp_api",
-    "MAILCHIMP_LIST": "@mailchimp_list"
+    "MAILCHIMP_LIST": "@mailchimp_list",
+    "MAILGUN_API": "@mailgun_api",
+    "MAILGUN_DOMAIN": "@mailgun_domain"
   },
   "build": {
     "env": {

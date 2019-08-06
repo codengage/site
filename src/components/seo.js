@@ -24,7 +24,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `image`,
-                content: data.logo.publicURL
+                content: data.image.publicURL
               },
               {
                 name: `keywords`,
@@ -33,6 +33,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 name: `description`,
                 content: metaDescription
+              },
+              {
+                name: `og:image`,
+                content: data.image.publicURL
               },
               {
                 property: `og:title`,
@@ -108,7 +112,7 @@ const detailsQuery = graphql`
         title
       }
     }
-    logo: file(name: {eq:"logo-codengage"}, sourceInstanceName: {eq: "images"}) {
+    image: file(name: {eq:"bg"}, sourceInstanceName: {eq: "images"}) {
       name
       publicURL
     },
