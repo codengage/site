@@ -44,8 +44,8 @@ function Header({ scroll }) {
                 <SocialIcons data={data} />
               </div>
             </div>
-            <div className={scroll ? "lg:px-20px xl:px-0 transition-fast transition-timing-ease-out transition-property-bg transition-delay-long bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px md:mt-0 h-40px lg:h-80px w-full"}>
-              <div className={scroll ? "container mx-auto pl-20px md:pl-40px md:pr-20px lg:pr-0 lg:pl-0 xl:px-0 j-grid items-center xl:w-1110px h-full" : "container mx-auto pl-20px lg:pl-0 j-grid items-center xl:w-1110px h-full"}>
+            <div className={scroll ? "lg:px-20px xl:px-0 transition-fast transition-timing-ease-out transition-property-bg transition-delay-long bg-white fixed h-64px lg:h-80px w-full top-0 z-1 shadow" : "mt-20px md:mt-0 h-40px md:h-60px lg:h-80px w-full"}>
+              <div className={scroll ? "container mx-auto menu-full j-grid items-center xl:w-1110px h-full" : "container mx-auto pl-20px lg:pl-0 j-grid items-center xl:w-1110px h-full"}>
                 <Link to="/" className="no-outline float-left flex items-center w-126px lg:w-163px lg:h-66px">
                   <img src={data.logo.publicURL} alt={data.logo.name} />
                 </Link>
@@ -59,20 +59,20 @@ function Header({ scroll }) {
                 </div>
 
                 <button
-                  className={isExpanded ? "no-outline ab-inv f-ic mr-26px" : "no-outline md-ab-inv f-ic relative visible mr-26px"}
+                  className={isExpanded ? "no-outline ab-inv items-center mr-26px hidden" : "no-outline md-ab-inv items-center relative visible mr-26px"}
                   onClick={() => toggleExpansion(!isExpanded)}>
                   <img src={data.icon_menu.publicURL} alt={data.icon_menu.name} />
                 </button>
                 <button
-                  className={isExpanded ? "no-outline md-ab-inv f-ic relative visible mr-26px text-24" : "no-outline ab-inv md-ab-inv flex mr-26px text-24"}
+                  className={isExpanded ? "no-outline md-ab-inv items-center relative visible mr-26px text-24" : "no-outline hidden ab-inv md-ab-inv mr-26px text-24"}
                   onClick={() => toggleExpansion(!isExpanded)}>
                   &times;
             </button>
               </div>
             </div>
             <div
-              className={isExpanded ? (scroll ? "fixed top-52 z-1 bg-white w-full pt-22px shadow-bottom visible md:invisible" : "z-1 bg-white w-full pt-22px shadow-bottom absolute visible md:invisible") : "ab-inv hidden"}>
-              <div className="c-grid w-auto h-auto mx-20px font-display text-14 text-black-1">
+              className={isExpanded ? (scroll ? "fixed top-52 menu-mobile" : "menu-mobile absolute") : "ab-inv hidden"}>
+              <div className="c-grid w-auto h-auto mx-20px xs:mx-auto xs:px-20px sm:mx-20px font-display text-14 text-black-1 max-w-360 sm:max-w-640">
                 <Link className="header-link no-outline" to="/#empresa" onClick={() => toggleExpansion(!isExpanded)} ><img src={data.icon_play.publicURL} alt="icon list" />&nbsp;Empresa</Link>
                 <Link className="header-link no-outline" to="/#servicos" onClick={() => toggleExpansion(!isExpanded)}><img src={data.icon_play.publicURL} alt="icon list" />&nbsp;Serviços</Link>
                 <Link className="header-link no-outline" to="/#clientes" onClick={() => toggleExpansion(!isExpanded)} ><img src={data.icon_play.publicURL} alt="icon list" />&nbsp;Clientes</Link>

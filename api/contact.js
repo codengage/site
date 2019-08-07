@@ -54,7 +54,7 @@ const updateTags = (path, tags = []) =>
 const sendContact = (body = {}) =>
   new Promise((resolve, reject) => {
     mailgun.messages().send({
-      from: `${body.email_address}`,
+      from: `Contato Codengage <${body.email_address}>`,
       to: 'contato@codengage.com',
       subject: `Contato de ${body.merge_fields.FULLNAME}`,
       html: `<p>Nome: ${body.merge_fields.FULLNAME};</p><p>Mensagem: ${body.merge_fields.MESSAGE};</p><p>Email: ${body.email_address};</p><p>Telefone: ${body.merge_fields.PHONE}.</p>`,
@@ -101,8 +101,8 @@ export default async (req, res) => {
 
   try {
     //envia email de contato pelo mailgun
-    if (tag === "contact") {
-      await sendContact(req.body)
+    if (tag === "Contact") {
+      await sendContact(body)
     }
 
     // registra ou atualiza o contato

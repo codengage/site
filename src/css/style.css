@@ -17,6 +17,11 @@
 
 /* personalização do caroussel */
 /* purgecss start ignore */
+@screen md {
+    .slick-slider {
+        display: none !important;
+    }
+}
 .slick-dots {
     position: relative !important;
 }
@@ -37,6 +42,8 @@
 }
 .carousel {
     display: inline-flex !important;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 /* purgecss end ignore */
 
@@ -64,6 +71,9 @@ body {
 .f-ic {
     @apply flex items-center;
 }
+.p-disp {
+    display: none !important;
+}
 .header-link {
     @apply w-full pt-6px pb-6px border-b border-black-9 inline-flex;
 }
@@ -75,6 +85,12 @@ body {
 }
 .input-contact {
     @apply w-full px-16px bg-white opacity-100 font-display text-black-1 border border-black-8 rounded;
+}
+.menu-full {
+    @apply  pl-20px;
+}
+.menu-mobile {
+    @apply z-1 bg-white w-full pt-22px shadow-bottom visible;
 }
 .mw424-mxa {
     @apply max-w-424 mx-auto;
@@ -102,9 +118,6 @@ body {
     .slick-slider {
         display: none !important;
     }
-    .md-ab-inv {
-        @apply absolute invisible;
-    }
     .img-mobile {
         @apply hidden;
     }
@@ -112,14 +125,31 @@ body {
         width: 369px !important;
         font-size: 58px !important;
     }
+    .menu-full {
+        @apply  pl-40px pr-20px;
+    }
+    .menu-mobile {
+        @apply invisible hidden;
+    }
+    .md-ab-inv {
+        @apply absolute invisible;
+    }
     .md-vis-rel {
         @apply visible relative;
+    }
+    .p-disp {
+        display: flex !important;
     }
     .sec-intro {
         @apply text-48-97;
     }
     .txtc-14-18 {
         @apply text-18;
+    }
+}
+@screen mda {
+    .menu-full {
+        @apply pl-20px pr-0 ;
     }
 }
 @screen lg {
@@ -138,6 +168,10 @@ body {
     }
     .lg-w-428 {
         width: 428px !important;
+    }
+    .menu-full {
+        padding-right:0 !important;
+        padding-left: 0 !important;
     }
     .sec-intro {
         @apply text-58;

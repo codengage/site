@@ -72,7 +72,7 @@ function SecTestimony() {
 
                     {
                       data.photos.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.img && <img width="50%" height="50%" className="md:max-w-300 w-full mx-auto sm:float-left order-1" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
+                        name === node.frontmatter.img && <img width="50%" height="50%" className="sm:max-w-300 w-full mx-auto sm:float-left order-1" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
                       )
                     }
                     <div className="px-5px sm:float-right md:pl-40px md:pr-0 lg:px-0 order-2">
