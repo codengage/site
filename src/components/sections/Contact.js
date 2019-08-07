@@ -136,7 +136,7 @@ function Contact() {
                   <div className="mb-20px">
                     <input
                       aria-label="Fullname"
-                      className="no-outline on-focus input-contact h-52px"
+                      className="no-outline input-contact h-52px"
                       type="text"
                       placeholder="Nome Completo"
                       required
@@ -147,7 +147,7 @@ function Contact() {
                   <div className="mb-20px lg:h-52px">
                     <input
                       aria-label="E-mail"
-                      className="no-outline on-focus input-contact lg:float-left lg:w-357px mb-20px lg:mb-0 h-52px lg:mr-10px"
+                      className="no-outline input-contact lg:float-left lg:w-357px mb-20px lg:mb-0 h-52px lg:mr-10px"
                       type="email"
                       placeholder="Email"
                       required
@@ -156,7 +156,7 @@ function Contact() {
                     ></input>
                     <input
                       aria-label="Phone"
-                      className="no-outline on-focus input-contact lg:float-right lg:w-357px h-52px lg:ml-10px"
+                      className="no-outline input-contact lg:float-right lg:w-357px h-52px lg:ml-10px"
                       type="text"
                       placeholder="Telefone"
                       required
@@ -167,7 +167,7 @@ function Contact() {
                   <div className="w-full mb-15px">
                     <textarea
                       aria-label="Message"
-                      className="no-outline on-focus input-contact h-154px max-h-180 py-16px"
+                      className="no-outline input-contact h-154px min-h-52 max-h-180 py-16px"
                       type="text"
                       placeholder="Mensagem"
                       required
@@ -176,7 +176,7 @@ function Contact() {
                     ></textarea>
                   </div>
                   <button
-                    className="no-outline on-focus h-52px w-full md:w-245px bg-black-1 hover:bg-black-5 text-18 text-white font-semibold rounded"
+                    className="no-outline h-52px w-full md:w-245px bg-black-1 hover:bg-black-5 text-18 text-white font-semibold rounded"
                     type="submit"
                     onClick={e => handleSubmit(e)}
                   >
