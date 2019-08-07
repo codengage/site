@@ -14,7 +14,7 @@ function Initial({ scroll }) {
           content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Initial" } }}) {
             edges {
               node {
-                excerpt
+                excerpt(pruneLength: 300)
                 frontmatter {
                   title
                 }   
