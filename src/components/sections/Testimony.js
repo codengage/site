@@ -33,7 +33,7 @@ function SecTestimony() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 300)
+                excerpt(pruneLength: 600)
                 frontmatter {
                   title
                   company
@@ -68,7 +68,7 @@ function SecTestimony() {
             <div className="max-w-380 sm:max-w-full lg:inline-flex lg:justify-between w-full mxa-ha">
               {
                 data.testimonys.edges.map(({ node }) =>
-                  <div key={node.frontmatter.order} className="flex-wrap sm:flex-no-wrap sm:inline-flex h-auto lg:w-307px mt-30px lg:mt-0 sm:content-between lg:flex-wrap mx-20px lg:mx-0">
+                  <div key={node.frontmatter.order} className="flex-wrap sm:flex-no-wrap sm:inline-flex h-auto lg:w-307px mt-30px lg:mt-0 sm:content-between lg:content-start lg:flex-wrap mx-20px lg:mx-0">
 
                     {
                       data.photos.nodes.map(({ name, publicURL }) =>

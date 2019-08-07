@@ -84,7 +84,7 @@ body {
     @apply flex justify-between flex-wrap;
 }
 .input-contact {
-    @apply w-full px-16px bg-white opacity-100 font-display text-black-1 border border-black-8 rounded;
+    @apply w-full px-16px bg-white font-display text-black-1 rounded;
 }
 .menu-full {
     @apply  pl-20px;

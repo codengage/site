@@ -47,7 +47,7 @@ function JoinIn() {
                     </p>
                   )
                 }
-                <a href="https://codengage.compleo.com.br/" rel="noopener" className="no-outline btn text-center py-13px h-52px md:w-245px mx-auto lg:ml-3px mt-20px lg:mt-0 bg-black-1 hover:bg-black-5 font-semibold" >
+                <a href="https://codengage.compleo.com.br/" target="_blank" rel="noopener" className="no-outline btn text-center py-13px h-52px md:w-245px mx-auto lg:ml-3px mt-20px lg:mt-0 bg-black-1 hover:bg-black-5 font-semibold" >
                   VAGAS ABERTAS
                 </a>
               </div>

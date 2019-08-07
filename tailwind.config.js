@@ -231,6 +231,9 @@ module.exports = {
       lineHeight: {
         125: 1.25,
       },
+      minHeight: {
+        '52': '52px'
+      },
       maxHeight: {
         '180': '180px',
         '677': '677px'
