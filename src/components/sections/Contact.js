@@ -135,6 +135,7 @@ function Contact() {
                 <form className="mx-20px lg:mx-0">
                   <div className="mb-20px">
                     <input
+                      aria-label="Fullname"
                       className="no-outline on-focus input-contact h-52px"
                       type="text"
                       placeholder="Nome Completo"
@@ -145,6 +146,7 @@ function Contact() {
                   </div>
                   <div className="mb-20px lg:h-52px">
                     <input
+                      aria-label="E-mail"
                       className="no-outline on-focus input-contact lg:float-left lg:w-357px mb-20px lg:mb-0 h-52px lg:mr-10px"
                       type="email"
                       placeholder="Email"
@@ -153,6 +155,7 @@ function Contact() {
                       onChange={e => changeEmail(e.target.value)}
                     ></input>
                     <input
+                      aria-label="Phone"
                       className="no-outline on-focus input-contact lg:float-right lg:w-357px h-52px lg:ml-10px"
                       type="text"
                       placeholder="Telefone"
@@ -163,6 +166,7 @@ function Contact() {
                   </div>
                   <div className="w-full mb-15px">
                     <textarea
+                      aria-label="Message"
                       className="no-outline on-focus input-contact h-154px max-h-180 py-16px"
                       type="text"
                       placeholder="Mensagem"

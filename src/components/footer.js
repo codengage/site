@@ -128,6 +128,7 @@ function Footer() {
                   </p>
                   <form className="mx-auto lg:mx-0 inline-flex w-320px">
                     <input
+                      aria-label="E-mail Newsletter"
                       className="no-outline on-focus bg-white float-left xs:w-215px h-41px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14"
                       type="email"
                       placeholder="Email"

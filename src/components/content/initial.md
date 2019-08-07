@@ -2,4 +2,4 @@
 title: "Initial"
 ---
 
-Este conceito minimalista pode facilitar muito o seu negócio. Saiba como podemos ajudá-lo a alcançar seus objetivos com menos.
+Este conceito minimalista pode facilitar muito o seu negócio. Nós podemos ajudá-lo, fornecendo "squads" de desenvolvimento de alta performance.
