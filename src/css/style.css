@@ -42,6 +42,8 @@
 }
 .carousel {
     display: inline-flex !important;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 /* purgecss end ignore */
 
@@ -68,6 +70,9 @@ body {
 }
 .f-ic {
     @apply flex items-center;
+}
+.p-disp {
+    display: none !important;
 }
 .header-link {
     @apply w-full pt-6px pb-6px border-b border-black-9 inline-flex;
@@ -119,6 +124,9 @@ body {
     }
     .md-vis-rel {
         @apply visible relative;
+    }
+    .p-disp {
+        display: flex !important;
     }
     .sec-intro {
         @apply text-48-97;

@@ -97,7 +97,7 @@ function Partners() {
                   </p>
                 ))}
               </div>
-              <div className="c-grid lg:max-w-980 xl:max-w-1110 md:h-245px xl:h-342px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-0 lg:mx-auto">
+              <div className="c-grid p-disp lg:max-w-980 xl:max-w-1110 md:h-245px xl:h-342px ab-inv md-vis-rel pb-30px lg:pb-50px px-20px lg:px-0 lg:mx-auto">
                 {data.partnersmd.edges.map(({ node }) => (
                   <div key={node.frontmatter.order} className="j-grid md:w-full">
                     {
@@ -126,15 +126,15 @@ function Partners() {
               <Slider {...sliderSettings} className="h-73px md-ab-inv flex mt-50px mb-73px">
                 {
                   data.partnerssm.edges.map(({ node }) => (
-                    <div key={node.frontmatter.order} className="carousel no-outline w-full px-auto flex-row inline-flex justify-around">
+                    <div key={node.frontmatter.order} className="carousel no-outline w-full px-auto flex-row inline-flex justify-between sm:justify-around">
                       {
                         data.icons.nodes.map(({ name, publicURL }) =>
-                          name === node.frontmatter.first && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
+                          name === node.frontmatter.first && <img className="w-130px xs:w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
                         )
                       }
                       {
                         data.icons.nodes.map(({ name, publicURL }) =>
-                          name === node.frontmatter.second && <img className="w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
+                          name === node.frontmatter.second && <img className="w-130px xs:w-150px" key={name} src={publicURL} alt={`icon ${name}`} />
                         )
                       }
                     </div>
