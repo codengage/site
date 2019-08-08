@@ -68,6 +68,12 @@ const sendContact = (body = {}) =>
   })
 
 export default async (req, res) => {
+//verifica se request é OPTIONS
+  if (req.method.toUpperCase() === "OPTIONS") {
+    res.status(200).json({
+      success: true
+    })
+  }
   // extrai tag do body
   const { tag, ...body } = req.body
 
@@ -101,7 +107,7 @@ export default async (req, res) => {
 
   try {
     //envia email de contato pelo mailgun
-    if (tag === "Contact") {
+    if (tag.toUpperCase() === "CONTACT") {
       await sendContact(body)
     }
 
