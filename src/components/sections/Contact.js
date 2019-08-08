@@ -34,6 +34,13 @@ function Contact() {
           title: 'Falha ao enviar e-mail!',
           content: 'Por favor, tente novamente mais tarde.'
         }
+      case 'invalid_email':
+        changeShowAlert(true);
+        return {
+          alert: "error",
+          title: "Email inválido!",
+          content: "Por favor, insira um email válido."
+        };
       case 'success':
         changeShowAlert(true)
         return {
@@ -49,37 +56,42 @@ function Contact() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    if (email && fullName && message && telefone) {
-      const data = {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json; charset=utf-8'
-        },
-        mode: 'cors',
-        body: JSON.stringify({
-          email_address: email,
-          status: 'subscribed',
-          merge_fields: {
-            FULLNAME: fullName,
-            PHONE: telefone,
-            MESSAGE: message
-          },
-          tag: 'Contact'
-        })
-      }
-
-      fetch(`${process.env.GATSBY_API_CONTACT}`, data)
-        .then(res => res.json())
-        .then(res => {
-          res.success ?
-            dispatch({ type: 'success' }) : dispatch({ type: 'error' });
-        })
-        .catch(e => {
-          dispatch({ type: 'error' })
-        })
+    const testEmail = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
+    if (email && !testEmail.test(email)) {
+      dispatch({ type: 'invalid_email' });
     } else {
-      dispatch({ type: 'incomplete' })
+      if (email && fullName && message && telefone) {
+        const data = {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json; charset=utf-8'
+          },
+          mode: 'cors',
+          body: JSON.stringify({
+            email_address: email,
+            status: 'subscribed',
+            merge_fields: {
+              FULLNAME: fullName,
+              PHONE: telefone,
+              MESSAGE: message
+            },
+            tag: 'Contact'
+          })
+        }
+
+        fetch(`${process.env.GATSBY_API_CONTACT}`, data)
+          .then(res => res.json())
+          .then(res => {
+            res.success ?
+              dispatch({ type: 'success' }) : dispatch({ type: 'error' });
+          })
+          .catch(e => {
+            dispatch({ type: 'error' })
+          })
+      } else {
+        dispatch({ type: 'incomplete' })
+      }
     }
   }
 
