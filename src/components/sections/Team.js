@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
+import Anchor from '../anchor';
+
 function SecTeam() {
 
   return (
@@ -33,6 +35,7 @@ function SecTeam() {
       `}
       render={data => (
         <section className="container mxa-ha lg:w-1110px pt-30px lg:pt-40px">
+        <Anchor id="servicos" />
           <div className="sec-intro font-semibold lg:mx-auto mx-20px">
             <h2>
               <span className="text-black-1">Um time </span>
