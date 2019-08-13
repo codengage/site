@@ -44,6 +44,16 @@ function SecTestimony() {
               }
             }
           },
+          arrow_left: file(sourceInstanceName: {eq: "icons"}, name: {eq: "testimony-left"}) {
+            id
+            publicURL
+            name
+          },
+          arrow_right: file(sourceInstanceName: {eq: "icons"}, name: {eq: "testimony-right"}) {
+            id
+            publicURL
+            name
+          }
         }
       `}
       render={data => (
@@ -65,19 +75,20 @@ function SecTestimony() {
                 )
               }
             </div>
-            <div className="max-w-380 sm:max-w-full lg:inline-flex lg:justify-between w-full mxa-ha">
+            <div className="max-w-380 sm:max-w-full lg:justify-between w-full mxa-ha">
               {
                 data.testimonys.edges.map(({ node }) =>
-                  <div key={node.frontmatter.order} className="flex-wrap sm:flex-no-wrap sm:inline-flex h-auto lg:w-307px mt-30px lg:mt-0 sm:content-between lg:content-start lg:flex-wrap mx-20px lg:mx-0">
+                  <div key={node.frontmatter.order} className="flex-wrap sm:flex-no-wrap sm:inline-flex h-auto mt-30px lg:mt-0 sm:content-between lg:py-25px mx-20px lg:mx-0">
 
                     {
                       data.photos.nodes.map(({ name, publicURL }) =>
-                        name === node.frontmatter.img && <img width="50%" height="50%" className="sm:max-w-300 w-full mx-auto sm:float-left order-1" key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
+                        name === node.frontmatter.img && <img width="50%" height="50%" className={`max-w-264 max-h-264 mx-auto sm:rounded-full ${node.frontmatter.order % 2 !== 0 ? "order-1 sm:float-left" : "order-3 sm:float-right"}`} key={name} src={publicURL} alt={`foto ${node.frontmatter.title}`} />
                       )
                     }
-                    <div className="px-5px sm:float-right md:pl-40px md:pr-0 lg:px-0 order-2">
-                      <p className="text-14 font-display text-center md:text-left mt-30px">{node.excerpt}</p>
-                      <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px lg:mb-0">
+                    <img className="order-2 mt-60px absolute hidden md:relative md:flex" src={node.frontmatter.order % 2 !== 0 ? data.arrow_left.publicURL : data.arrow_right.publicURL} alt={node.frontmatter.order % 2 !== 0 ? data.arrow_left.name : data.arrow_right.name} />
+                    <div className={`px-5px md:px-0 sm:my-auto ${node.frontmatter.order % 2 !== 0 ? "order-3 sm:float-right" : "order-1 sm:float-left"}`}>
+                      <p className="text-14 lg:text-22 font-display text-center md:text-left mt-30px sm:mt-0  italic">{node.excerpt}</p>
+                      <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px sm:mb-0">
                         <p className="text-16 text-cian-1">{node.frontmatter.title}</p>
                         <p className="text-14 text-black-3">{node.frontmatter.company}</p>
                       </div>
