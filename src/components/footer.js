@@ -33,6 +33,13 @@ function Footer() {
           title: 'Falha ao registrar e-mail!',
           content: 'Por favor, tente novamente mais tarde.'
         }
+      case 'invalid_email':
+        changeShowAlert(true);
+        return {
+          alert: "error",
+          title: "Email inválido!",
+          content: "Por favor, insira um email válido."
+        };
       case 'success':
         changeShowAlert(true)
         return {
@@ -49,31 +56,36 @@ function Footer() {
     event.preventDefault()
 
     if (email) {
-      const data = {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json; charset=utf-8'
-        },
-        mode: 'cors',
-        body: JSON.stringify({
-          email_address: email,
-          status: 'subscribed',
-          tag: 'Newsletter'
-        })
-      }
+      const testEmail = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
+      if (!testEmail.test(email)) {
+        dispatch({ type: 'invalid_email' });
+      } else {
+        const data = {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json; charset=utf-8'
+          },
+          mode: 'cors',
+          body: JSON.stringify({
+            email_address: email,
+            status: 'subscribed',
+            tag: 'Newsletter'
+          })
+        }
 
-      fetch(process.env.GATSBY_API_CONTACT, data)
-        .then(res => res.json())
-        .then(res => {
-          res.success ?
-            dispatch({ type: 'success' }) :
+        fetch(process.env.GATSBY_API_CONTACT, data)
+          .then(res => res.json())
+          .then(res => {
+            res.success ?
+              dispatch({ type: 'success' }) :
+              dispatch({ type: 'error' });
+
+          })
+          .catch(e => {
             dispatch({ type: 'error' });
-
-        })
-        .catch(e => {
-          dispatch({ type: 'error' });
-        })
+          })
+      }
     } else {
       dispatch({ type: 'incomplete' })
     }

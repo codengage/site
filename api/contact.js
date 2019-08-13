@@ -1,3 +1,6 @@
+const { json, send } = require('micro');
+const microCors = require('micro-cors');
+const cors = microCors({ origin: ['*'] })
 const md5 = require('md5')
 const dotenv = require('dotenv')
 const Mailchimp = require('mailchimp-api-v3')
@@ -67,16 +70,14 @@ const sendContact = (body = {}) =>
     });
   })
 
-export default async (req, res) => {
-//verifica se request é OPTIONS
+module.exports = cors(async (req, res) => {
+  //verifica se request é OPTIONS
   if (req.method.toUpperCase() === "OPTIONS") {
-    res.status(200).json({
-      success: true
-    })
-  }
+      send(res, 200, {success: true})
+    }
   // extrai tag do body
-  const { tag, ...body } = req.body
-
+  const { tag, ...body } = await json(req)
+    
   // path para o mailchimp
   const path = `/lists/${listId}/members/${md5(body.email_address)}`
 
@@ -118,13 +119,9 @@ export default async (req, res) => {
     await updateTags(path, tags)
 
     // retorna sucesso
-    res.status(200).json({
-      success: true
-    })
+    send(res, 200, {success: true})
   } catch (e) {
     // retorna erro
-    res.status(400).json({
-      erro: e.message
-    })
+    send(res, 400, {erro: e.message})
   }
-}
+})

@@ -30,7 +30,7 @@ function Initial({ scroll }) {
               <img className="float-left" src={data.balanco.publicURL} alt={data.balanco.name} />
             </div>
             <div className="lg:float-right mt-50px lg:mt-0 txtc-lgtxtl mx-auto max-w-320 sm:max-w-380 lg:max-w-452 xl:max-w-546">
-              <div className="h-51px lg:h-60px xl:h-79px w-280px xs:w-298px initial-xs mx-auto lg:mx-0 font-semibold text-46 xs:text-48-97">
+              <div className="h-51px lg:h-60px xl:h-79px w-280px xs:w-298px initial-xs mx-auto lg:mx-0 font-semibold text-42 xs:text-46 sm:text-48-97">
                 <h1>
                   <span className="text-black-1">Menos é </span>
                   <span className="text-cian-1">mais.</span>

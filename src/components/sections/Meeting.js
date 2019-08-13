@@ -1,8 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
-import Anchor from '../anchor';
-
 function Meeting() {
 
   return (
@@ -32,7 +30,6 @@ function Meeting() {
       render={data => (
         <section className="mxa-ha xl:max-w-1110 lg:max-h-677 pt-30px pb-30px lg:pt-60px lg:pb-60px">
           <div className="container h-full lg:inline-flex lg:justify-between xl:w-1111px">
-            <Anchor id="servicos" />
             <div className="w-auto md:w-546px lg:w-700px mxa-ha lg:mx-0">
               <img className="mx-20px md:mx-0 h-full" src={data.web.publicURL} alt={data.web.name} />
             </div>

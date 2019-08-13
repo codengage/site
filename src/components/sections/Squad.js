@@ -59,7 +59,7 @@ function Squad () {
         <section className="bg-white h-auto pb-10px md:pb-20px xl:pb-0">
           <div className="container mx-auto h-full pt-30px lg:pt-60px lg:max-w-980 xl:max-w-1110">
             <div className="lg:float-left md:w-203px xl:w-290px mxa-ha text-center xl:text-left">
-              <h3 className="max-w-380 mx-auto text-28 md:text-34 lg:text-46 font-semibold">Monte seu “Squad” profissional conosco:</h3>
+              <h3 className="max-w-380 mx-auto text-28 md:text-34 lg:text-46 font-semibold">Monte seu time conosco:</h3>
               <img className="w-auto mt-35px md:mt-21px mx-auto xl:ml-60px xl:mr-0 mb-35px xl:mb-82px" src={data.rosto.publicURL} alt="rosto mulher" />
             </div>
             <div className="lg:float-right h-auto xl:w-734px xl:ml-86px lg:mb-60px text-14 text-black-3 ">
