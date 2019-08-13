@@ -89,8 +89,8 @@ function SecTestimony() {
                     <div className={`px-5px md:px-0 sm:my-auto ${node.frontmatter.order % 2 !== 0 ? "order-3 sm:float-right" : "order-1 sm:float-left"}`}>
                       <p className="text-14 lg:text-22 font-display text-center md:text-left mt-30px sm:mt-0  italic">{node.excerpt}</p>
                       <div className="w-auto font-semibold text-center md:text-left mt-20px mb-20px sm:mb-0">
-                        <p className="text-16 text-cian-1">{node.frontmatter.title}</p>
-                        <p className="text-14 text-black-3">{node.frontmatter.company}</p>
+                        <p className="text-16 lg:text-18 text-cian-1">{node.frontmatter.title}</p>
+                        <p className="text-14 lg:text-16 text-black-3">{node.frontmatter.company}</p>
                       </div>
                     </div>
                   </div>
