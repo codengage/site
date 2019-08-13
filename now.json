@@ -11,7 +11,7 @@
   },
   "build": {
     "env": {
-      "REACT_APP_API_CONTACT": "/api/contact"
+      "GATSBY_API_CONTACT": "https://codengage.now.sh/api/contact"
     }
   }
 }
