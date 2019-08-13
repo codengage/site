@@ -125,13 +125,15 @@ function Footer() {
         <div className="h-auto">
           <div className="h-auto pt-30px lg:pt-56px">
             <div className="container mx-auto relative max-w-320px sm:max-w-424 lg:max-w-848 xl:max-w-1025">
-              <Alert
-                type={state.alert}
-                title={state.title}
-                content={state.content}
-                show={showAlert}
-                onClose={handleCloseAlert.bind(this)}
-              />
+              <div className="lg:w-95pc lg:mx-auto">
+                <Alert
+                  type={state.alert}
+                  title={state.title}
+                  content={state.content}
+                  show={showAlert}
+                  onClose={handleCloseAlert.bind(this)}
+                />
+              </div>
               <div className="w-auto mx-20px pb-203px lg:pb-54px lg:inline-flex lg:justify-between">
                 <div className="lg:w-358px lg:h-135px lg:pt-7px lg:pb-6px flex lg:content-between flex-wrap text-14 txtc-lgtxtl">
                   <h3 className="font-bold w-full lg:w-auto mb-20px lg:mb-0">Assine nossa Newsletter mensal</h3>
@@ -168,7 +170,7 @@ function Footer() {
                     <p>comercial@codengage.com</p>
                     <p>rh@codengage.com</p>
                   </div>
-                  <div className="c-grid w-82px lg:h-full lg:ml-40px xl:ml-68px font-display text-14 text-cian-3">
+                  <div className="c-grid w-82px lg:h-full lg:ml-40px font-display text-14 text-cian-3">
                     <Link className="inline-flex no-outline" to="/#empresa"><img src={data.icon_play_cian.publicURL} alt="icon list" />&nbsp;Empresa</Link>
                     <Link className="inline-flex no-outline" to="/#servicos"><img src={data.icon_play_cian.publicURL} alt="icon list" />&nbsp;Serviços</Link>
                     <Link className="inline-flex no-outline" to="/#clientes"><img src={data.icon_play_cian.publicURL} alt="icon list" />&nbsp;Clientes</Link>
