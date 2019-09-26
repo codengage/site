@@ -80,7 +80,7 @@ function Contact() {
           })
         }
 
-        fetch(`${process.env.GATSBY_API_CONTACT}`, data)
+        fetch('https://codengage.now.sh/api/contact', data)
           .then(res => res.json())
           .then(res => {
             res.success ?
