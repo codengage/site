@@ -1,9 +1,9 @@
 ---
 title: "Initial"
-hackathonTitle: "Hackathon Team"
+hackathonTitle: "4º Lugar para"
 hackathonTeam: "Codengage NMD"
-hackathonDesc: "Time de hackathon patrocinado pela Codengage fará sua estréia em um dos eventos mais importantes do Brasil, o Code Race 2019. Estamos na torcida :)"
-hackathonLink: "https://coderace.com.br/"
+hackathonDesc: "Nosso time deixou sua marca na sexta edição da CODE RACE com o projeto GreenGo, passando pela etapa qualificatória, destacando-se na semifinal e chegando entre os finalistas da competição."
+hackathonLink: "https://www.instagram.com/p/B3DDyN6nIqi/?igshid=1fhjyqt64xhaw"
 ---
 
 Este conceito minimalista pode facilitar muito o seu negócio. Nós podemos ajudá-lo com "squads" de alta performance.

@@ -63,7 +63,7 @@ function Initial({ scroll }) {
                   }
                 </h1>
               </div>
-              <div className="lg-w-428 h-85px lg:h-107px xl:h-126px mx-auto lg:ml-3px mt-15px lg:mt-20px xl:mt-38px lg:mr-25px">
+              <div className="lg-w-428 mx-auto lg:ml-3px mt-15px lg:mt-20px xl:mt-38px lg:mr-25px">
                 {
                   // data.content.edges.map(({ node }) =>
                   //   <p key={node.frontmatter.title} className="text-18 lg:text-24 xl:text-26 text-black-3 txtc-lgtxtl">
@@ -80,7 +80,7 @@ function Initial({ scroll }) {
               {/* <a href="/#empresa" className="no-outline btn text-center block py-13px h-52px md:w-245px mt-30px xl:mt-40px lg:ml-3px mx-auto bg-cian-1 hover:bg-cian-3 font-semibold" >INICIAR NAVEGAÇÃO</a> */}
               {
                 data.hackathonContent.edges.map(({ node }) => 
-                  <a href={`${node.frontmatter.hackathonLink}`} rel="noopener" target="_blank" className="no-outline btn text-center block py-13px h-52px md:w-245px mt-30px xl:mt-40px lg:ml-3px mx-auto bg-cian-1 hover:bg-cian-3 font-semibold" >CONHEÇA O EVENTO</a>
+                  <a href={`${node.frontmatter.hackathonLink}`} rel="noopener" target="_blank" className="no-outline btn text-center block py-13px h-52px md:w-245px mt-30px xl:mt-40px lg:ml-3px mx-auto bg-cian-1 hover:bg-cian-3 font-semibold" >CONHEÇA O PROJETO</a>
                 )
               }
             </div>
