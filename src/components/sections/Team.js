@@ -63,7 +63,7 @@ function SecTeam() {
               </div>
               <div className="h-auto lg:h-165px mt-30px lg:mt-43px">
                 <p className="text-18 lg:text-26 text-black-3 font-display">
-                  Oferecemos a assessoria completa para empresas quem desejam desenvolver novos produtos, ou reforçar sua equipe técnica atual.
+                  Oferecemos a assessoria completa para empresas que desejam desenvolver novos produtos, ou reforçar sua equipe técnica atual.
               </p>
               </div>
             </div>
