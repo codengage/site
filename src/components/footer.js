@@ -135,29 +135,13 @@ function Footer() {
                 />
               </div>
               <div className="w-auto mx-20px pb-203px lg:pb-54px lg:inline-flex lg:justify-between">
-                <div className="lg:w-358px lg:h-135px lg:pt-7px lg:pb-6px flex lg:content-between flex-wrap text-14 txtc-lgtxtl">
-                  <h3 className="font-bold w-full lg:w-auto mb-20px lg:mb-0">Assine nossa Newsletter mensal</h3>
-                  <p className="font-display lg:w-350px mb-20px lg:mb-0">
-                    Acompanhe-nos recebendo mensalmente novidades sobre o mercado de tecnologia no seu email.
-                  </p>
-                  <form className="mx-auto lg:mx-0 inline-flex w-320px">
-                    <input
-                      aria-label="E-mail Newsletter"
-                      className="no-outline on-focus bg-white float-left xs:w-215px h-41px mr-10px px-16px font-display text-cian-1 border border-black-8 rounded text-14"
-                      type="email"
-                      placeholder="Email"
-                      required
-                      value={email}
-                      onChange={e => changeEmail(e.target.value)}
-                    ></input>
-                    <button
-                      className="no-outline on-focus float-right w-85px lg:w-123px h-41px ml-10px bg-cian-1 hover:bg-cian-3 text-12 text-white font-semibold rounded"
-                      type="submit"
-                      onClick={e => handleSubmit(e)}
-                    >
-                      ASSINAR
-                </button>
-                  </form>
+                <div className="lg:w-358px lg:h-135px lg:pt-7px lg:pb-6px lg:content-between text-12 txtc-lgtxtl">
+                  <p className="font-bold mb-5px">Codengage Dark</p>
+                  <p className="mb-15px">Rua Inês Pinzon, 388 - Sala Térrea - Centro Norte.</p>
+                  <p className="font-bold mb-5px">Codengage Light</p>
+                  <p className="mb-15px">Rua Bento Munhoz da Rocha Neto, 266 - 1º Andar - Centro Norte.</p>
+                  <p className="mb-5px">Ambas em Dois Vizinhos - Paraná. Cep 85660-000.</p>
+                  <p>CNPJ: 24.477.617/0001-60</p>
                 </div>
                 <div className="absolute lg:relative w-full left-0 -bottom-28 xs:-bottom-32 lg:bottom-0 lg:w-180px lg:h-228px lg:pt-5px lg:-mb-85px xl:mr-0 xl:ml-85px">
                   <img className="mx-auto" src={data.mimi.publicURL} alt="mimi codengage" />
@@ -185,7 +169,7 @@ function Footer() {
               <div className="mx-20px xl:mx-auto lg:max-w-1110 h-full">
                 <div className="inline-flex justify-end h-11px items-center mt-21px mb-18px">
                   <img className="lg:w-7px h-7px" src={data.copyright_regular.publicURL} alt="copyright icon" />
-                  <p className="text-white text-10 font-display">&nbsp;Codengage 2019</p>
+                  <p className="text-white text-10 font-display">&nbsp;Codengage 2020</p>
                 </div>
                 <div className="relative inline-flex justify-between w-73px h-18px float-right mt-17px mb-15px">
                   <SocialIcons data={data} />
