@@ -78,7 +78,7 @@ function SecTestimony() {
             <div className="max-w-380 sm:max-w-full lg:justify-between w-full mxa-ha">
               {
                 data.testimonys.edges.map(({ node }) =>
-                  <div key={node.frontmatter.order} className="flex-wrap sm:flex-no-wrap sm:inline-flex h-auto mt-30px lg:mt-0 sm:content-between lg:py-25px mx-20px lg:mx-0">
+                  <div key={node.frontmatter.order} className="flex-no-wrap sm:inline-flex h-auto mt-30px lg:mt-0 sm:content-between lg:py-25px mx-20px lg:mx-0">
 
                     {
                       data.photos.nodes.map(({ name, publicURL }) =>
