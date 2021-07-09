@@ -136,11 +136,9 @@ function Footer() {
               </div>
               <div className="w-auto mx-20px pb-203px lg:pb-54px lg:inline-flex lg:justify-between">
                 <div className="lg:w-358px lg:h-135px lg:pt-7px lg:pb-6px lg:content-between text-12 txtc-lgtxtl">
-                  <p className="font-bold mb-5px">Codengage Dark</p>
-                  <p className="mb-15px">Rua Inês Pinzon, 388 - Sala Térrea - Centro Norte.</p>
-                  <p className="font-bold mb-5px">Codengage Light</p>
-                  <p className="mb-15px">Rua Bento Munhoz da Rocha Neto, 266 - 1º Andar - Centro Norte.</p>
-                  <p className="mb-5px">Ambas em Dois Vizinhos - Paraná. Cep 85660-000.</p>
+                  <p className="font-bold mb-5px">Codengage</p>
+                  <p className="mb-15px">Av. Prefeito Dedi Barrichelo Montagner, 250, térreo.</p>
+                  <p className="mb-5px">Dois Vizinhos - Paraná. Cep 85660-000.</p>
                   <p>CNPJ: 24.477.617/0001-60</p>
                 </div>
                 <div className="absolute lg:relative w-full left-0 -bottom-28 xs:-bottom-32 lg:bottom-0 lg:w-180px lg:h-228px lg:pt-5px lg:-mb-85px xl:mr-0 xl:ml-85px">
