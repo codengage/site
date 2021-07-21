@@ -29,7 +29,9 @@ function Layout() {
       }
     })
   }, [])
-
+  function closeCookie() {
+    localStorage.setItem('cookie','declined')    
+  }
   return (
     <>
       <SEO title="Codengage" lang="pt-BR" />
@@ -56,8 +58,29 @@ function Layout() {
             <Testimony />
             <JoinIn />
             <Contact />
+            <Footer />            
+            <div className={localStorage.getItem('cookie') ? "hidden" : "w-full fixed bottom-3 px-20px"}>
+              <div class="flex items-center justify-between w-full bg-black-1 shadow text-white py-20px px-20px rounded">
+                <p>Footer Alert (Only use X to close)
+                  <a href="https://www.linkedin.com/company/codengage" rel="noopener" target="_blank" class="no-outline">
+                    <span class="font-bold text-18"> link1 </span>
+                  </a>
+                  asda askdj alksjd
+                  <a href="https://www.linkedin.com/company/codengage" rel="noopener" target="_blank" class="no-outline">
+                    <span class="font-bold text-18"> link2 </span>
+                  </a>
+                  asda askdj alksjd
+                </p>
+                  <button
+                    className="no-outline btn text-center block py-13px h-52px md:max-w-245 mx-auto xl:ml-3px mt-30px xl:mt-34px bg-cian-1 hover:bg-cian-3 font-semibold order-3"
+                    type="button"
+                    onClick={e => closeCookie()}
+                  >
+                    close
+                  </button>
 
-            <Footer />
+              </div>
+            </div>
           </div>
         )}
       />
