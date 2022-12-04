@@ -3,7 +3,7 @@ import React from 'react';
 function SocialIcons ({data}) {
   return (
     <>
-      <a href="https://www.instagram.com/codengagecom/" rel="noopener" target="_blank" className="no-outline">
+      <a href="https://www.instagram.com/codengage_/" rel="noopener" target="_blank" className="no-outline">
         <img src={data.instagram.publicURL} alt={data.instagram.name} />
       </a>
       <a href="https://www.facebook.com/codengagecom/" rel="noopener" target="_blank" className="no-outline">

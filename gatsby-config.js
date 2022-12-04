@@ -8,6 +8,7 @@ module.exports = {
     author: `@CodengageTech`,
   },
   plugins: [
+    `gatsby-plugin-flow`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,

@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery, Link } from "gatsby";
 
 function Meeting() {
 
@@ -46,9 +46,7 @@ function Meeting() {
                     </p>
                   )
                 }
-                <a href="https://calendar.google.com/calendar/b/3?cid=Y29tZXJjaWFsQGNvZGVuZ2FnZS5jb20" rel="noopener" target="_blank" className="no-outline btn text-center block py-13px h-52px md:max-w-245 mx-auto xl:ml-3px mt-30px xl:mt-34px bg-cian-1 hover:bg-cian-3 font-semibold order-3" >
-                AGENDAR UMA REUNIÃO
-                </a>
+                <Link className="no-outline btn text-center block py-13px h-52px md:max-w-245 mx-auto xl:ml-3px mt-30px xl:mt-34px bg-cian-1 hover:bg-cian-3 font-semibold order-3" to="/#contato">ENTRE EM CONTATO</Link>
               </div>
             </div>
           </div>
