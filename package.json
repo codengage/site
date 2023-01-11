@@ -24,7 +24,7 @@
     "gatsby-plugin-purgecss": "4.0.0",
     "gatsby-plugin-react-helmet": "3.1.0",
     "gatsby-source-filesystem": "^2.1.1",
-    "gatsby-transformer-remark": "^2.5.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "glhd-tailwindcss-transitions": "^0.3.0",
     "graphql": "14.4.1",
     "mailchimp-api-v3": "^1.13.1",
